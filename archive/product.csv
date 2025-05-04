@@ -90,7 +90,7 @@ product_id,name,price,description,subcategory_id
 89,Mystery - Product 4,634.08,This is a description for Mystery - Product 4,18
 90,Mystery - Product 5,186.21,This is a description for Mystery - Product 5,18
 91,Science Fiction - Product 1,787.66,This is a description for Science Fiction - Product 1,19
-92,Science Fiction - Product 2,0.37,This is a description for Science Fiction - Product 2,19
+92,Science Fiction - Product 2,787.66,This is a description for Science Fiction - Product 2,19
 93,Science Fiction - Product 3,845.60,This is a description for Science Fiction - Product 3,19
 94,Science Fiction - Product 4,836.60,This is a description for Science Fiction - Product 4,19
 95,Science Fiction - Product 5,443.20,This is a description for Science Fiction - Product 5,19
