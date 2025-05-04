@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Load_DWH"
   DTS:PackageType="5"
-  DTS:VersionBuild="16"
-  DTS:VersionGUID="{20BF0566-2CD3-43FD-96EF-0F56137C0F5E}">
+  DTS:VersionBuild="38"
+  DTS:VersionGUID="{3401FB4B-049E-4704-A87B-FB64905B80AA}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -531,26 +531,21 @@
                   name="Aggregate Input 1">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Load_Returns_Fact\Aggregate.Inputs[Aggregate Input 1].Columns[return_date]"
-                      cachedDataType="wstr"
-                      cachedLength="10"
-                      cachedName="return_date"
-                      lineageId="Package\Load_Returns_Fact\OLE DB Source.Outputs[OLE DB Source Output].Columns[return_date]" />
-                    <inputColumn
-                      refId="Package\Load_Returns_Fact\Aggregate.Inputs[Aggregate Input 1].Columns[product_id]"
+                      refId="Package\Load_Returns_Fact\Aggregate.Inputs[Aggregate Input 1].Columns[return_id]"
                       cachedDataType="i4"
-                      cachedName="product_id"
-                      lineageId="Package\Load_Returns_Fact\OLE DB Source.Outputs[OLE DB Source Output].Columns[product_id]" />
+                      cachedName="return_id"
+                      lineageId="Package\Load_Returns_Fact\OLE DB Source.Outputs[OLE DB Source Output].Columns[return_id]" />
                     <inputColumn
                       refId="Package\Load_Returns_Fact\Aggregate.Inputs[Aggregate Input 1].Columns[supplier_id]"
                       cachedDataType="i4"
                       cachedName="supplier_id"
                       lineageId="Package\Load_Returns_Fact\OLE DB Source.Outputs[OLE DB Source Output].Columns[supplier_id]" />
                     <inputColumn
-                      refId="Package\Load_Returns_Fact\Aggregate.Inputs[Aggregate Input 1].Columns[return_id]"
-                      cachedDataType="i4"
-                      cachedName="return_id"
-                      lineageId="Package\Load_Returns_Fact\OLE DB Source.Outputs[OLE DB Source Output].Columns[return_id]" />
+                      refId="Package\Load_Returns_Fact\Aggregate.Inputs[Aggregate Input 1].Columns[date]"
+                      cachedDataType="wstr"
+                      cachedLength="10"
+                      cachedName="date"
+                      lineageId="Package\Load_Returns_Fact\Lookup.Outputs[Lookup Match Output].Columns[date]" />
                   </inputColumns>
                   <externalMetadataColumns />
                 </input>
@@ -572,48 +567,21 @@
                   </properties>
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Load_Returns_Fact\Aggregate.Outputs[Aggregate Output 1].Columns[return_date]"
-                      dataType="wstr"
-                      length="10"
-                      lineageId="Package\Load_Returns_Fact\Aggregate.Outputs[Aggregate Output 1].Columns[return_date]"
-                      name="return_date">
+                      refId="Package\Load_Returns_Fact\Aggregate.Outputs[Aggregate Output 1].Columns[returns_count]"
+                      dataType="ui8"
+                      lineageId="Package\Load_Returns_Fact\Aggregate.Outputs[Aggregate Output 1].Columns[returns_count]"
+                      name="returns_count">
                       <properties>
                         <property
                           containsID="true"
                           dataType="System.Int32"
                           description="Specifies the ID of the input column used in the aggregation."
-                          name="AggregationColumnId">#{Package\Load_Returns_Fact\OLE DB Source.Outputs[OLE DB Source Output].Columns[return_date]}</property>
+                          name="AggregationColumnId">#{Package\Load_Returns_Fact\OLE DB Source.Outputs[OLE DB Source Output].Columns[return_id]}</property>
                         <property
                           dataType="System.Int32"
                           description="Specifies the type of aggregation."
                           name="AggregationType"
-                          typeConverter="AggregationType">0</property>
-                        <property
-                          dataType="System.Int32"
-                          description="Indicates whether the column requires special handling because it may contain oversized data or it requires precision beyond a float data type."
-                          name="IsBig">1</property>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the string comparison options."
-                          name="AggregationComparisonFlags">0</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Load_Returns_Fact\Aggregate.Outputs[Aggregate Output 1].Columns[product_id]"
-                      dataType="i4"
-                      lineageId="Package\Load_Returns_Fact\Aggregate.Outputs[Aggregate Output 1].Columns[product_id]"
-                      name="product_id">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the ID of the input column used in the aggregation."
-                          name="AggregationColumnId">#{Package\Load_Returns_Fact\OLE DB Source.Outputs[OLE DB Source Output].Columns[product_id]}</property>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the type of aggregation."
-                          name="AggregationType"
-                          typeConverter="AggregationType">0</property>
+                          typeConverter="AggregationType">1</property>
                         <property
                           dataType="System.Int32"
                           description="Indicates whether the column requires special handling because it may contain oversized data or it requires precision beyond a float data type."
@@ -651,21 +619,22 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Load_Returns_Fact\Aggregate.Outputs[Aggregate Output 1].Columns[returns_count]"
-                      dataType="ui8"
-                      lineageId="Package\Load_Returns_Fact\Aggregate.Outputs[Aggregate Output 1].Columns[returns_count]"
-                      name="returns_count">
+                      refId="Package\Load_Returns_Fact\Aggregate.Outputs[Aggregate Output 1].Columns[date]"
+                      dataType="wstr"
+                      length="10"
+                      lineageId="Package\Load_Returns_Fact\Aggregate.Outputs[Aggregate Output 1].Columns[date]"
+                      name="date">
                       <properties>
                         <property
                           containsID="true"
                           dataType="System.Int32"
                           description="Specifies the ID of the input column used in the aggregation."
-                          name="AggregationColumnId">#{Package\Load_Returns_Fact\OLE DB Source.Outputs[OLE DB Source Output].Columns[return_id]}</property>
+                          name="AggregationColumnId">#{Package\Load_Returns_Fact\Lookup.Outputs[Lookup Match Output].Columns[date]}</property>
                         <property
                           dataType="System.Int32"
                           description="Specifies the type of aggregation."
                           name="AggregationType"
-                          typeConverter="AggregationType">1</property>
+                          typeConverter="AggregationType">0</property>
                         <property
                           dataType="System.Int32"
                           description="Indicates whether the column requires special handling because it may contain oversized data or it requires precision beyond a float data type."
@@ -712,28 +681,6 @@
                   name="Derived Column Output"
                   synchronousInputId="Package\Load_Returns_Fact\Derived Column.Inputs[Derived Column Input]">
                   <outputColumns>
-                    <outputColumn
-                      refId="Package\Load_Returns_Fact\Derived Column.Outputs[Derived Column Output].Columns[return_month]"
-                      dataType="i4"
-                      errorOrTruncationOperation="Computation"
-                      errorRowDisposition="FailComponent"
-                      lineageId="Package\Load_Returns_Fact\Derived Column.Outputs[Derived Column Output].Columns[return_month]"
-                      name="return_month"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.String"
-                          description="Derived Column Expression"
-                          name="Expression">[MONTH]((DT_DATE)#{Package\Load_Returns_Fact\OLE DB Source.Outputs[OLE DB Source Output].Columns[return_date]})</property>
-                        <property
-                          containsID="true"
-                          dataType="System.String"
-                          description="Derived Column Friendly Expression"
-                          expressionType="Notify"
-                          name="FriendlyExpression">MONTH((DT_DATE)return_date)</property>
-                      </properties>
-                    </outputColumn>
                     <outputColumn
                       refId="Package\Load_Returns_Fact\Derived Column.Outputs[Derived Column Output].Columns[return_year]"
                       dataType="i4"
@@ -805,7 +752,7 @@
                   expressionType="Notify"
                   name="SqlCommandParam"
                   UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from (select * from [dwh].[DimTime]) [refTable]
-where [refTable].[month] = ? and [refTable].[year] = ?</property>
+where [refTable].[year] = ?</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the type of connection used to access the reference dataset."
@@ -841,7 +788,7 @@ where [refTable].[month] = ? and [refTable].[year] = ?</property>
                   containsID="true"
                   dataType="System.String"
                   description="Specifies the list of lineage identifiers that map to the parameters that the SQL statement in the SQLCommand property uses. Entries in the list are separated by semicolons."
-                  name="ParameterMap">#{Package\Load_Returns_Fact\Derived Column.Outputs[Derived Column Output].Columns[return_month]};#{Package\Load_Returns_Fact\Derived Column.Outputs[Derived Column Output].Columns[return_year]};</property>
+                  name="ParameterMap">#{Package\Load_Returns_Fact\Derived Column.Outputs[Derived Column Output].Columns[return_year]};</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the column code page to use when code page information is unavailable from the data source."
@@ -864,22 +811,6 @@ where [refTable].[month] = ? and [refTable].[year] = ?</property>
                   refId="Package\Load_Returns_Fact\Lookup.Inputs[Lookup Input]"
                   name="Lookup Input">
                   <inputColumns>
-                    <inputColumn
-                      refId="Package\Load_Returns_Fact\Lookup.Inputs[Lookup Input].Columns[return_month]"
-                      cachedDataType="i4"
-                      cachedName="return_month"
-                      lineageId="Package\Load_Returns_Fact\Derived Column.Outputs[Derived Column Output].Columns[return_month]">
-                      <properties>
-                        <property
-                          dataType="System.String"
-                          description="Specifies the column in the reference table that a column joins."
-                          name="JoinToReferenceColumn">month</property>
-                        <property
-                          dataType="System.Null"
-                          description="Specifies the column in the reference table from which a column is copied."
-                          name="CopyFromReferenceColumn" />
-                      </properties>
-                    </inputColumn>
                     <inputColumn
                       refId="Package\Load_Returns_Fact\Lookup.Inputs[Lookup Input].Columns[return_year]"
                       cachedDataType="i4"
@@ -908,6 +839,23 @@ where [refTable].[month] = ? and [refTable].[year] = ?</property>
                   exclusionGroup="1"
                   name="Lookup Match Output"
                   synchronousInputId="Package\Load_Returns_Fact\Lookup.Inputs[Lookup Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Load_Returns_Fact\Lookup.Outputs[Lookup Match Output].Columns[date]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Copy Column"
+                      length="10"
+                      lineageId="Package\Load_Returns_Fact\Lookup.Outputs[Lookup Match Output].Columns[date]"
+                      name="date"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn">date</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
                   <externalMetadataColumns />
                 </output>
                 <output
@@ -1299,31 +1247,27 @@ where [refTable].[product_key] = ?</property>
                   name="OLE DB Destination Input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Load_Returns_Fact\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[product_id]"
-                      cachedDataType="i4"
-                      cachedName="product_id"
-                      externalMetadataColumnId="Package\Load_Returns_Fact\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[product_id]"
-                      lineageId="Package\Load_Returns_Fact\Sort.Outputs[Sort Output].Columns[product_id]" />
-                    <inputColumn
                       refId="Package\Load_Returns_Fact\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[supplier_id]"
                       cachedDataType="i4"
                       cachedName="supplier_id"
+                      cachedSortKeyPosition="1"
                       externalMetadataColumnId="Package\Load_Returns_Fact\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[supplier_id]"
                       lineageId="Package\Load_Returns_Fact\Sort.Outputs[Sort Output].Columns[supplier_id]" />
-                    <inputColumn
-                      refId="Package\Load_Returns_Fact\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[return_date]"
-                      cachedDataType="wstr"
-                      cachedLength="10"
-                      cachedName="return_date"
-                      cachedSortKeyPosition="-1"
-                      externalMetadataColumnId="Package\Load_Returns_Fact\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[date_key]"
-                      lineageId="Package\Load_Returns_Fact\Sort.Outputs[Sort Output].Columns[return_date]" />
                     <inputColumn
                       refId="Package\Load_Returns_Fact\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[returns_count]"
                       cachedDataType="ui8"
                       cachedName="returns_count"
+                      cachedSortKeyPosition="-3"
                       externalMetadataColumnId="Package\Load_Returns_Fact\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[returns_count]"
                       lineageId="Package\Load_Returns_Fact\Sort.Outputs[Sort Output].Columns[returns_count]" />
+                    <inputColumn
+                      refId="Package\Load_Returns_Fact\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[date]"
+                      cachedDataType="wstr"
+                      cachedLength="10"
+                      cachedName="date"
+                      cachedSortKeyPosition="-2"
+                      externalMetadataColumnId="Package\Load_Returns_Fact\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[date_key]"
+                      lineageId="Package\Load_Returns_Fact\Sort.Outputs[Sort Output].Columns[date]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -1647,11 +1591,10 @@ where [refTable].[product_key] = ?</property>
                   name="Sort Input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Load_Returns_Fact\Sort.Inputs[Sort Input].Columns[return_date]"
-                      cachedDataType="wstr"
-                      cachedLength="10"
-                      cachedName="return_date"
-                      lineageId="Package\Load_Returns_Fact\Aggregate.Outputs[Aggregate Output 1].Columns[return_date]">
+                      refId="Package\Load_Returns_Fact\Sort.Inputs[Sort Input].Columns[returns_count]"
+                      cachedDataType="ui8"
+                      cachedName="returns_count"
+                      lineageId="Package\Load_Returns_Fact\Aggregate.Outputs[Aggregate Output 1].Columns[returns_count]">
                       <properties>
                         <property
                           dataType="System.Int32"
@@ -1660,23 +1603,7 @@ where [refTable].[product_key] = ?</property>
                         <property
                           dataType="System.Int32"
                           description="Specifies the sort order of the column."
-                          name="NewSortKeyPosition">-1</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\Load_Returns_Fact\Sort.Inputs[Sort Input].Columns[product_id]"
-                      cachedDataType="i4"
-                      cachedName="product_id"
-                      lineageId="Package\Load_Returns_Fact\Aggregate.Outputs[Aggregate Output 1].Columns[product_id]">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the comparison options for character data."
-                          name="NewComparisonFlags">0</property>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the sort order of the column."
-                          name="NewSortKeyPosition">0</property>
+                          name="NewSortKeyPosition">-3</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
@@ -1692,14 +1619,15 @@ where [refTable].[product_key] = ?</property>
                         <property
                           dataType="System.Int32"
                           description="Specifies the sort order of the column."
-                          name="NewSortKeyPosition">0</property>
+                          name="NewSortKeyPosition">1</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\Load_Returns_Fact\Sort.Inputs[Sort Input].Columns[returns_count]"
-                      cachedDataType="ui8"
-                      cachedName="returns_count"
-                      lineageId="Package\Load_Returns_Fact\Aggregate.Outputs[Aggregate Output 1].Columns[returns_count]">
+                      refId="Package\Load_Returns_Fact\Sort.Inputs[Sort Input].Columns[date]"
+                      cachedDataType="wstr"
+                      cachedLength="10"
+                      cachedName="date"
+                      lineageId="Package\Load_Returns_Fact\Aggregate.Outputs[Aggregate Output 1].Columns[date]">
                       <properties>
                         <property
                           dataType="System.Int32"
@@ -1708,7 +1636,7 @@ where [refTable].[product_key] = ?</property>
                         <property
                           dataType="System.Int32"
                           description="Specifies the sort order of the column."
-                          name="NewSortKeyPosition">0</property>
+                          name="NewSortKeyPosition">-2</property>
                       </properties>
                     </inputColumn>
                   </inputColumns>
@@ -1722,38 +1650,25 @@ where [refTable].[product_key] = ?</property>
                   name="Sort Output">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Load_Returns_Fact\Sort.Outputs[Sort Output].Columns[return_date]"
-                      dataType="wstr"
-                      length="10"
-                      lineageId="Package\Load_Returns_Fact\Sort.Outputs[Sort Output].Columns[return_date]"
-                      name="return_date"
-                      sortKeyPosition="-1">
+                      refId="Package\Load_Returns_Fact\Sort.Outputs[Sort Output].Columns[returns_count]"
+                      dataType="ui8"
+                      lineageId="Package\Load_Returns_Fact\Sort.Outputs[Sort Output].Columns[returns_count]"
+                      name="returns_count"
+                      sortKeyPosition="-3">
                       <properties>
                         <property
                           containsID="true"
                           dataType="System.Int32"
                           description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\Load_Returns_Fact\Aggregate.Outputs[Aggregate Output 1].Columns[return_date]}</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Load_Returns_Fact\Sort.Outputs[Sort Output].Columns[product_id]"
-                      dataType="i4"
-                      lineageId="Package\Load_Returns_Fact\Sort.Outputs[Sort Output].Columns[product_id]"
-                      name="product_id">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\Load_Returns_Fact\Aggregate.Outputs[Aggregate Output 1].Columns[product_id]}</property>
+                          name="SortColumnId">#{Package\Load_Returns_Fact\Aggregate.Outputs[Aggregate Output 1].Columns[returns_count]}</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
                       refId="Package\Load_Returns_Fact\Sort.Outputs[Sort Output].Columns[supplier_id]"
                       dataType="i4"
                       lineageId="Package\Load_Returns_Fact\Sort.Outputs[Sort Output].Columns[supplier_id]"
-                      name="supplier_id">
+                      name="supplier_id"
+                      sortKeyPosition="1">
                       <properties>
                         <property
                           containsID="true"
@@ -1763,16 +1678,18 @@ where [refTable].[product_key] = ?</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Load_Returns_Fact\Sort.Outputs[Sort Output].Columns[returns_count]"
-                      dataType="ui8"
-                      lineageId="Package\Load_Returns_Fact\Sort.Outputs[Sort Output].Columns[returns_count]"
-                      name="returns_count">
+                      refId="Package\Load_Returns_Fact\Sort.Outputs[Sort Output].Columns[date]"
+                      dataType="wstr"
+                      length="10"
+                      lineageId="Package\Load_Returns_Fact\Sort.Outputs[Sort Output].Columns[date]"
+                      name="date"
+                      sortKeyPosition="-2">
                       <properties>
                         <property
                           containsID="true"
                           dataType="System.Int32"
                           description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\Load_Returns_Fact\Aggregate.Outputs[Aggregate Output 1].Columns[returns_count]}</property>
+                          name="SortColumnId">#{Package\Load_Returns_Fact\Aggregate.Outputs[Aggregate Output 1].Columns[date]}</property>
                       </properties>
                     </outputColumn>
                   </outputColumns>
@@ -1794,19 +1711,19 @@ where [refTable].[product_key] = ?</property>
               startId="Package\Load_Returns_Fact\Derived Column.Outputs[Derived Column Output]" />
             <path
               refId="Package\Load_Returns_Fact.Paths[Lookup Match Output]"
+              endId="Package\Load_Returns_Fact\Lookup 1.Inputs[Lookup Input]"
+              name="Lookup Match Output"
+              startId="Package\Load_Returns_Fact\Lookup.Outputs[Lookup Match Output]" />
+            <path
+              refId="Package\Load_Returns_Fact.Paths[Lookup Match Output1]"
               endId="Package\Load_Returns_Fact\Lookup 2.Inputs[Lookup Input]"
               name="Lookup Match Output"
               startId="Package\Load_Returns_Fact\Lookup 1.Outputs[Lookup Match Output]" />
             <path
-              refId="Package\Load_Returns_Fact.Paths[Lookup Match Output1]"
+              refId="Package\Load_Returns_Fact.Paths[Lookup Match Output2]"
               endId="Package\Load_Returns_Fact\Aggregate.Inputs[Aggregate Input 1]"
               name="Lookup Match Output"
               startId="Package\Load_Returns_Fact\Lookup 2.Outputs[Lookup Match Output]" />
-            <path
-              refId="Package\Load_Returns_Fact.Paths[Lookup Match Output2]"
-              endId="Package\Load_Returns_Fact\Lookup 1.Inputs[Lookup Input]"
-              name="Lookup Match Output"
-              startId="Package\Load_Returns_Fact\Lookup.Outputs[Lookup Match Output]" />
             <path
               refId="Package\Load_Returns_Fact.Paths[OLE DB Source Output]"
               endId="Package\Load_Returns_Fact\Derived Column.Inputs[Derived Column Input]"
@@ -2349,13 +2266,13 @@ where [refTable].[product_key] = ?</property>
           Id="Package\Load_Product-Dim"
           TopLeft="92,62" />
         <NodeLayout
-          Size="181,42"
-          Id="Package\Load_Suppliers_Dim"
-          TopLeft="323,61" />
-        <NodeLayout
           Size="176,42"
           Id="Package\Load_Returns_Fact"
-          TopLeft="528,57" />
+          TopLeft="528,56" />
+        <NodeLayout
+          Size="181,42"
+          Id="Package\Load_Suppliers_Dim"
+          TopLeft="329,64" />
       </GraphLayout>
     </LayoutInfo>
   </Package>
@@ -2363,15 +2280,19 @@ where [refTable].[product_key] = ?</property>
     design-time-name="Package\Load_Product-Dim">
     <LayoutInfo>
       <GraphLayout
-        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="157,42"
-          Id="Package\Load_Product-Dim\OLE DB Source"
-          TopLeft="131,43" />
+          Size="177,42"
+          Id="Package\Load_Product-Dim\OLE DB Destination"
+          TopLeft="135,266" />
         <NodeLayout
           Size="130,42"
           Id="Package\Load_Product-Dim\Aggregate"
           TopLeft="152,134" />
+        <NodeLayout
+          Size="157,42"
+          Id="Package\Load_Product-Dim\OLE DB Source"
+          TopLeft="131,43" />
         <EdgeLayout
           Id="Package\Load_Product-Dim.Paths[OLE DB Source Output]"
           TopLeft="213.25,85">
@@ -2391,13 +2312,11 @@ where [refTable].[product_key] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="177,42"
-          Id="Package\Load_Product-Dim\OLE DB Destination"
-          TopLeft="135,266" />
         <EdgeLayout
           Id="Package\Load_Product-Dim.Paths[Aggregate Output 1]"
           TopLeft="220.25,176">
@@ -2417,12 +2336,27 @@ where [refTable].[product_key] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Load_Product-Dim\OLE DB Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
   <PipelineComponentMetadata
     design-time-name="Package\Load_Product-Dim\OLE DB Source">
     <Properties>
@@ -2436,8 +2370,239 @@ where [refTable].[product_key] = ?</property>
       </Property>
     </Properties>
   </PipelineComponentMetadata>
+  <TaskHost
+    design-time-name="Package\Load_Returns_Fact">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="177,42"
+          Id="Package\Load_Returns_Fact\OLE DB Destination"
+          TopLeft="329,572" />
+        <NodeLayout
+          Size="158,42"
+          Id="Package\Load_Returns_Fact\Derived Column"
+          TopLeft="408,106" />
+        <NodeLayout
+          Size="157,42"
+          Id="Package\Load_Returns_Fact\OLE DB Source"
+          TopLeft="406,15" />
+        <EdgeLayout
+          Id="Package\Load_Returns_Fact.Paths[OLE DB Source Output]"
+          TopLeft="485.75,57">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,49"
+              Start="0,0"
+              End="0,41.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,41.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <AnnotationLayout
+          Text="p[l;'./    nnb bjhnm"
+          ParentId="Package\Load_Returns_Fact"
+          FontInfo="{assembly:Null}"
+          Size="126,60"
+          Id="cddaf3b7-5250-45e6-94bc-b667d7488dd9"
+          TopLeft="1483,53" />
+        <NodeLayout
+          Size="115,42"
+          Id="Package\Load_Returns_Fact\Lookup"
+          TopLeft="427,183" />
+        <EdgeLayout
+          Id="Package\Load_Returns_Fact.Paths[Derived Column Output]"
+          TopLeft="485.75,148">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,35"
+              Start="0,0"
+              End="0,27.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,27.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="124,42"
+          Id="Package\Load_Returns_Fact\Lookup 1"
+          TopLeft="416,255" />
+        <EdgeLayout
+          Id="Package\Load_Returns_Fact.Paths[Lookup Match Output]"
+          TopLeft="481.25,225">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,30"
+              Start="0,0"
+              End="0,22.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,22.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-48.19138671875,5.4453125,96.3827734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="124,42"
+          Id="Package\Load_Returns_Fact\Lookup 2"
+          TopLeft="418,341" />
+        <EdgeLayout
+          Id="Package\Load_Returns_Fact.Paths[Lookup Match Output1]"
+          TopLeft="479,297">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,44"
+              Start="0,0"
+              End="0,36.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,36.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-48.19138671875,12.4453125,96.3827734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="130,42"
+          Id="Package\Load_Returns_Fact\Aggregate"
+          TopLeft="412,425" />
+        <EdgeLayout
+          Id="Package\Load_Returns_Fact.Paths[Lookup Match Output2]"
+          TopLeft="478.5,383">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,42"
+              Start="0,0"
+              End="0,34.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,34.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-48.19138671875,11.4453125,96.3827734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="99,42"
+          Id="Package\Load_Returns_Fact\Sort"
+          TopLeft="416,501" />
+        <EdgeLayout
+          Id="Package\Load_Returns_Fact.Paths[Aggregate Output 1]"
+          TopLeft="477,467">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-11.5,34"
+              Start="0,0"
+              End="-11.5,26.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,13" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,13"
+                    Point2="0,17"
+                    Point3="-4,17" />
+                  <mssgle:LineSegment
+                    End="-7.5,17" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-7.5,17"
+                    Point2="-11.5,17"
+                    Point3="-11.5,21" />
+                  <mssgle:LineSegment
+                    End="-11.5,26.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Load_Returns_Fact.Paths[Sort Output]"
+          TopLeft="465.5,543">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-48,29"
+              Start="0,0"
+              End="-48,21.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,10.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,10.5"
+                    Point2="0,14.5"
+                    Point3="-4,14.5" />
+                  <mssgle:LineSegment
+                    End="-44,14.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-44,14.5"
+                    Point2="-48,14.5"
+                    Point3="-48,18.5" />
+                  <mssgle:LineSegment
+                    End="-48,21.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\Load_Product-Dim\OLE DB Destination">
+    design-time-name="Package\Load_Returns_Fact\OLE DB Destination">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -2453,11 +2618,15 @@ where [refTable].[product_key] = ?</property>
     design-time-name="Package\Load_Suppliers_Dim">
     <LayoutInfo>
       <GraphLayout
-        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="157,42"
           Id="Package\Load_Suppliers_Dim\OLE DB Source"
           TopLeft="139,36" />
+        <NodeLayout
+          Size="177,42"
+          Id="Package\Load_Suppliers_Dim\OLE DB Destination"
+          TopLeft="129,215" />
         <NodeLayout
           Size="130,55"
           Id="Package\Load_Suppliers_Dim\Aggregate"
@@ -2481,13 +2650,11 @@ where [refTable].[product_key] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="177,42"
-          Id="Package\Load_Suppliers_Dim\OLE DB Destination"
-          TopLeft="129,215" />
         <EdgeLayout
           Id="Package\Load_Suppliers_Dim.Paths[Aggregate Output 1]"
           TopLeft="216.25,166">
@@ -2507,7 +2674,9 @@ where [refTable].[product_key] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -2539,248 +2708,6 @@ where [refTable].[product_key] = ?</property>
       </Property>
     </Properties>
   </PipelineComponentMetadata>
-  <TaskHost
-    design-time-name="Package\Load_Returns_Fact">
-    <LayoutInfo>
-      <GraphLayout
-        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
-        <NodeLayout
-          Size="157,42"
-          Id="Package\Load_Returns_Fact\OLE DB Source"
-          TopLeft="82,7" />
-        <NodeLayout
-          Size="124,42"
-          Id="Package\Load_Returns_Fact\Lookup 1"
-          TopLeft="98,224" />
-        <NodeLayout
-          Size="124,42"
-          Id="Package\Load_Returns_Fact\Lookup 2"
-          TopLeft="103,317" />
-        <EdgeLayout
-          Id="Package\Load_Returns_Fact.Paths[Lookup Match Output]"
-          TopLeft="162.5,266">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,51"
-              Start="0,0"
-              End="0,43.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,43.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-48.19138671875,15.9453125,96.3827734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="130,42"
-          Id="Package\Load_Returns_Fact\Aggregate"
-          TopLeft="105,399" />
-        <EdgeLayout
-          Id="Package\Load_Returns_Fact.Paths[Lookup Match Output1]"
-          TopLeft="167.5,359">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,40"
-              Start="0,0"
-              End="0,32.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,32.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-48.19138671875,10.4453125,96.3827734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="177,42"
-          Id="Package\Load_Returns_Fact\OLE DB Destination"
-          TopLeft="95,536" />
-        <NodeLayout
-          Size="158,42"
-          Id="Package\Load_Returns_Fact\Derived Column"
-          TopLeft="56,82" />
-        <EdgeLayout
-          Id="Package\Load_Returns_Fact.Paths[OLE DB Source Output]"
-          TopLeft="160.5,49">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-25.5,33"
-              Start="0,0"
-              End="-25.5,25.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,12.5" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,12.5"
-                    Point2="0,16.5"
-                    Point3="-4,16.5" />
-                  <mssgle:LineSegment
-                    End="-21.5,16.5" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-21.5,16.5"
-                    Point2="-25.5,16.5"
-                    Point3="-25.5,20.5" />
-                  <mssgle:LineSegment
-                    End="-25.5,25.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="115,42"
-          Id="Package\Load_Returns_Fact\Lookup"
-          TopLeft="79,132" />
-        <EdgeLayout
-          Id="Package\Load_Returns_Fact.Paths[Derived Column Output]"
-          TopLeft="135,124">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-56,29"
-              Start="0,0"
-              End="-48.5,29">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,25" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,25"
-                    Point2="0,29"
-                    Point3="-4,29" />
-                  <mssgle:LineSegment
-                    End="-48.5,29" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Load_Returns_Fact.Paths[Lookup Match Output2]"
-          TopLeft="136.5,174">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="23.5,50"
-              Start="0,0"
-              End="23.5,42.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,21" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,21"
-                    Point2="0,25"
-                    Point3="4,25" />
-                  <mssgle:LineSegment
-                    End="19.5,25" />
-                  <mssgle:CubicBezierSegment
-                    Point1="19.5,25"
-                    Point2="23.5,25"
-                    Point3="23.5,29" />
-                  <mssgle:LineSegment
-                    End="23.5,42.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-36.44138671875,30,96.3827734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="99,42"
-          Id="Package\Load_Returns_Fact\Sort"
-          TopLeft="127,461" />
-        <EdgeLayout
-          Id="Package\Load_Returns_Fact.Paths[Aggregate Output 1]"
-          TopLeft="105,420">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="22,62"
-              Start="0,0"
-              End="14.5,62">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="-18.5,0" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-18.5,0"
-                    Point2="-22.5,0"
-                    Point3="-22.5,4" />
-                  <mssgle:LineSegment
-                    End="-22.5,58" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-22.5,58"
-                    Point2="-22.5,62"
-                    Point3="-18.5,62" />
-                  <mssgle:LineSegment
-                    End="14.5,62" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Load_Returns_Fact.Paths[Sort Output]"
-          TopLeft="180,503">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,33"
-              Start="0,0"
-              End="0,25.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,25.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-      </GraphLayout>
-    </LayoutInfo>
-  </TaskHost>
   <PipelineComponentMetadata
     design-time-name="Package\Load_Returns_Fact\OLE DB Source">
     <Properties>
@@ -2791,6 +2718,29 @@ where [refTable].[product_key] = ?</property>
         <Name>TableInfoObjectType</Name>
         <Value
           type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Load_Returns_Fact\Lookup">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:boolean">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dwh].[DimTime]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:int">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
       </Property>
     </Properties>
   </PipelineComponentMetadata>
@@ -2829,42 +2779,6 @@ where [refTable].[product_key] = ?</property>
         <Name>UsedTableName</Name>
         <Value
           type="q3:string">[dwh].[DimProduct]</Value>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q4:int">0</Value>
-      </Property>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Load_Returns_Fact\OLE DB Destination">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Load_Returns_Fact\Lookup">
-    <Properties>
-      <Property>
-        <Name>OverwriteParamsSQLProp</Name>
-        <Value
-          type="q2:boolean">false</Value>
-      </Property>
-      <Property>
-        <Name>UsedTableName</Name>
-        <Value
-          type="q3:string">[dwh].[DimTime]</Value>
       </Property>
       <Property>
         <Name>TableInfoObjectType</Name>

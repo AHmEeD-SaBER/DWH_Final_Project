@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Load_Staging"
   DTS:PackageType="5"
-  DTS:VersionBuild="50"
-  DTS:VersionGUID="{DFB8991C-3374-48C8-BD3A-228FD58029A6}">
+  DTS:VersionBuild="55"
+  DTS:VersionGUID="{AFF37592-B1CD-4627-899A-30F006C90F35}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -5019,151 +5019,6 @@
               </outputs>
             </component>
             <component
-              refId="Package\Load_ReturnsSTG\Flat File Source"
-              componentClassID="Microsoft.FlatFileSource"
-              contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
-              description="Flat File Source"
-              localeId="1033"
-              name="Flat File Source"
-              usesDispositions="true"
-              version="1">
-              <properties>
-                <property
-                  dataType="System.Boolean"
-                  description="Specifies whether zero-length columns are treated as null."
-                  name="RetainNulls">false</property>
-                <property
-                  dataType="System.String"
-                  description="Specifies the name of an output column containing the file name. If no name is specified, no output column containing the file name will be generated."
-                  name="FileNameColumnName"></property>
-              </properties>
-              <connections>
-                <connection
-                  refId="Package\Load_ReturnsSTG\Flat File Source.Connections[FlatFileConnection]"
-                  connectionManagerID="Package.ConnectionManagers[Flat File Connection Manager 4]"
-                  connectionManagerRefId="Package.ConnectionManagers[Flat File Connection Manager 4]"
-                  name="FlatFileConnection" />
-              </connections>
-              <outputs>
-                <output
-                  refId="Package\Load_ReturnsSTG\Flat File Source.Outputs[Flat File Source Output]"
-                  name="Flat File Source Output">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\Load_ReturnsSTG\Flat File Source.Outputs[Flat File Source Output].Columns[supplier_id]"
-                      codePage="65001"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Load_ReturnsSTG\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[supplier_id]"
-                      length="50"
-                      lineageId="Package\Load_ReturnsSTG\Flat File Source.Outputs[Flat File Source Output].Columns[supplier_id]"
-                      name="supplier_id"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the data is in binary format."
-                          name="UseBinaryFormat">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Load_ReturnsSTG\Flat File Source.Outputs[Flat File Source Output].Columns[supplier_name]"
-                      dataType="wstr"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Load_ReturnsSTG\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[supplier_name]"
-                      length="255"
-                      lineageId="Package\Load_ReturnsSTG\Flat File Source.Outputs[Flat File Source Output].Columns[supplier_name]"
-                      name="supplier_name"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the data is in binary format."
-                          name="UseBinaryFormat">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Load_ReturnsSTG\Flat File Source.Outputs[Flat File Source Output].Columns[email]"
-                      dataType="wstr"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Load_ReturnsSTG\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[email]"
-                      length="255"
-                      lineageId="Package\Load_ReturnsSTG\Flat File Source.Outputs[Flat File Source Output].Columns[email]"
-                      name="email"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the data is in binary format."
-                          name="UseBinaryFormat">false</property>
-                      </properties>
-                    </outputColumn>
-                  </outputColumns>
-                  <externalMetadataColumns
-                    isUsed="True">
-                    <externalMetadataColumn
-                      refId="Package\Load_ReturnsSTG\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[supplier_id]"
-                      codePage="65001"
-                      dataType="str"
-                      length="50"
-                      name="supplier_id" />
-                    <externalMetadataColumn
-                      refId="Package\Load_ReturnsSTG\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[supplier_name]"
-                      dataType="wstr"
-                      length="255"
-                      name="supplier_name" />
-                    <externalMetadataColumn
-                      refId="Package\Load_ReturnsSTG\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[email]"
-                      dataType="wstr"
-                      length="255"
-                      name="email" />
-                  </externalMetadataColumns>
-                </output>
-                <output
-                  refId="Package\Load_ReturnsSTG\Flat File Source.Outputs[Flat File Source Error Output]"
-                  isErrorOut="true"
-                  name="Flat File Source Error Output">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\Load_ReturnsSTG\Flat File Source.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
-                      codePage="1252"
-                      dataType="text"
-                      description="Flat File Source Error Output Column"
-                      lineageId="Package\Load_ReturnsSTG\Flat File Source.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
-                      name="Flat File Source Error Output Column" />
-                    <outputColumn
-                      refId="Package\Load_ReturnsSTG\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
-                      dataType="i4"
-                      lineageId="Package\Load_ReturnsSTG\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
-                      name="ErrorCode"
-                      specialFlags="1" />
-                    <outputColumn
-                      refId="Package\Load_ReturnsSTG\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
-                      dataType="i4"
-                      lineageId="Package\Load_ReturnsSTG\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
-                      name="ErrorColumn"
-                      specialFlags="2" />
-                  </outputColumns>
-                  <externalMetadataColumns />
-                </output>
-              </outputs>
-            </component>
-            <component
               refId="Package\Load_ReturnsSTG\Merge Join"
               componentClassID="Microsoft.MergeJoin"
               contactInfo="Merge Join;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
@@ -5179,7 +5034,7 @@
                 <property
                   dataType="System.Int32"
                   description="Specifies the number of columns in the ordering key."
-                  name="NumKeyColumns">1</property>
+                  name="NumKeyColumns">2</property>
                 <property
                   dataType="System.Boolean"
                   description="Indicates whether the null values are treated as equal values."
@@ -5216,6 +5071,7 @@
                       cachedDataType="str"
                       cachedLength="50"
                       cachedName="product_id"
+                      cachedSortKeyPosition="2"
                       lineageId="Package\Load_ReturnsSTG\Sort 1.Outputs[Sort Output].Columns[product_id]" />
                     <inputColumn
                       refId="Package\Load_ReturnsSTG\Merge Join.Inputs[Merge Join Left Input].Columns[return_date]"
@@ -5261,6 +5117,14 @@
                       cachedLength="50"
                       cachedName="supplier_id"
                       lineageId="Package\Load_ReturnsSTG\Sort 2.Outputs[Sort Output].Columns[supplier_id]" />
+                    <inputColumn
+                      refId="Package\Load_ReturnsSTG\Merge Join.Inputs[Merge Join Right Input].Columns[product_id]"
+                      cachedCodepage="65001"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="product_id"
+                      cachedSortKeyPosition="2"
+                      lineageId="Package\Load_ReturnsSTG\Sort 2.Outputs[Sort Output].Columns[product_id]" />
                   </inputColumns>
                   <externalMetadataColumns />
                 </input>
@@ -5308,7 +5172,8 @@
                       dataType="str"
                       length="50"
                       lineageId="Package\Load_ReturnsSTG\Merge Join.Outputs[Merge Join Output].Columns[product_id]"
-                      name="product_id">
+                      name="product_id"
+                      sortKeyPosition="2">
                       <properties>
                         <property
                           containsID="true"
@@ -5375,6 +5240,21 @@
                           dataType="System.Int32"
                           description="The input column associated with this output column"
                           name="InputColumnID">#{Package\Load_ReturnsSTG\Merge Join.Inputs[Merge Join Right Input].Columns[supplier_id]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load_ReturnsSTG\Merge Join.Outputs[Merge Join Output].Columns[product_id (1)]"
+                      codePage="65001"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Load_ReturnsSTG\Merge Join.Outputs[Merge Join Output].Columns[product_id (1)]"
+                      name="product_id (1)">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\Load_ReturnsSTG\Merge Join.Inputs[Merge Join Right Input].Columns[product_id]}</property>
                       </properties>
                     </outputColumn>
                   </outputColumns>
@@ -6349,7 +6229,7 @@
                       cachedDataType="str"
                       cachedLength="50"
                       cachedName="supplier_id"
-                      lineageId="Package\Load_ReturnsSTG\Flat File Source.Outputs[Flat File Source Output].Columns[supplier_id]">
+                      lineageId="Package\Load_ReturnsSTG\Suppliers.Outputs[Flat File Source Output].Columns[supplier_id]">
                       <properties>
                         <property
                           dataType="System.Int32"
@@ -6366,7 +6246,7 @@
                       cachedDataType="wstr"
                       cachedLength="255"
                       cachedName="supplier_name"
-                      lineageId="Package\Load_ReturnsSTG\Flat File Source.Outputs[Flat File Source Output].Columns[supplier_name]">
+                      lineageId="Package\Load_ReturnsSTG\Suppliers.Outputs[Flat File Source Output].Columns[supplier_name]">
                       <properties>
                         <property
                           dataType="System.Int32"
@@ -6383,7 +6263,7 @@
                       cachedDataType="wstr"
                       cachedLength="255"
                       cachedName="email"
-                      lineageId="Package\Load_ReturnsSTG\Flat File Source.Outputs[Flat File Source Output].Columns[email]">
+                      lineageId="Package\Load_ReturnsSTG\Suppliers.Outputs[Flat File Source Output].Columns[email]">
                       <properties>
                         <property
                           dataType="System.Int32"
@@ -6418,7 +6298,7 @@
                           containsID="true"
                           dataType="System.Int32"
                           description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\Load_ReturnsSTG\Flat File Source.Outputs[Flat File Source Output].Columns[supplier_id]}</property>
+                          name="SortColumnId">#{Package\Load_ReturnsSTG\Suppliers.Outputs[Flat File Source Output].Columns[supplier_id]}</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
@@ -6432,7 +6312,7 @@
                           containsID="true"
                           dataType="System.Int32"
                           description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\Load_ReturnsSTG\Flat File Source.Outputs[Flat File Source Output].Columns[supplier_name]}</property>
+                          name="SortColumnId">#{Package\Load_ReturnsSTG\Suppliers.Outputs[Flat File Source Output].Columns[supplier_name]}</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
@@ -6446,7 +6326,7 @@
                           containsID="true"
                           dataType="System.Int32"
                           description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\Load_ReturnsSTG\Flat File Source.Outputs[Flat File Source Output].Columns[email]}</property>
+                          name="SortColumnId">#{Package\Load_ReturnsSTG\Suppliers.Outputs[Flat File Source Output].Columns[email]}</property>
                       </properties>
                     </outputColumn>
                   </outputColumns>
@@ -6528,7 +6408,7 @@
                         <property
                           dataType="System.Int32"
                           description="Specifies the sort order of the column."
-                          name="NewSortKeyPosition">0</property>
+                          name="NewSortKeyPosition">2</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
@@ -6632,7 +6512,8 @@
                       dataType="str"
                       length="50"
                       lineageId="Package\Load_ReturnsSTG\Sort 1.Outputs[Sort Output].Columns[product_id]"
-                      name="product_id">
+                      name="product_id"
+                      sortKeyPosition="2">
                       <properties>
                         <property
                           containsID="true"
@@ -6765,7 +6646,7 @@
                         <property
                           dataType="System.Int32"
                           description="Specifies the sort order of the column."
-                          name="NewSortKeyPosition">0</property>
+                          name="NewSortKeyPosition">2</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
@@ -6887,7 +6768,8 @@
                       dataType="str"
                       length="50"
                       lineageId="Package\Load_ReturnsSTG\Sort 2.Outputs[Sort Output].Columns[product_id]"
-                      name="product_id">
+                      name="product_id"
+                      sortKeyPosition="2">
                       <properties>
                         <property
                           containsID="true"
@@ -7027,6 +6909,7 @@
                       cachedDataType="str"
                       cachedLength="50"
                       cachedName="product_id"
+                      cachedSortKeyPosition="2"
                       lineageId="Package\Load_ReturnsSTG\Merge Join.Outputs[Merge Join Output].Columns[product_id]">
                       <properties>
                         <property
@@ -7232,6 +7115,151 @@
                 </output>
               </outputs>
             </component>
+            <component
+              refId="Package\Load_ReturnsSTG\Suppliers"
+              componentClassID="Microsoft.FlatFileSource"
+              contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Flat File Source"
+              localeId="1033"
+              name="Suppliers"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether zero-length columns are treated as null."
+                  name="RetainNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of an output column containing the file name. If no name is specified, no output column containing the file name will be generated."
+                  name="FileNameColumnName"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Load_ReturnsSTG\Suppliers.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Flat File Connection Manager 4]"
+                  connectionManagerRefId="Package.ConnectionManagers[Flat File Connection Manager 4]"
+                  name="FlatFileConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Load_ReturnsSTG\Suppliers.Outputs[Flat File Source Output]"
+                  name="Flat File Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Load_ReturnsSTG\Suppliers.Outputs[Flat File Source Output].Columns[supplier_id]"
+                      codePage="65001"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load_ReturnsSTG\Suppliers.Outputs[Flat File Source Output].ExternalColumns[supplier_id]"
+                      length="50"
+                      lineageId="Package\Load_ReturnsSTG\Suppliers.Outputs[Flat File Source Output].Columns[supplier_id]"
+                      name="supplier_id"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load_ReturnsSTG\Suppliers.Outputs[Flat File Source Output].Columns[supplier_name]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load_ReturnsSTG\Suppliers.Outputs[Flat File Source Output].ExternalColumns[supplier_name]"
+                      length="255"
+                      lineageId="Package\Load_ReturnsSTG\Suppliers.Outputs[Flat File Source Output].Columns[supplier_name]"
+                      name="supplier_name"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load_ReturnsSTG\Suppliers.Outputs[Flat File Source Output].Columns[email]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load_ReturnsSTG\Suppliers.Outputs[Flat File Source Output].ExternalColumns[email]"
+                      length="255"
+                      lineageId="Package\Load_ReturnsSTG\Suppliers.Outputs[Flat File Source Output].Columns[email]"
+                      name="email"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Load_ReturnsSTG\Suppliers.Outputs[Flat File Source Output].ExternalColumns[supplier_id]"
+                      codePage="65001"
+                      dataType="str"
+                      length="50"
+                      name="supplier_id" />
+                    <externalMetadataColumn
+                      refId="Package\Load_ReturnsSTG\Suppliers.Outputs[Flat File Source Output].ExternalColumns[supplier_name]"
+                      dataType="wstr"
+                      length="255"
+                      name="supplier_name" />
+                    <externalMetadataColumn
+                      refId="Package\Load_ReturnsSTG\Suppliers.Outputs[Flat File Source Output].ExternalColumns[email]"
+                      dataType="wstr"
+                      length="255"
+                      name="email" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Load_ReturnsSTG\Suppliers.Outputs[Flat File Source Error Output]"
+                  isErrorOut="true"
+                  name="Flat File Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Load_ReturnsSTG\Suppliers.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      codePage="1252"
+                      dataType="text"
+                      description="Flat File Source Error Output Column"
+                      lineageId="Package\Load_ReturnsSTG\Suppliers.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      name="Flat File Source Error Output Column" />
+                    <outputColumn
+                      refId="Package\Load_ReturnsSTG\Suppliers.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Load_ReturnsSTG\Suppliers.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Load_ReturnsSTG\Suppliers.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Load_ReturnsSTG\Suppliers.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
           </components>
           <paths>
             <path
@@ -7243,17 +7271,17 @@
               refId="Package\Load_ReturnsSTG.Paths[Flat File Source Output]"
               endId="Package\Load_ReturnsSTG\Sort.Inputs[Sort Input]"
               name="Flat File Source Output"
-              startId="Package\Load_ReturnsSTG\Flat File Source.Outputs[Flat File Source Output]" />
+              startId="Package\Load_ReturnsSTG\Suppliers.Outputs[Flat File Source Output]" />
             <path
               refId="Package\Load_ReturnsSTG.Paths[Flat File Source Output1]"
-              endId="Package\Load_ReturnsSTG\Sort 1.Inputs[Sort Input]"
-              name="Flat File Source Output"
-              startId="Package\Load_ReturnsSTG\Returns.Outputs[Flat File Source Output]" />
-            <path
-              refId="Package\Load_ReturnsSTG.Paths[Flat File Source Output2]"
               endId="Package\Load_ReturnsSTG\Sort 2.Inputs[Sort Input]"
               name="Flat File Source Output"
               startId="Package\Load_ReturnsSTG\Order.Outputs[Flat File Source Output]" />
+            <path
+              refId="Package\Load_ReturnsSTG.Paths[Flat File Source Output2]"
+              endId="Package\Load_ReturnsSTG\Sort 1.Inputs[Sort Input]"
+              name="Flat File Source Output"
+              startId="Package\Load_ReturnsSTG\Returns.Outputs[Flat File Source Output]" />
             <path
               refId="Package\Load_ReturnsSTG.Paths[Merge Join Output]"
               endId="Package\Load_ReturnsSTG\Sort 3.Inputs[Sort Input]"
@@ -7266,24 +7294,24 @@
               startId="Package\Load_ReturnsSTG\Merge Join 1.Outputs[Merge Join Output]" />
             <path
               refId="Package\Load_ReturnsSTG.Paths[Sort Output]"
-              endId="Package\Load_ReturnsSTG\Merge Join.Inputs[Merge Join Left Input]"
-              name="Sort Output"
-              startId="Package\Load_ReturnsSTG\Sort 1.Outputs[Sort Output]" />
-            <path
-              refId="Package\Load_ReturnsSTG.Paths[Sort Output1]"
               endId="Package\Load_ReturnsSTG\Merge Join.Inputs[Merge Join Right Input]"
               name="Sort Output"
               startId="Package\Load_ReturnsSTG\Sort 2.Outputs[Sort Output]" />
             <path
-              refId="Package\Load_ReturnsSTG.Paths[Sort Output2]"
+              refId="Package\Load_ReturnsSTG.Paths[Sort Output1]"
               endId="Package\Load_ReturnsSTG\Merge Join 1.Inputs[Merge Join Left Input]"
               name="Sort Output"
               startId="Package\Load_ReturnsSTG\Sort.Outputs[Sort Output]" />
             <path
-              refId="Package\Load_ReturnsSTG.Paths[Sort Output3]"
+              refId="Package\Load_ReturnsSTG.Paths[Sort Output2]"
               endId="Package\Load_ReturnsSTG\Merge Join 1.Inputs[Merge Join Right Input]"
               name="Sort Output"
               startId="Package\Load_ReturnsSTG\Sort 3.Outputs[Sort Output]" />
+            <path
+              refId="Package\Load_ReturnsSTG.Paths[Sort Output3]"
+              endId="Package\Load_ReturnsSTG\Merge Join.Inputs[Merge Join Left Input]"
+              name="Sort Output"
+              startId="Package\Load_ReturnsSTG\Sort 1.Outputs[Sort Output]" />
           </paths>
         </pipeline>
       </DTS:ObjectData>
@@ -7955,81 +7983,31 @@
       <GraphLayout
         Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="156,42"
-          Id="Package\Load_ReturnsSTG\Flat File Source"
+          Size="125,42"
+          Id="Package\Load_ReturnsSTG\Suppliers"
           TopLeft="129,34" />
         <NodeLayout
           Size="118,42"
           Id="Package\Load_ReturnsSTG\Returns"
-          TopLeft="370,38" />
+          TopLeft="325,25" />
         <NodeLayout
           Size="99,42"
           Id="Package\Load_ReturnsSTG\Sort"
-          TopLeft="169,284" />
+          TopLeft="147,284" />
         <EdgeLayout
           Id="Package\Load_ReturnsSTG.Paths[Flat File Source Output]"
-          TopLeft="207,76">
+          TopLeft="194,76">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="11.5,208"
+              EndConnector="0,208"
               Start="0,0"
-              End="11.5,200.5">
+              End="0,200.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,100" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,100"
-                    Point2="0,104"
-                    Point3="4,104" />
-                  <mssgle:LineSegment
-                    End="7.5,104" />
-                  <mssgle:CubicBezierSegment
-                    Point1="7.5,104"
-                    Point2="11.5,104"
-                    Point3="11.5,108" />
-                  <mssgle:LineSegment
-                    End="11.5,200.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="108,42"
-          Id="Package\Load_ReturnsSTG\Sort 1"
-          TopLeft="456,118" />
-        <EdgeLayout
-          Id="Package\Load_ReturnsSTG.Paths[Flat File Source Output1]"
-          TopLeft="429,80">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="81,38"
-              Start="0,0"
-              End="81,30.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,15" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,15"
-                    Point2="0,19"
-                    Point3="4,19" />
-                  <mssgle:LineSegment
-                    End="77,19" />
-                  <mssgle:CubicBezierSegment
-                    Point1="77,19"
-                    Point2="81,19"
-                    Point3="81,23" />
-                  <mssgle:LineSegment
-                    End="81,30.5" />
+                    End="0,200.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -8047,7 +8025,7 @@
           Id="Package\Load_ReturnsSTG\Sort 2"
           TopLeft="672,131" />
         <EdgeLayout
-          Id="Package\Load_ReturnsSTG.Paths[Flat File Source Output2]"
+          Id="Package\Load_ReturnsSTG.Paths[Flat File Source Output1]"
           TopLeft="636,74.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -8086,40 +8064,6 @@
           TopLeft="556,232" />
         <EdgeLayout
           Id="Package\Load_ReturnsSTG.Paths[Sort Output]"
-          TopLeft="510,160">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="112.5,72"
-              Start="0,0"
-              End="112.5,64.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,32" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,32"
-                    Point2="0,36"
-                    Point3="4,36" />
-                  <mssgle:LineSegment
-                    End="108.5,36" />
-                  <mssgle:CubicBezierSegment
-                    Point1="108.5,36"
-                    Point2="112.5,36"
-                    Point3="112.5,40" />
-                  <mssgle:LineSegment
-                    End="112.5,64.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Load_ReturnsSTG.Paths[Sort Output1]"
           TopLeft="726,173">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -8195,14 +8139,14 @@
           Id="Package\Load_ReturnsSTG\Merge Join 1"
           TopLeft="427,490" />
         <EdgeLayout
-          Id="Package\Load_ReturnsSTG.Paths[Sort Output2]"
-          TopLeft="218.5,326">
+          Id="Package\Load_ReturnsSTG.Paths[Sort Output1]"
+          TopLeft="196.5,326">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="257.166666666667,164"
+              EndConnector="279.166666666667,164"
               Start="0,0"
-              End="257.166666666667,156.5">
+              End="279.166666666667,156.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
@@ -8213,13 +8157,13 @@
                     Point2="0,97.3036211699164"
                     Point3="4,97.3036211699164" />
                   <mssgle:LineSegment
-                    End="253.166666666667,97.3036211699164" />
+                    End="275.166666666667,97.3036211699164" />
                   <mssgle:CubicBezierSegment
-                    Point1="253.166666666667,97.3036211699164"
-                    Point2="257.166666666667,97.3036211699164"
-                    Point3="257.166666666667,101.303621169916" />
+                    Point1="275.166666666667,97.3036211699164"
+                    Point2="279.166666666667,97.3036211699164"
+                    Point3="279.166666666667,101.303621169916" />
                   <mssgle:LineSegment
-                    End="257.166666666667,156.5" />
+                    End="279.166666666667,156.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -8229,7 +8173,7 @@
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Load_ReturnsSTG.Paths[Sort Output3]"
+          Id="Package\Load_ReturnsSTG.Paths[Sort Output2]"
           TopLeft="659,385">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -8318,6 +8262,78 @@
                     Point3="90,25" />
                   <mssgle:LineSegment
                     End="90,34.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="108,42"
+          Id="Package\Load_ReturnsSTG\Sort 1"
+          TopLeft="456,118" />
+        <EdgeLayout
+          Id="Package\Load_ReturnsSTG.Paths[Sort Output3]"
+          TopLeft="510,160">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="112.5,72"
+              Start="0,0"
+              End="112.5,64.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,32" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,32"
+                    Point2="0,36"
+                    Point3="4,36" />
+                  <mssgle:LineSegment
+                    End="108.5,36" />
+                  <mssgle:CubicBezierSegment
+                    Point1="108.5,36"
+                    Point2="112.5,36"
+                    Point3="112.5,40" />
+                  <mssgle:LineSegment
+                    End="112.5,64.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Load_ReturnsSTG.Paths[Flat File Source Output2]"
+          TopLeft="384,67">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="126,51"
+              Start="0,0"
+              End="126,43.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,21.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,21.5"
+                    Point2="0,25.5"
+                    Point3="4,25.5" />
+                  <mssgle:LineSegment
+                    End="122,25.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="122,25.5"
+                    Point2="126,25.5"
+                    Point3="126,29.5" />
+                  <mssgle:LineSegment
+                    End="126,43.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
