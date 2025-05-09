@@ -62,7 +62,7 @@ customer_id,first_name,last_name,email,country
 61,Sarah,Boyer,tannermichael@example.net,Tanzania
 62,Melissa,Garza,wwhite@example.org,Suriname
 63,Michael,Blair,rebeccawise@example.com,Pitcairn Islands
-64,Michelle,Thomas,russokimberly@example.com,Israel
+64,Michelle,Thomas,russokimberly@example.com,Egypt
 65,Melissa,Brooks,bensonpatricia@example.net,North Macedonia
 66,Jamie,Flores,elaine01@example.net,Sweden
 67,Sheila,Camacho,hbenson@example.org,Montenegro
@@ -190,7 +190,7 @@ customer_id,first_name,last_name,email,country
 189,Sarah,Santos,iharrison@example.com,Cote d'Ivoire
 190,Jessica,Murphy,upeters@example.net,Sweden
 191,Sandra,Green,katelyngillespie@example.com,Christmas Island
-192,Sophia,Delgado,craigbrooks@example.net,Israel
+192,Sophia,Delgado,craigbrooks@example.net,Egypt
 193,Michael,Cooper,adrian07@example.org,Costa Rica
 194,Margaret,Graham,kthomas@example.com,United States of America
 195,Michael,Rogers,timothy14@example.org,Malta
