@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Load_DWH"
   DTS:PackageType="5"
-  DTS:VersionBuild="105"
-  DTS:VersionGUID="{017E8BCE-6F89-450E-ADC3-97C488FF01FA}">
+  DTS:VersionBuild="110"
+  DTS:VersionGUID="{AEBC00A6-E60C-4EB5-B430-9E52C0C5A40E}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -122,12 +122,12 @@
                       cachedName="campaign_id"
                       lineageId="Package\campaign_fact\Lookup 1.Outputs[Lookup Match Output].Columns[campaign_id]" />
                     <inputColumn
-                      refId="Package\campaign_fact\Aggregate.Inputs[Aggregate Input 1].Columns[amount]"
+                      refId="Package\campaign_fact\Aggregate.Inputs[Aggregate Input 1].Columns[subtotal]"
                       cachedDataType="numeric"
-                      cachedName="amount"
+                      cachedName="subtotal"
                       cachedPrecision="10"
                       cachedScale="2"
-                      lineageId="Package\campaign_fact\OLE DB Source.Outputs[OLE DB Source Output].Columns[amount]" />
+                      lineageId="Package\campaign_fact\OLE DB Source.Outputs[OLE DB Source Output].Columns[subtotal]" />
                     <inputColumn
                       refId="Package\campaign_fact\Aggregate.Inputs[Aggregate Input 1].Columns[quantity]"
                       cachedDataType="i4"
@@ -207,10 +207,10 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\campaign_fact\Aggregate.Outputs[Aggregate Output 1].Columns[campaign_id]"
+                      refId="Package\campaign_fact\Aggregate.Outputs[Aggregate Output 1].Columns[Lookup 1.campaign_id]"
                       dataType="i4"
-                      lineageId="Package\campaign_fact\Aggregate.Outputs[Aggregate Output 1].Columns[campaign_id]"
-                      name="campaign_id">
+                      lineageId="Package\campaign_fact\Aggregate.Outputs[Aggregate Output 1].Columns[Lookup 1.campaign_id]"
+                      name="Lookup 1.campaign_id">
                       <properties>
                         <property
                           containsID="true"
@@ -233,10 +233,10 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\campaign_fact\Aggregate.Outputs[Aggregate Output 1].Columns[amount]"
+                      refId="Package\campaign_fact\Aggregate.Outputs[Aggregate Output 1].Columns[subtotal]"
                       dataType="numeric"
-                      lineageId="Package\campaign_fact\Aggregate.Outputs[Aggregate Output 1].Columns[amount]"
-                      name="amount"
+                      lineageId="Package\campaign_fact\Aggregate.Outputs[Aggregate Output 1].Columns[subtotal]"
+                      name="subtotal"
                       precision="10"
                       scale="2">
                       <properties>
@@ -244,7 +244,7 @@
                           containsID="true"
                           dataType="System.Int32"
                           description="Specifies the ID of the input column used in the aggregation."
-                          name="AggregationColumnId">#{Package\campaign_fact\OLE DB Source.Outputs[OLE DB Source Output].Columns[amount]}</property>
+                          name="AggregationColumnId">#{Package\campaign_fact\OLE DB Source.Outputs[OLE DB Source Output].Columns[subtotal]}</property>
                         <property
                           dataType="System.Int32"
                           description="Specifies the type of aggregation."
@@ -531,8 +531,8 @@ where [refTable].[year] = ?</property>
               <connections>
                 <connection
                   refId="Package\campaign_fact\Lookup.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[LAPTOP-VEM5U6KP.RetailDW]"
-                  connectionManagerRefId="Package.ConnectionManagers[LAPTOP-VEM5U6KP.RetailDW]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-LEL90HF.RetailDW]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-LEL90HF.RetailDW]"
                   description="Connection manager used to access lookup data."
                   name="OleDbConnection" />
               </connections>
@@ -672,7 +672,7 @@ where [refTable].[campaign_id] = ?</property>
                 <property
                   dataType="System.String"
                   description="Indicates whether to reference metadata in an XML format."
-                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="campaign_id" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="name" dataType="DT_WSTR" length="255" precision="0" scale="0" codePage="0"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
+                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="campaign_id" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="campaign_name" dataType="DT_WSTR" length="255" precision="0" scale="0" codePage="0"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
                 <property
                   containsID="true"
                   dataType="System.String"
@@ -690,8 +690,8 @@ where [refTable].[campaign_id] = ?</property>
               <connections>
                 <connection
                   refId="Package\campaign_fact\Lookup 1.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[LAPTOP-VEM5U6KP.RetailDW]"
-                  connectionManagerRefId="Package.ConnectionManagers[LAPTOP-VEM5U6KP.RetailDW]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-LEL90HF.RetailDW]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-LEL90HF.RetailDW]"
                   description="Connection manager used to access lookup data."
                   name="OleDbConnection" />
               </connections>
@@ -848,8 +848,8 @@ where [refTable].[product_key] = ?</property>
               <connections>
                 <connection
                   refId="Package\campaign_fact\Lookup 2.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[LAPTOP-VEM5U6KP.RetailDW]"
-                  connectionManagerRefId="Package.ConnectionManagers[LAPTOP-VEM5U6KP.RetailDW]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-LEL90HF.RetailDW]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-LEL90HF.RetailDW]"
                   description="Connection manager used to access lookup data."
                   name="OleDbConnection" />
               </connections>
@@ -979,8 +979,8 @@ where [refTable].[product_key] = ?</property>
               <connections>
                 <connection
                   refId="Package\campaign_fact\OLE DB Destination.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[LAPTOP-VEM5U6KP.RetailDW]"
-                  connectionManagerRefId="Package.ConnectionManagers[LAPTOP-VEM5U6KP.RetailDW]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-LEL90HF.RetailDW]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-LEL90HF.RetailDW]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -999,12 +999,6 @@ where [refTable].[product_key] = ?</property>
                       externalMetadataColumnId="Package\campaign_fact\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[product_id]"
                       lineageId="Package\campaign_fact\Aggregate.Outputs[Aggregate Output 1].Columns[product_id]" />
                     <inputColumn
-                      refId="Package\campaign_fact\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[campaign_id]"
-                      cachedDataType="i4"
-                      cachedName="campaign_id"
-                      externalMetadataColumnId="Package\campaign_fact\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[campaign_id]"
-                      lineageId="Package\campaign_fact\Aggregate.Outputs[Aggregate Output 1].Columns[campaign_id]" />
-                    <inputColumn
                       refId="Package\campaign_fact\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[date]"
                       cachedDataType="wstr"
                       cachedLength="10"
@@ -1012,19 +1006,25 @@ where [refTable].[product_key] = ?</property>
                       externalMetadataColumnId="Package\campaign_fact\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[date_key]"
                       lineageId="Package\campaign_fact\Aggregate.Outputs[Aggregate Output 1].Columns[date]" />
                     <inputColumn
-                      refId="Package\campaign_fact\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[amount]"
-                      cachedDataType="numeric"
-                      cachedName="amount"
-                      cachedPrecision="10"
-                      cachedScale="2"
-                      externalMetadataColumnId="Package\campaign_fact\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[total_sales]"
-                      lineageId="Package\campaign_fact\Aggregate.Outputs[Aggregate Output 1].Columns[amount]" />
-                    <inputColumn
                       refId="Package\campaign_fact\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[quantity]"
                       cachedDataType="i8"
                       cachedName="quantity"
                       externalMetadataColumnId="Package\campaign_fact\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[units_sold]"
                       lineageId="Package\campaign_fact\Aggregate.Outputs[Aggregate Output 1].Columns[quantity]" />
+                    <inputColumn
+                      refId="Package\campaign_fact\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[subtotal]"
+                      cachedDataType="numeric"
+                      cachedName="subtotal"
+                      cachedPrecision="10"
+                      cachedScale="2"
+                      externalMetadataColumnId="Package\campaign_fact\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[total_sales]"
+                      lineageId="Package\campaign_fact\Aggregate.Outputs[Aggregate Output 1].Columns[subtotal]" />
+                    <inputColumn
+                      refId="Package\campaign_fact\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Lookup 1.campaign_id]"
+                      cachedDataType="i4"
+                      cachedName="Lookup 1.campaign_id"
+                      externalMetadataColumnId="Package\campaign_fact\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[campaign_id]"
+                      lineageId="Package\campaign_fact\Aggregate.Outputs[Aggregate Output 1].Columns[Lookup 1.campaign_id]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -1055,6 +1055,12 @@ where [refTable].[product_key] = ?</property>
                       refId="Package\campaign_fact\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[units_sold]"
                       dataType="i4"
                       name="units_sold" />
+                    <externalMetadataColumn
+                      refId="Package\campaign_fact\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[total_discount]"
+                      dataType="numeric"
+                      name="total_discount"
+                      precision="18"
+                      scale="2" />
                   </externalMetadataColumns>
                 </input>
               </inputs>
@@ -1134,8 +1140,8 @@ where [refTable].[product_key] = ?</property>
               <connections>
                 <connection
                   refId="Package\campaign_fact\OLE DB Source.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[LAPTOP-VEM5U6KP.RetailDW]"
-                  connectionManagerRefId="Package.ConnectionManagers[LAPTOP-VEM5U6KP.RetailDW]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-LEL90HF.RetailDW]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-LEL90HF.RetailDW]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -1239,13 +1245,24 @@ where [refTable].[product_key] = ?</property>
                       name="country"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\campaign_fact\OLE DB Source.Outputs[OLE DB Source Output].Columns[amount]"
+                      refId="Package\campaign_fact\OLE DB Source.Outputs[OLE DB Source Output].Columns[subtotal]"
                       dataType="numeric"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\campaign_fact\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[amount]"
-                      lineageId="Package\campaign_fact\OLE DB Source.Outputs[OLE DB Source Output].Columns[amount]"
-                      name="amount"
+                      externalMetadataColumnId="Package\campaign_fact\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[subtotal]"
+                      lineageId="Package\campaign_fact\OLE DB Source.Outputs[OLE DB Source Output].Columns[subtotal]"
+                      name="subtotal"
+                      precision="10"
+                      scale="2"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\campaign_fact\OLE DB Source.Outputs[OLE DB Source Output].Columns[discount]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\campaign_fact\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[discount]"
+                      lineageId="Package\campaign_fact\OLE DB Source.Outputs[OLE DB Source Output].Columns[discount]"
+                      name="discount"
                       precision="10"
                       scale="2"
                       truncationRowDisposition="FailComponent" />
@@ -1297,9 +1314,15 @@ where [refTable].[product_key] = ?</property>
                       length="100"
                       name="country" />
                     <externalMetadataColumn
-                      refId="Package\campaign_fact\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[amount]"
+                      refId="Package\campaign_fact\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[subtotal]"
                       dataType="numeric"
-                      name="amount"
+                      name="subtotal"
+                      precision="10"
+                      scale="2" />
+                    <externalMetadataColumn
+                      refId="Package\campaign_fact\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[discount]"
+                      dataType="numeric"
+                      name="discount"
                       precision="10"
                       scale="2" />
                   </externalMetadataColumns>
@@ -1336,6 +1359,20 @@ where [refTable].[product_key] = ?</property>
                       lineageId="Package\campaign_fact\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[quantity]"
                       name="quantity" />
                     <outputColumn
+                      refId="Package\campaign_fact\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[subtotal]"
+                      dataType="numeric"
+                      lineageId="Package\campaign_fact\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[subtotal]"
+                      name="subtotal"
+                      precision="10"
+                      scale="2" />
+                    <outputColumn
+                      refId="Package\campaign_fact\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[discount]"
+                      dataType="numeric"
+                      lineageId="Package\campaign_fact\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[discount]"
+                      name="discount"
+                      precision="10"
+                      scale="2" />
+                    <outputColumn
                       refId="Package\campaign_fact\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[campaign_id]"
                       dataType="i4"
                       lineageId="Package\campaign_fact\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[campaign_id]"
@@ -1363,13 +1400,6 @@ where [refTable].[product_key] = ?</property>
                       length="100"
                       lineageId="Package\campaign_fact\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[country]"
                       name="country" />
-                    <outputColumn
-                      refId="Package\campaign_fact\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[amount]"
-                      dataType="numeric"
-                      lineageId="Package\campaign_fact\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[amount]"
-                      name="amount"
-                      precision="10"
-                      scale="2" />
                     <outputColumn
                       refId="Package\campaign_fact\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
                       dataType="i4"
@@ -1479,10 +1509,10 @@ where [refTable].[product_key] = ?</property>
                   name="Aggregate Input 1">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Country_fact\Aggregate.Inputs[Aggregate Input 1].Columns[country_id]"
+                      refId="Package\Country_fact\Aggregate.Inputs[Aggregate Input 1].Columns[order_id]"
                       cachedDataType="i4"
-                      cachedName="country_id"
-                      lineageId="Package\Country_fact\Lookup 1.Outputs[Lookup Match Output].Columns[country_id]" />
+                      cachedName="order_id"
+                      lineageId="Package\Country_fact\OLE DB Source.Outputs[OLE DB Source Output].Columns[order_id]" />
                     <inputColumn
                       refId="Package\Country_fact\Aggregate.Inputs[Aggregate Input 1].Columns[date]"
                       cachedDataType="wstr"
@@ -1490,23 +1520,17 @@ where [refTable].[product_key] = ?</property>
                       cachedName="date"
                       lineageId="Package\Country_fact\Lookup.Outputs[Lookup Match Output].Columns[date]" />
                     <inputColumn
-                      refId="Package\Country_fact\Aggregate.Inputs[Aggregate Input 1].Columns[order_id]"
+                      refId="Package\Country_fact\Aggregate.Inputs[Aggregate Input 1].Columns[country_id]"
                       cachedDataType="i4"
-                      cachedName="order_id"
-                      lineageId="Package\Country_fact\OLE DB Source.Outputs[OLE DB Source Output].Columns[order_id]" />
+                      cachedName="country_id"
+                      lineageId="Package\Country_fact\Lookup 1.Outputs[Lookup Match Output].Columns[country_id]" />
                     <inputColumn
-                      refId="Package\Country_fact\Aggregate.Inputs[Aggregate Input 1].Columns[amount]"
+                      refId="Package\Country_fact\Aggregate.Inputs[Aggregate Input 1].Columns[subtotal]"
                       cachedDataType="numeric"
-                      cachedName="amount"
+                      cachedName="subtotal"
                       cachedPrecision="10"
                       cachedScale="2"
-                      lineageId="Package\Country_fact\OLE DB Source.Outputs[OLE DB Source Output].Columns[amount]" />
-                    <inputColumn
-                      refId="Package\Country_fact\Aggregate.Inputs[Aggregate Input 1].Columns[name]"
-                      cachedDataType="wstr"
-                      cachedLength="100"
-                      cachedName="name"
-                      lineageId="Package\Country_fact\Lookup 1.Outputs[Lookup Match Output].Columns[name]" />
+                      lineageId="Package\Country_fact\OLE DB Source.Outputs[OLE DB Source Output].Columns[subtotal]" />
                   </inputColumns>
                   <externalMetadataColumns />
                 </input>
@@ -1528,21 +1552,21 @@ where [refTable].[product_key] = ?</property>
                   </properties>
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Country_fact\Aggregate.Outputs[Aggregate Output 1].Columns[country_id]"
-                      dataType="i4"
-                      lineageId="Package\Country_fact\Aggregate.Outputs[Aggregate Output 1].Columns[country_id]"
-                      name="country_id">
+                      refId="Package\Country_fact\Aggregate.Outputs[Aggregate Output 1].Columns[order_id]"
+                      dataType="ui8"
+                      lineageId="Package\Country_fact\Aggregate.Outputs[Aggregate Output 1].Columns[order_id]"
+                      name="order_id">
                       <properties>
                         <property
                           containsID="true"
                           dataType="System.Int32"
                           description="Specifies the ID of the input column used in the aggregation."
-                          name="AggregationColumnId">#{Package\Country_fact\Lookup 1.Outputs[Lookup Match Output].Columns[country_id]}</property>
+                          name="AggregationColumnId">#{Package\Country_fact\OLE DB Source.Outputs[OLE DB Source Output].Columns[order_id]}</property>
                         <property
                           dataType="System.Int32"
                           description="Specifies the type of aggregation."
                           name="AggregationType"
-                          typeConverter="AggregationType">0</property>
+                          typeConverter="AggregationType">1</property>
                         <property
                           dataType="System.Int32"
                           description="Indicates whether the column requires special handling because it may contain oversized data or it requires precision beyond a float data type."
@@ -1581,21 +1605,21 @@ where [refTable].[product_key] = ?</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Country_fact\Aggregate.Outputs[Aggregate Output 1].Columns[order_id]"
-                      dataType="ui8"
-                      lineageId="Package\Country_fact\Aggregate.Outputs[Aggregate Output 1].Columns[order_id]"
-                      name="order_id">
+                      refId="Package\Country_fact\Aggregate.Outputs[Aggregate Output 1].Columns[country_id]"
+                      dataType="i4"
+                      lineageId="Package\Country_fact\Aggregate.Outputs[Aggregate Output 1].Columns[country_id]"
+                      name="country_id">
                       <properties>
                         <property
                           containsID="true"
                           dataType="System.Int32"
                           description="Specifies the ID of the input column used in the aggregation."
-                          name="AggregationColumnId">#{Package\Country_fact\OLE DB Source.Outputs[OLE DB Source Output].Columns[order_id]}</property>
+                          name="AggregationColumnId">#{Package\Country_fact\Lookup 1.Outputs[Lookup Match Output].Columns[country_id]}</property>
                         <property
                           dataType="System.Int32"
                           description="Specifies the type of aggregation."
                           name="AggregationType"
-                          typeConverter="AggregationType">1</property>
+                          typeConverter="AggregationType">0</property>
                         <property
                           dataType="System.Int32"
                           description="Indicates whether the column requires special handling because it may contain oversized data or it requires precision beyond a float data type."
@@ -1607,10 +1631,10 @@ where [refTable].[product_key] = ?</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Country_fact\Aggregate.Outputs[Aggregate Output 1].Columns[amount]"
+                      refId="Package\Country_fact\Aggregate.Outputs[Aggregate Output 1].Columns[subtotal]"
                       dataType="numeric"
-                      lineageId="Package\Country_fact\Aggregate.Outputs[Aggregate Output 1].Columns[amount]"
-                      name="amount"
+                      lineageId="Package\Country_fact\Aggregate.Outputs[Aggregate Output 1].Columns[subtotal]"
+                      name="subtotal"
                       precision="10"
                       scale="2">
                       <properties>
@@ -1618,39 +1642,12 @@ where [refTable].[product_key] = ?</property>
                           containsID="true"
                           dataType="System.Int32"
                           description="Specifies the ID of the input column used in the aggregation."
-                          name="AggregationColumnId">#{Package\Country_fact\OLE DB Source.Outputs[OLE DB Source Output].Columns[amount]}</property>
+                          name="AggregationColumnId">#{Package\Country_fact\OLE DB Source.Outputs[OLE DB Source Output].Columns[subtotal]}</property>
                         <property
                           dataType="System.Int32"
                           description="Specifies the type of aggregation."
                           name="AggregationType"
-                          typeConverter="AggregationType">0</property>
-                        <property
-                          dataType="System.Int32"
-                          description="Indicates whether the column requires special handling because it may contain oversized data or it requires precision beyond a float data type."
-                          name="IsBig">1</property>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the string comparison options."
-                          name="AggregationComparisonFlags">0</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Country_fact\Aggregate.Outputs[Aggregate Output 1].Columns[name]"
-                      dataType="wstr"
-                      length="100"
-                      lineageId="Package\Country_fact\Aggregate.Outputs[Aggregate Output 1].Columns[name]"
-                      name="name">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the ID of the input column used in the aggregation."
-                          name="AggregationColumnId">#{Package\Country_fact\Lookup 1.Outputs[Lookup Match Output].Columns[name]}</property>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the type of aggregation."
-                          name="AggregationType"
-                          typeConverter="AggregationType">0</property>
+                          typeConverter="AggregationType">4</property>
                         <property
                           dataType="System.Int32"
                           description="Indicates whether the column requires special handling because it may contain oversized data or it requires precision beyond a float data type."
@@ -1703,10 +1700,10 @@ where [refTable].[product_key] = ?</property>
                   name="Aggregate Input 1">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Country_fact\Aggregate 1.Inputs[Aggregate Input 1].Columns[country_id]"
-                      cachedDataType="i4"
-                      cachedName="country_id"
-                      lineageId="Package\Country_fact\Aggregate.Outputs[Aggregate Output 1].Columns[country_id]" />
+                      refId="Package\Country_fact\Aggregate 1.Inputs[Aggregate Input 1].Columns[order_id]"
+                      cachedDataType="ui8"
+                      cachedName="order_id"
+                      lineageId="Package\Country_fact\Aggregate.Outputs[Aggregate Output 1].Columns[order_id]" />
                     <inputColumn
                       refId="Package\Country_fact\Aggregate 1.Inputs[Aggregate Input 1].Columns[date]"
                       cachedDataType="wstr"
@@ -1714,23 +1711,17 @@ where [refTable].[product_key] = ?</property>
                       cachedName="date"
                       lineageId="Package\Country_fact\Aggregate.Outputs[Aggregate Output 1].Columns[date]" />
                     <inputColumn
-                      refId="Package\Country_fact\Aggregate 1.Inputs[Aggregate Input 1].Columns[order_id]"
-                      cachedDataType="ui8"
-                      cachedName="order_id"
-                      lineageId="Package\Country_fact\Aggregate.Outputs[Aggregate Output 1].Columns[order_id]" />
+                      refId="Package\Country_fact\Aggregate 1.Inputs[Aggregate Input 1].Columns[country_id]"
+                      cachedDataType="i4"
+                      cachedName="country_id"
+                      lineageId="Package\Country_fact\Aggregate.Outputs[Aggregate Output 1].Columns[country_id]" />
                     <inputColumn
-                      refId="Package\Country_fact\Aggregate 1.Inputs[Aggregate Input 1].Columns[amount]"
+                      refId="Package\Country_fact\Aggregate 1.Inputs[Aggregate Input 1].Columns[subtotal]"
                       cachedDataType="numeric"
-                      cachedName="amount"
+                      cachedName="subtotal"
                       cachedPrecision="10"
                       cachedScale="2"
-                      lineageId="Package\Country_fact\Aggregate.Outputs[Aggregate Output 1].Columns[amount]" />
-                    <inputColumn
-                      refId="Package\Country_fact\Aggregate 1.Inputs[Aggregate Input 1].Columns[name]"
-                      cachedDataType="wstr"
-                      cachedLength="100"
-                      cachedName="name"
-                      lineageId="Package\Country_fact\Aggregate.Outputs[Aggregate Output 1].Columns[name]" />
+                      lineageId="Package\Country_fact\Aggregate.Outputs[Aggregate Output 1].Columns[subtotal]" />
                   </inputColumns>
                   <externalMetadataColumns />
                 </input>
@@ -1752,21 +1743,21 @@ where [refTable].[product_key] = ?</property>
                   </properties>
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Country_fact\Aggregate 1.Outputs[Aggregate Output 1].Columns[country_id]"
-                      dataType="i4"
-                      lineageId="Package\Country_fact\Aggregate 1.Outputs[Aggregate Output 1].Columns[country_id]"
-                      name="country_id">
+                      refId="Package\Country_fact\Aggregate 1.Outputs[Aggregate Output 1].Columns[order_id]"
+                      dataType="ui8"
+                      lineageId="Package\Country_fact\Aggregate 1.Outputs[Aggregate Output 1].Columns[order_id]"
+                      name="order_id">
                       <properties>
                         <property
                           containsID="true"
                           dataType="System.Int32"
                           description="Specifies the ID of the input column used in the aggregation."
-                          name="AggregationColumnId">#{Package\Country_fact\Aggregate.Outputs[Aggregate Output 1].Columns[country_id]}</property>
+                          name="AggregationColumnId">#{Package\Country_fact\Aggregate.Outputs[Aggregate Output 1].Columns[order_id]}</property>
                         <property
                           dataType="System.Int32"
                           description="Specifies the type of aggregation."
                           name="AggregationType"
-                          typeConverter="AggregationType">0</property>
+                          typeConverter="AggregationType">4</property>
                         <property
                           dataType="System.Int32"
                           description="Indicates whether the column requires special handling because it may contain oversized data or it requires precision beyond a float data type."
@@ -1805,21 +1796,21 @@ where [refTable].[product_key] = ?</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Country_fact\Aggregate 1.Outputs[Aggregate Output 1].Columns[order_id]"
-                      dataType="ui8"
-                      lineageId="Package\Country_fact\Aggregate 1.Outputs[Aggregate Output 1].Columns[order_id]"
-                      name="order_id">
+                      refId="Package\Country_fact\Aggregate 1.Outputs[Aggregate Output 1].Columns[country_id]"
+                      dataType="i4"
+                      lineageId="Package\Country_fact\Aggregate 1.Outputs[Aggregate Output 1].Columns[country_id]"
+                      name="country_id">
                       <properties>
                         <property
                           containsID="true"
                           dataType="System.Int32"
                           description="Specifies the ID of the input column used in the aggregation."
-                          name="AggregationColumnId">#{Package\Country_fact\Aggregate.Outputs[Aggregate Output 1].Columns[order_id]}</property>
+                          name="AggregationColumnId">#{Package\Country_fact\Aggregate.Outputs[Aggregate Output 1].Columns[country_id]}</property>
                         <property
                           dataType="System.Int32"
                           description="Specifies the type of aggregation."
                           name="AggregationType"
-                          typeConverter="AggregationType">4</property>
+                          typeConverter="AggregationType">0</property>
                         <property
                           dataType="System.Int32"
                           description="Indicates whether the column requires special handling because it may contain oversized data or it requires precision beyond a float data type."
@@ -1831,10 +1822,10 @@ where [refTable].[product_key] = ?</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Country_fact\Aggregate 1.Outputs[Aggregate Output 1].Columns[amount]"
+                      refId="Package\Country_fact\Aggregate 1.Outputs[Aggregate Output 1].Columns[subtotal]"
                       dataType="numeric"
-                      lineageId="Package\Country_fact\Aggregate 1.Outputs[Aggregate Output 1].Columns[amount]"
-                      name="amount"
+                      lineageId="Package\Country_fact\Aggregate 1.Outputs[Aggregate Output 1].Columns[subtotal]"
+                      name="subtotal"
                       precision="10"
                       scale="2">
                       <properties>
@@ -1842,39 +1833,12 @@ where [refTable].[product_key] = ?</property>
                           containsID="true"
                           dataType="System.Int32"
                           description="Specifies the ID of the input column used in the aggregation."
-                          name="AggregationColumnId">#{Package\Country_fact\Aggregate.Outputs[Aggregate Output 1].Columns[amount]}</property>
+                          name="AggregationColumnId">#{Package\Country_fact\Aggregate.Outputs[Aggregate Output 1].Columns[subtotal]}</property>
                         <property
                           dataType="System.Int32"
                           description="Specifies the type of aggregation."
                           name="AggregationType"
                           typeConverter="AggregationType">4</property>
-                        <property
-                          dataType="System.Int32"
-                          description="Indicates whether the column requires special handling because it may contain oversized data or it requires precision beyond a float data type."
-                          name="IsBig">1</property>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the string comparison options."
-                          name="AggregationComparisonFlags">0</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Country_fact\Aggregate 1.Outputs[Aggregate Output 1].Columns[name]"
-                      dataType="wstr"
-                      length="100"
-                      lineageId="Package\Country_fact\Aggregate 1.Outputs[Aggregate Output 1].Columns[name]"
-                      name="name">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the ID of the input column used in the aggregation."
-                          name="AggregationColumnId">#{Package\Country_fact\Aggregate.Outputs[Aggregate Output 1].Columns[name]}</property>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the type of aggregation."
-                          name="AggregationType"
-                          typeConverter="AggregationType">0</property>
                         <property
                           dataType="System.Int32"
                           description="Indicates whether the column requires special handling because it may contain oversized data or it requires precision beyond a float data type."
@@ -2041,8 +2005,8 @@ where [refTable].[year] = ?</property>
               <connections>
                 <connection
                   refId="Package\Country_fact\Lookup.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[LAPTOP-VEM5U6KP.RetailDW]"
-                  connectionManagerRefId="Package.ConnectionManagers[LAPTOP-VEM5U6KP.RetailDW]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-LEL90HF.RetailDW]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-LEL90HF.RetailDW]"
                   description="Connection manager used to access lookup data."
                   name="OleDbConnection" />
               </connections>
@@ -2150,7 +2114,7 @@ where [refTable].[year] = ?</property>
                   expressionType="Notify"
                   name="SqlCommandParam"
                   UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from (select * from [dwh].[DimCountry]) [refTable]
-where [refTable].[name] = ?</property>
+where [refTable].[country_name] = ?</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the type of connection used to access the reference dataset."
@@ -2181,7 +2145,7 @@ where [refTable].[name] = ?</property>
                 <property
                   dataType="System.String"
                   description="Indicates whether to reference metadata in an XML format."
-                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="country_id" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="name" dataType="DT_WSTR" length="100" precision="0" scale="0" codePage="0"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
+                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="country_id" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="country_name" dataType="DT_WSTR" length="255" precision="0" scale="0" codePage="0"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
                 <property
                   containsID="true"
                   dataType="System.String"
@@ -2199,8 +2163,8 @@ where [refTable].[name] = ?</property>
               <connections>
                 <connection
                   refId="Package\Country_fact\Lookup 1.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[LAPTOP-VEM5U6KP.RetailDW]"
-                  connectionManagerRefId="Package.ConnectionManagers[LAPTOP-VEM5U6KP.RetailDW]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-LEL90HF.RetailDW]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-LEL90HF.RetailDW]"
                   description="Connection manager used to access lookup data."
                   name="OleDbConnection" />
               </connections>
@@ -2219,7 +2183,7 @@ where [refTable].[name] = ?</property>
                         <property
                           dataType="System.String"
                           description="Specifies the column in the reference table that a column joins."
-                          name="JoinToReferenceColumn">name</property>
+                          name="JoinToReferenceColumn">country_name</property>
                         <property
                           dataType="System.Null"
                           description="Specifies the column in the reference table from which a column is copied."
@@ -2251,21 +2215,6 @@ where [refTable].[name] = ?</property>
                           dataType="System.String"
                           description="Specifies the column in the reference table from which a column is copied."
                           name="CopyFromReferenceColumn">country_id</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Country_fact\Lookup 1.Outputs[Lookup Match Output].Columns[name]"
-                      dataType="wstr"
-                      errorOrTruncationOperation="Copy Column"
-                      length="100"
-                      lineageId="Package\Country_fact\Lookup 1.Outputs[Lookup Match Output].Columns[name]"
-                      name="name"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          dataType="System.String"
-                          description="Specifies the column in the reference table from which a column is copied."
-                          name="CopyFromReferenceColumn">name</property>
                       </properties>
                     </outputColumn>
                   </outputColumns>
@@ -2362,8 +2311,8 @@ where [refTable].[name] = ?</property>
               <connections>
                 <connection
                   refId="Package\Country_fact\OLE DB Destination.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[LAPTOP-VEM5U6KP.RetailDW]"
-                  connectionManagerRefId="Package.ConnectionManagers[LAPTOP-VEM5U6KP.RetailDW]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-LEL90HF.RetailDW]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-LEL90HF.RetailDW]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -2389,14 +2338,6 @@ where [refTable].[name] = ?</property>
                       externalMetadataColumnId="Package\Country_fact\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[no_orders]"
                       lineageId="Package\Country_fact\Sort.Outputs[Sort Output].Columns[order_id]" />
                     <inputColumn
-                      refId="Package\Country_fact\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[amount]"
-                      cachedDataType="numeric"
-                      cachedName="amount"
-                      cachedPrecision="10"
-                      cachedScale="2"
-                      externalMetadataColumnId="Package\Country_fact\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[sales]"
-                      lineageId="Package\Country_fact\Sort.Outputs[Sort Output].Columns[amount]" />
-                    <inputColumn
                       refId="Package\Country_fact\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[date]"
                       cachedDataType="wstr"
                       cachedLength="10"
@@ -2405,12 +2346,13 @@ where [refTable].[name] = ?</property>
                       externalMetadataColumnId="Package\Country_fact\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[date_key]"
                       lineageId="Package\Country_fact\Sort.Outputs[Sort Output].Columns[date]" />
                     <inputColumn
-                      refId="Package\Country_fact\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[name]"
-                      cachedDataType="wstr"
-                      cachedLength="100"
-                      cachedName="name"
-                      externalMetadataColumnId="Package\Country_fact\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[country_name]"
-                      lineageId="Package\Country_fact\Sort.Outputs[Sort Output].Columns[name]" />
+                      refId="Package\Country_fact\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[subtotal]"
+                      cachedDataType="numeric"
+                      cachedName="subtotal"
+                      cachedPrecision="10"
+                      cachedScale="2"
+                      externalMetadataColumnId="Package\Country_fact\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[sales]"
+                      lineageId="Package\Country_fact\Sort.Outputs[Sort Output].Columns[subtotal]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -2437,11 +2379,6 @@ where [refTable].[name] = ?</property>
                       dataType="wstr"
                       length="10"
                       name="date_key" />
-                    <externalMetadataColumn
-                      refId="Package\Country_fact\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[country_name]"
-                      dataType="wstr"
-                      length="255"
-                      name="country_name" />
                   </externalMetadataColumns>
                 </input>
               </inputs>
@@ -2521,8 +2458,8 @@ where [refTable].[name] = ?</property>
               <connections>
                 <connection
                   refId="Package\Country_fact\OLE DB Source.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[LAPTOP-VEM5U6KP.RetailDW]"
-                  connectionManagerRefId="Package.ConnectionManagers[LAPTOP-VEM5U6KP.RetailDW]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-LEL90HF.RetailDW]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-LEL90HF.RetailDW]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -2637,13 +2574,13 @@ where [refTable].[name] = ?</property>
                       name="country"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Country_fact\OLE DB Source.Outputs[OLE DB Source Output].Columns[amount]"
+                      refId="Package\Country_fact\OLE DB Source.Outputs[OLE DB Source Output].Columns[subtotal]"
                       dataType="numeric"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Country_fact\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[amount]"
-                      lineageId="Package\Country_fact\OLE DB Source.Outputs[OLE DB Source Output].Columns[amount]"
-                      name="amount"
+                      externalMetadataColumnId="Package\Country_fact\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[subtotal]"
+                      lineageId="Package\Country_fact\OLE DB Source.Outputs[OLE DB Source Output].Columns[subtotal]"
+                      name="subtotal"
                       precision="10"
                       scale="2"
                       truncationRowDisposition="FailComponent" />
@@ -2701,9 +2638,9 @@ where [refTable].[name] = ?</property>
                       length="100"
                       name="country" />
                     <externalMetadataColumn
-                      refId="Package\Country_fact\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[amount]"
+                      refId="Package\Country_fact\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[subtotal]"
                       dataType="numeric"
-                      name="amount"
+                      name="subtotal"
                       precision="10"
                       scale="2" />
                   </externalMetadataColumns>
@@ -2740,6 +2677,13 @@ where [refTable].[name] = ?</property>
                       lineageId="Package\Country_fact\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[quantity]"
                       name="quantity" />
                     <outputColumn
+                      refId="Package\Country_fact\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[subtotal]"
+                      dataType="numeric"
+                      lineageId="Package\Country_fact\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[subtotal]"
+                      name="subtotal"
+                      precision="10"
+                      scale="2" />
+                    <outputColumn
                       refId="Package\Country_fact\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[discount]"
                       dataType="numeric"
                       lineageId="Package\Country_fact\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[discount]"
@@ -2774,13 +2718,6 @@ where [refTable].[name] = ?</property>
                       length="100"
                       lineageId="Package\Country_fact\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[country]"
                       name="country" />
-                    <outputColumn
-                      refId="Package\Country_fact\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[amount]"
-                      dataType="numeric"
-                      lineageId="Package\Country_fact\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[amount]"
-                      name="amount"
-                      precision="10"
-                      scale="2" />
                     <outputColumn
                       refId="Package\Country_fact\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
                       dataType="i4"
@@ -2871,29 +2808,12 @@ where [refTable].[name] = ?</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\Country_fact\Sort.Inputs[Sort Input].Columns[amount]"
+                      refId="Package\Country_fact\Sort.Inputs[Sort Input].Columns[subtotal]"
                       cachedDataType="numeric"
-                      cachedName="amount"
+                      cachedName="subtotal"
                       cachedPrecision="10"
                       cachedScale="2"
-                      lineageId="Package\Country_fact\Aggregate 1.Outputs[Aggregate Output 1].Columns[amount]">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the comparison options for character data."
-                          name="NewComparisonFlags">0</property>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the sort order of the column."
-                          name="NewSortKeyPosition">0</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\Country_fact\Sort.Inputs[Sort Input].Columns[name]"
-                      cachedDataType="wstr"
-                      cachedLength="100"
-                      cachedName="name"
-                      lineageId="Package\Country_fact\Aggregate 1.Outputs[Aggregate Output 1].Columns[name]">
+                      lineageId="Package\Country_fact\Aggregate 1.Outputs[Aggregate Output 1].Columns[subtotal]">
                       <properties>
                         <property
                           dataType="System.Int32"
@@ -2958,10 +2878,10 @@ where [refTable].[name] = ?</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Country_fact\Sort.Outputs[Sort Output].Columns[amount]"
+                      refId="Package\Country_fact\Sort.Outputs[Sort Output].Columns[subtotal]"
                       dataType="numeric"
-                      lineageId="Package\Country_fact\Sort.Outputs[Sort Output].Columns[amount]"
-                      name="amount"
+                      lineageId="Package\Country_fact\Sort.Outputs[Sort Output].Columns[subtotal]"
+                      name="subtotal"
                       precision="10"
                       scale="2">
                       <properties>
@@ -2969,21 +2889,7 @@ where [refTable].[name] = ?</property>
                           containsID="true"
                           dataType="System.Int32"
                           description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\Country_fact\Aggregate 1.Outputs[Aggregate Output 1].Columns[amount]}</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Country_fact\Sort.Outputs[Sort Output].Columns[name]"
-                      dataType="wstr"
-                      length="100"
-                      lineageId="Package\Country_fact\Sort.Outputs[Sort Output].Columns[name]"
-                      name="name">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\Country_fact\Aggregate 1.Outputs[Aggregate Output 1].Columns[name]}</property>
+                          name="SortColumnId">#{Package\Country_fact\Aggregate 1.Outputs[Aggregate Output 1].Columns[subtotal]}</property>
                       </properties>
                     </outputColumn>
                   </outputColumns>
@@ -3332,8 +3238,8 @@ where [refTable].[customer_id] = ?</property>
               <connections>
                 <connection
                   refId="Package\Customer_ratings\Lookup.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[LAPTOP-VEM5U6KP.RetailDW]"
-                  connectionManagerRefId="Package.ConnectionManagers[LAPTOP-VEM5U6KP.RetailDW]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-LEL90HF.RetailDW]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-LEL90HF.RetailDW]"
                   description="Connection manager used to access lookup data."
                   name="OleDbConnection" />
               </connections>
@@ -3474,8 +3380,8 @@ where [refTable].[category_id] = ?</property>
               <connections>
                 <connection
                   refId="Package\Customer_ratings\Lookup 1.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[LAPTOP-VEM5U6KP.RetailDW]"
-                  connectionManagerRefId="Package.ConnectionManagers[LAPTOP-VEM5U6KP.RetailDW]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-LEL90HF.RetailDW]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-LEL90HF.RetailDW]"
                   description="Connection manager used to access lookup data."
                   name="OleDbConnection" />
               </connections>
@@ -3605,8 +3511,8 @@ where [refTable].[category_id] = ?</property>
               <connections>
                 <connection
                   refId="Package\Customer_ratings\OLE DB Destination.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[LAPTOP-VEM5U6KP.RetailDW]"
-                  connectionManagerRefId="Package.ConnectionManagers[LAPTOP-VEM5U6KP.RetailDW]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-LEL90HF.RetailDW]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-LEL90HF.RetailDW]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -3644,12 +3550,6 @@ where [refTable].[category_id] = ?</property>
                       cachedName="rating"
                       externalMetadataColumnId="Package\Customer_ratings\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[avg_rate]"
                       lineageId="Package\Customer_ratings\Sort.Outputs[Sort Output].Columns[rating]" />
-                    <inputColumn
-                      refId="Package\Customer_ratings\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[product_id]"
-                      cachedDataType="ui8"
-                      cachedName="product_id"
-                      externalMetadataColumnId="Package\Customer_ratings\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[no_review_products]"
-                      lineageId="Package\Customer_ratings\Sort.Outputs[Sort Output].Columns[product_id]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -3674,9 +3574,9 @@ where [refTable].[category_id] = ?</property>
                       dataType="r8"
                       name="avg_rate" />
                     <externalMetadataColumn
-                      refId="Package\Customer_ratings\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[no_review_products]"
+                      refId="Package\Customer_ratings\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[orders]"
                       dataType="i4"
-                      name="no_review_products" />
+                      name="orders" />
                   </externalMetadataColumns>
                 </input>
               </inputs>
@@ -3756,8 +3656,8 @@ where [refTable].[category_id] = ?</property>
               <connections>
                 <connection
                   refId="Package\Customer_ratings\OLE DB Source.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[LAPTOP-VEM5U6KP.RetailDW]"
-                  connectionManagerRefId="Package.ConnectionManagers[LAPTOP-VEM5U6KP.RetailDW]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-LEL90HF.RetailDW]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-LEL90HF.RetailDW]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -4425,8 +4325,8 @@ where [refTable].[category_id] = ?</property>
               <connections>
                 <connection
                   refId="Package\Load_Campaign_Dim\OLE DB Destination.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[LAPTOP-VEM5U6KP.RetailDW]"
-                  connectionManagerRefId="Package.ConnectionManagers[LAPTOP-VEM5U6KP.RetailDW]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-LEL90HF.RetailDW]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-LEL90HF.RetailDW]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -4439,13 +4339,6 @@ where [refTable].[category_id] = ?</property>
                   name="OLE DB Destination Input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Load_Campaign_Dim\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[campaign_name]"
-                      cachedDataType="wstr"
-                      cachedLength="255"
-                      cachedName="campaign_name"
-                      externalMetadataColumnId="Package\Load_Campaign_Dim\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[name]"
-                      lineageId="Package\Load_Campaign_Dim\Aggregate.Outputs[Aggregate Output 1].Columns[campaign_name]" />
-                    <inputColumn
                       refId="Package\Load_Campaign_Dim\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[campaign_id]"
                       cachedDataType="i4"
                       cachedName="campaign_id"
@@ -4455,14 +4348,14 @@ where [refTable].[category_id] = ?</property>
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
-                      refId="Package\Load_Campaign_Dim\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[name]"
-                      dataType="wstr"
-                      length="255"
-                      name="name" />
-                    <externalMetadataColumn
                       refId="Package\Load_Campaign_Dim\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[campaign_id]"
                       dataType="i4"
                       name="campaign_id" />
+                    <externalMetadataColumn
+                      refId="Package\Load_Campaign_Dim\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[campaign_name]"
+                      dataType="wstr"
+                      length="255"
+                      name="campaign_name" />
                   </externalMetadataColumns>
                 </input>
               </inputs>
@@ -4542,8 +4435,8 @@ where [refTable].[category_id] = ?</property>
               <connections>
                 <connection
                   refId="Package\Load_Campaign_Dim\OLE DB Source.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[LAPTOP-VEM5U6KP.RetailDW]"
-                  connectionManagerRefId="Package.ConnectionManagers[LAPTOP-VEM5U6KP.RetailDW]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-LEL90HF.RetailDW]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-LEL90HF.RetailDW]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -4658,13 +4551,13 @@ where [refTable].[category_id] = ?</property>
                       name="country"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Load_Campaign_Dim\OLE DB Source.Outputs[OLE DB Source Output].Columns[amount]"
+                      refId="Package\Load_Campaign_Dim\OLE DB Source.Outputs[OLE DB Source Output].Columns[subtotal]"
                       dataType="numeric"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Load_Campaign_Dim\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[amount]"
-                      lineageId="Package\Load_Campaign_Dim\OLE DB Source.Outputs[OLE DB Source Output].Columns[amount]"
-                      name="amount"
+                      externalMetadataColumnId="Package\Load_Campaign_Dim\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[subtotal]"
+                      lineageId="Package\Load_Campaign_Dim\OLE DB Source.Outputs[OLE DB Source Output].Columns[subtotal]"
+                      name="subtotal"
                       precision="10"
                       scale="2"
                       truncationRowDisposition="FailComponent" />
@@ -4722,9 +4615,9 @@ where [refTable].[category_id] = ?</property>
                       length="100"
                       name="country" />
                     <externalMetadataColumn
-                      refId="Package\Load_Campaign_Dim\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[amount]"
+                      refId="Package\Load_Campaign_Dim\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[subtotal]"
                       dataType="numeric"
-                      name="amount"
+                      name="subtotal"
                       precision="10"
                       scale="2" />
                   </externalMetadataColumns>
@@ -4761,6 +4654,13 @@ where [refTable].[category_id] = ?</property>
                       lineageId="Package\Load_Campaign_Dim\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[quantity]"
                       name="quantity" />
                     <outputColumn
+                      refId="Package\Load_Campaign_Dim\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[subtotal]"
+                      dataType="numeric"
+                      lineageId="Package\Load_Campaign_Dim\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[subtotal]"
+                      name="subtotal"
+                      precision="10"
+                      scale="2" />
+                    <outputColumn
                       refId="Package\Load_Campaign_Dim\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[discount]"
                       dataType="numeric"
                       lineageId="Package\Load_Campaign_Dim\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[discount]"
@@ -4796,13 +4696,6 @@ where [refTable].[category_id] = ?</property>
                       length="100"
                       lineageId="Package\Load_Campaign_Dim\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[country]"
                       name="country" />
-                    <outputColumn
-                      refId="Package\Load_Campaign_Dim\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[amount]"
-                      dataType="numeric"
-                      lineageId="Package\Load_Campaign_Dim\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[amount]"
-                      name="amount"
-                      precision="10"
-                      scale="2" />
                     <outputColumn
                       refId="Package\Load_Campaign_Dim\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[campaign_id]"
                       dataType="i4"
@@ -5038,8 +4931,8 @@ where [refTable].[category_id] = ?</property>
               <connections>
                 <connection
                   refId="Package\Load_Category_Dim\OLE DB Destination.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[LAPTOP-VEM5U6KP.RetailDW]"
-                  connectionManagerRefId="Package.ConnectionManagers[LAPTOP-VEM5U6KP.RetailDW]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-LEL90HF.RetailDW]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-LEL90HF.RetailDW]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -5155,8 +5048,8 @@ where [refTable].[category_id] = ?</property>
               <connections>
                 <connection
                   refId="Package\Load_Category_Dim\OLE DB Source.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[LAPTOP-VEM5U6KP.RetailDW]"
-                  connectionManagerRefId="Package.ConnectionManagers[LAPTOP-VEM5U6KP.RetailDW]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-LEL90HF.RetailDW]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-LEL90HF.RetailDW]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -5594,8 +5487,8 @@ where [refTable].[category_id] = ?</property>
               <connections>
                 <connection
                   refId="Package\Load_Country_Dim\OLE DB Destination.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[LAPTOP-VEM5U6KP.RetailDW]"
-                  connectionManagerRefId="Package.ConnectionManagers[LAPTOP-VEM5U6KP.RetailDW]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-LEL90HF.RetailDW]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-LEL90HF.RetailDW]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -5612,7 +5505,7 @@ where [refTable].[category_id] = ?</property>
                       cachedDataType="wstr"
                       cachedLength="100"
                       cachedName="country"
-                      externalMetadataColumnId="Package\Load_Country_Dim\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[name]"
+                      externalMetadataColumnId="Package\Load_Country_Dim\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[country_name]"
                       lineageId="Package\Load_Country_Dim\Aggregate.Outputs[Aggregate Output 1].Columns[country]" />
                   </inputColumns>
                   <externalMetadataColumns
@@ -5622,10 +5515,10 @@ where [refTable].[category_id] = ?</property>
                       dataType="i4"
                       name="country_id" />
                     <externalMetadataColumn
-                      refId="Package\Load_Country_Dim\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[name]"
+                      refId="Package\Load_Country_Dim\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[country_name]"
                       dataType="wstr"
-                      length="100"
-                      name="name" />
+                      length="255"
+                      name="country_name" />
                   </externalMetadataColumns>
                 </input>
               </inputs>
@@ -5705,8 +5598,8 @@ where [refTable].[category_id] = ?</property>
               <connections>
                 <connection
                   refId="Package\Load_Country_Dim\OLE DB Source.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[LAPTOP-VEM5U6KP.RetailDW]"
-                  connectionManagerRefId="Package.ConnectionManagers[LAPTOP-VEM5U6KP.RetailDW]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-LEL90HF.RetailDW]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-LEL90HF.RetailDW]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -5821,13 +5714,13 @@ where [refTable].[category_id] = ?</property>
                       name="country"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Load_Country_Dim\OLE DB Source.Outputs[OLE DB Source Output].Columns[amount]"
+                      refId="Package\Load_Country_Dim\OLE DB Source.Outputs[OLE DB Source Output].Columns[subtotal]"
                       dataType="numeric"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Load_Country_Dim\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[amount]"
-                      lineageId="Package\Load_Country_Dim\OLE DB Source.Outputs[OLE DB Source Output].Columns[amount]"
-                      name="amount"
+                      externalMetadataColumnId="Package\Load_Country_Dim\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[subtotal]"
+                      lineageId="Package\Load_Country_Dim\OLE DB Source.Outputs[OLE DB Source Output].Columns[subtotal]"
+                      name="subtotal"
                       precision="10"
                       scale="2"
                       truncationRowDisposition="FailComponent" />
@@ -5885,9 +5778,9 @@ where [refTable].[category_id] = ?</property>
                       length="100"
                       name="country" />
                     <externalMetadataColumn
-                      refId="Package\Load_Country_Dim\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[amount]"
+                      refId="Package\Load_Country_Dim\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[subtotal]"
                       dataType="numeric"
-                      name="amount"
+                      name="subtotal"
                       precision="10"
                       scale="2" />
                   </externalMetadataColumns>
@@ -5924,6 +5817,13 @@ where [refTable].[category_id] = ?</property>
                       lineageId="Package\Load_Country_Dim\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[quantity]"
                       name="quantity" />
                     <outputColumn
+                      refId="Package\Load_Country_Dim\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[subtotal]"
+                      dataType="numeric"
+                      lineageId="Package\Load_Country_Dim\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[subtotal]"
+                      name="subtotal"
+                      precision="10"
+                      scale="2" />
+                    <outputColumn
                       refId="Package\Load_Country_Dim\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[discount]"
                       dataType="numeric"
                       lineageId="Package\Load_Country_Dim\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[discount]"
@@ -5958,13 +5858,6 @@ where [refTable].[category_id] = ?</property>
                       length="100"
                       lineageId="Package\Load_Country_Dim\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[country]"
                       name="country" />
-                    <outputColumn
-                      refId="Package\Load_Country_Dim\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[amount]"
-                      dataType="numeric"
-                      lineageId="Package\Load_Country_Dim\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[amount]"
-                      name="amount"
-                      precision="10"
-                      scale="2" />
                     <outputColumn
                       refId="Package\Load_Country_Dim\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
                       dataType="i4"
@@ -6159,8 +6052,8 @@ where [refTable].[category_id] = ?</property>
               <connections>
                 <connection
                   refId="Package\Load_Customer_Dim\OLE DB Destination.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[LAPTOP-VEM5U6KP.RetailDW]"
-                  connectionManagerRefId="Package.ConnectionManagers[LAPTOP-VEM5U6KP.RetailDW]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-LEL90HF.RetailDW]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-LEL90HF.RetailDW]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -6288,8 +6181,8 @@ where [refTable].[category_id] = ?</property>
               <connections>
                 <connection
                   refId="Package\Load_Customer_Dim\OLE DB Source.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[LAPTOP-VEM5U6KP.RetailDW]"
-                  connectionManagerRefId="Package.ConnectionManagers[LAPTOP-VEM5U6KP.RetailDW]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-LEL90HF.RetailDW]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-LEL90HF.RetailDW]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -6641,8 +6534,8 @@ where [refTable].[category_id] = ?</property>
               <connections>
                 <connection
                   refId="Package\Load_Product-Dim\OLE DB Destination.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[LAPTOP-VEM5U6KP.RetailDW]"
-                  connectionManagerRefId="Package.ConnectionManagers[LAPTOP-VEM5U6KP.RetailDW]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-LEL90HF.RetailDW]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-LEL90HF.RetailDW]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -6758,8 +6651,8 @@ where [refTable].[category_id] = ?</property>
               <connections>
                 <connection
                   refId="Package\Load_Product-Dim\OLE DB Source.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[LAPTOP-VEM5U6KP.RetailDW]"
-                  connectionManagerRefId="Package.ConnectionManagers[LAPTOP-VEM5U6KP.RetailDW]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-LEL90HF.RetailDW]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-LEL90HF.RetailDW]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -7351,8 +7244,8 @@ where [refTable].[year] = ?</property>
               <connections>
                 <connection
                   refId="Package\Load_Returns_Fact\Lookup.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[LAPTOP-VEM5U6KP.RetailDW]"
-                  connectionManagerRefId="Package.ConnectionManagers[LAPTOP-VEM5U6KP.RetailDW]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-LEL90HF.RetailDW]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-LEL90HF.RetailDW]"
                   description="Connection manager used to access lookup data."
                   name="OleDbConnection" />
               </connections>
@@ -7509,8 +7402,8 @@ where [refTable].[supplier_id] = ?</property>
               <connections>
                 <connection
                   refId="Package\Load_Returns_Fact\Lookup 1.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[LAPTOP-VEM5U6KP.RetailDW]"
-                  connectionManagerRefId="Package.ConnectionManagers[LAPTOP-VEM5U6KP.RetailDW]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-LEL90HF.RetailDW]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-LEL90HF.RetailDW]"
                   description="Connection manager used to access lookup data."
                   name="OleDbConnection" />
               </connections>
@@ -7667,8 +7560,8 @@ where [refTable].[product_key] = ?</property>
               <connections>
                 <connection
                   refId="Package\Load_Returns_Fact\Lookup 2.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[LAPTOP-VEM5U6KP.RetailDW]"
-                  connectionManagerRefId="Package.ConnectionManagers[LAPTOP-VEM5U6KP.RetailDW]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-LEL90HF.RetailDW]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-LEL90HF.RetailDW]"
                   description="Connection manager used to access lookup data."
                   name="OleDbConnection" />
               </connections>
@@ -7815,8 +7708,8 @@ where [refTable].[product_key] = ?</property>
               <connections>
                 <connection
                   refId="Package\Load_Returns_Fact\OLE DB Destination.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[LAPTOP-VEM5U6KP.RetailDW]"
-                  connectionManagerRefId="Package.ConnectionManagers[LAPTOP-VEM5U6KP.RetailDW]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-LEL90HF.RetailDW]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-LEL90HF.RetailDW]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -7857,10 +7750,6 @@ where [refTable].[product_key] = ?</property>
                       refId="Package\Load_Returns_Fact\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[supplier_id]"
                       dataType="i4"
                       name="supplier_id" />
-                    <externalMetadataColumn
-                      refId="Package\Load_Returns_Fact\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[product_id]"
-                      dataType="i4"
-                      name="product_id" />
                     <externalMetadataColumn
                       refId="Package\Load_Returns_Fact\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[date_key]"
                       dataType="wstr"
@@ -7953,8 +7842,8 @@ where [refTable].[product_key] = ?</property>
               <connections>
                 <connection
                   refId="Package\Load_Returns_Fact\OLE DB Source.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[LAPTOP-VEM5U6KP.RetailDW]"
-                  connectionManagerRefId="Package.ConnectionManagers[LAPTOP-VEM5U6KP.RetailDW]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-LEL90HF.RetailDW]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-LEL90HF.RetailDW]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -8030,6 +7919,16 @@ where [refTable].[product_key] = ?</property>
                       lineageId="Package\Load_Returns_Fact\OLE DB Source.Outputs[OLE DB Source Output].Columns[supplier_id]"
                       name="supplier_id"
                       truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Load_Returns_Fact\OLE DB Source.Outputs[OLE DB Source Output].Columns[supplier_name]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load_Returns_Fact\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[supplier_name]"
+                      length="255"
+                      lineageId="Package\Load_Returns_Fact\OLE DB Source.Outputs[OLE DB Source Output].Columns[supplier_name]"
+                      name="supplier_name"
+                      truncationRowDisposition="FailComponent" />
                   </outputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -8065,6 +7964,11 @@ where [refTable].[product_key] = ?</property>
                       refId="Package\Load_Returns_Fact\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[supplier_id]"
                       dataType="i4"
                       name="supplier_id" />
+                    <externalMetadataColumn
+                      refId="Package\Load_Returns_Fact\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[supplier_name]"
+                      dataType="wstr"
+                      length="255"
+                      name="supplier_name" />
                   </externalMetadataColumns>
                 </output>
                 <output
@@ -8111,6 +8015,12 @@ where [refTable].[product_key] = ?</property>
                       name="amount_refunded"
                       precision="10"
                       scale="2" />
+                    <outputColumn
+                      refId="Package\Load_Returns_Fact\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[supplier_name]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Load_Returns_Fact\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[supplier_name]"
+                      name="supplier_name" />
                     <outputColumn
                       refId="Package\Load_Returns_Fact\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
                       dataType="i4"
@@ -8530,8 +8440,8 @@ where [refTable].[product_key] = ?</property>
               <connections>
                 <connection
                   refId="Package\Load_Suppliers_Dim\OLE DB Destination.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[LAPTOP-VEM5U6KP.RetailDW]"
-                  connectionManagerRefId="Package.ConnectionManagers[LAPTOP-VEM5U6KP.RetailDW]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-LEL90HF.RetailDW]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-LEL90HF.RetailDW]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -8659,8 +8569,8 @@ where [refTable].[product_key] = ?</property>
               <connections>
                 <connection
                   refId="Package\Load_Suppliers_Dim\OLE DB Source.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[LAPTOP-VEM5U6KP.RetailDW]"
-                  connectionManagerRefId="Package.ConnectionManagers[LAPTOP-VEM5U6KP.RetailDW]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-LEL90HF.RetailDW]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-LEL90HF.RetailDW]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -8945,45 +8855,45 @@ where [refTable].[product_key] = ?</property>
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
         <NodeLayout
-          Size="146.4,41.6"
+          Size="146,42"
           Id="Package\campaign_fact"
           TopLeft="637.499965168537,223.599998445114" />
         <NodeLayout
-          Size="137.6,41.6"
+          Size="176,42"
           Id="Package\Country_fact"
           TopLeft="647.499964622161,144.733332326876" />
         <NodeLayout
-          Size="184.8,41.6"
+          Size="161,42"
+          Id="Package\Customer_ratings"
+          TopLeft="894.166617811556,49.3999996564786" />
+        <NodeLayout
+          Size="185,42"
           Id="Package\Load_Campaign_Dim"
           TopLeft="589,57" />
         <NodeLayout
-          Size="180,41.6"
+          Size="180,42"
           Id="Package\Load_Category_Dim"
           TopLeft="335,199" />
         <NodeLayout
-          Size="168,41.6"
+          Size="215,42"
           Id="Package\Load_Country_Dim"
           TopLeft="332,128" />
         <NodeLayout
-          Size="183.2,41.6"
+          Size="183,42"
           Id="Package\Load_Customer_Dim"
           TopLeft="319,50" />
         <NodeLayout
-          Size="171.2,41.6"
+          Size="171,42"
           Id="Package\Load_Product-Dim"
           TopLeft="80,54" />
         <NodeLayout
-          Size="176,41.6"
+          Size="176,42"
           Id="Package\Load_Returns_Fact"
           TopLeft="85,203" />
         <NodeLayout
-          Size="180.8,41.6"
+          Size="181,42"
           Id="Package\Load_Suppliers_Dim"
           TopLeft="81,128" />
-        <NodeLayout
-          Size="160.8,41.6"
-          Id="Package\Customer_ratings"
-          TopLeft="894.166617811556,49.3999996564786" />
       </GraphLayout>
     </LayoutInfo>
   </Package>
@@ -8993,37 +8903,33 @@ where [refTable].[product_key] = ?</property>
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="153.6,41.6"
-          Id="Package\campaign_fact\Conditional Split"
-          TopLeft="739.999988973141,68.9999989718199" />
-        <NodeLayout
-          Size="126.4,41.6"
-          Id="Package\campaign_fact\Aggregate"
-          TopLeft="538.999991968274,510.999992385507" />
-        <NodeLayout
-          Size="120.8,41.6"
-          Id="Package\campaign_fact\Lookup 1"
-          TopLeft="539.999991953373,331.999995052814" />
-        <NodeLayout
-          Size="152.8,41.6"
-          Id="Package\campaign_fact\Derived Column"
-          TopLeft="523.999992191792,133.999998003244" />
-        <NodeLayout
-          Size="171.2,41.6"
-          Id="Package\campaign_fact\OLE DB Destination"
-          TopLeft="524.99999217689,588.39999126792" />
-        <NodeLayout
-          Size="152,41.6"
-          Id="Package\campaign_fact\OLE DB Source"
-          TopLeft="528.999992117286,29.9999995529652" />
-        <NodeLayout
-          Size="112.8,41.6"
+          Size="113,42"
           Id="Package\campaign_fact\Lookup"
           TopLeft="536.999991998076,236.999996468425" />
         <NodeLayout
-          Size="120.8,41.6"
+          Size="121,42"
           Id="Package\campaign_fact\Lookup 2"
           TopLeft="531.999992072582,426.999993637204" />
+        <NodeLayout
+          Size="154,42"
+          Id="Package\campaign_fact\Conditional Split"
+          TopLeft="739.999988973141,68.9999989718199" />
+        <NodeLayout
+          Size="152,42"
+          Id="Package\campaign_fact\OLE DB Source"
+          TopLeft="528.999992117286,29.9999995529652" />
+        <NodeLayout
+          Size="121,42"
+          Id="Package\campaign_fact\Lookup 1"
+          TopLeft="539.999991953373,331.999995052814" />
+        <NodeLayout
+          Size="153,42"
+          Id="Package\campaign_fact\Derived Column"
+          TopLeft="523.999992191792,133.999998003244" />
+        <NodeLayout
+          Size="171,42"
+          Id="Package\campaign_fact\OLE DB Destination"
+          TopLeft="524.99999217689,588.39999126792" />
         <EdgeLayout
           Id="Package\campaign_fact.Paths[OLE DB Source Output]"
           TopLeft="680.999992117286,50.7999995529652">
@@ -9056,42 +8962,6 @@ where [refTable].[product_key] = ?</property>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\campaign_fact.Paths[Lookup Match Output2]"
-          TopLeft="592.399992072582,468.599993637204">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="9.79999989569194,42.3999987483024"
-              Start="0,0"
-              End="9.79999989569194,34.8999987483024">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,17.1999993741512" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,17.1999993741512"
-                    Point2="0,21.1999993741512"
-                    Point3="4,21.1999993741512" />
-                  <mssgle:LineSegment
-                    End="5.79999989569194,21.1999993741512" />
-                  <mssgle:CubicBezierSegment
-                    Point1="5.79999989569194,21.1999993741512"
-                    Point2="9.79999989569194,21.1999993741512"
-                    Point3="9.79999989569194,25.1999993741512" />
-                  <mssgle:LineSegment
-                    End="9.79999989569194,34.8999987483024" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-43.291386770904,26.1999993741512,96.3827734375,11.609375"
-              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -9200,32 +9070,60 @@ where [refTable].[product_key] = ?</property>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
+        <NodeLayout
+          Size="130,42"
+          Id="Package\campaign_fact\Aggregate"
+          TopLeft="543,498" />
         <EdgeLayout
-          Id="Package\campaign_fact.Paths[Aggregate Output 1]"
-          TopLeft="602.199991968274,552.599992385507">
+          Id="Package\campaign_fact.Paths[Lookup Match Output2]"
+          TopLeft="592.499992072582,468.999993637204">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="8.40000020861601,35.7999988824131"
+              EndConnector="15.500007927418,29.000006362796"
               Start="0,0"
-              End="8.40000020861601,28.2999988824131">
+              End="15.500007927418,21.500006362796">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,13.8999994412065" />
+                    End="0,10.500003181398" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,13.8999994412065"
-                    Point2="0,17.8999994412065"
-                    Point3="4,17.8999994412065" />
+                    Point1="0,10.500003181398"
+                    Point2="0,14.500003181398"
+                    Point3="4,14.500003181398" />
                   <mssgle:LineSegment
-                    End="4.40000020861601,17.8999994412065" />
+                    End="11.500007927418,14.500003181398" />
                   <mssgle:CubicBezierSegment
-                    Point1="4.40000020861601,17.8999994412065"
-                    Point2="8.40000020861601,17.8999994412065"
-                    Point3="8.40000020861601,21.8999994412065" />
+                    Point1="11.500007927418,14.500003181398"
+                    Point2="15.500007927418,14.500003181398"
+                    Point3="15.500007927418,18.500003181398" />
                   <mssgle:LineSegment
-                    End="8.40000020861601,28.2999988824131" />
+                    End="15.500007927418,21.500006362796" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-40.441382755041,19.500003181398,96.3827734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\campaign_fact.Paths[Aggregate Output 1]"
+          TopLeft="609.249996088445,540">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,48.39999126792"
+              Start="0,0"
+              End="0,40.89999126792">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,40.89999126792" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -9238,12 +9136,71 @@ where [refTable].[product_key] = ?</property>
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
+    design-time-name="Package\campaign_fact\Lookup">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:boolean">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dwh].[DimTime]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:int">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\campaign_fact\Lookup 2">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:boolean">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dwh].[DimProduct]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:int">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\campaign_fact\OLE DB Source">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
     design-time-name="Package\campaign_fact\Lookup 1">
     <Properties>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:string">false</Value>
+          type="q2:boolean">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
@@ -9253,7 +9210,7 @@ where [refTable].[product_key] = ?</property>
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q4:string">0</Value>
+          type="q4:int">0</Value>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -9273,208 +9230,67 @@ where [refTable].[product_key] = ?</property>
       </Property>
     </Properties>
   </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\campaign_fact\OLE DB Source">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\campaign_fact\Lookup">
-    <Properties>
-      <Property>
-        <Name>OverwriteParamsSQLProp</Name>
-        <Value
-          type="q2:string">false</Value>
-      </Property>
-      <Property>
-        <Name>UsedTableName</Name>
-        <Value
-          type="q3:string">[dwh].[DimTime]</Value>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q4:string">0</Value>
-      </Property>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\campaign_fact\Lookup 2">
-    <Properties>
-      <Property>
-        <Name>OverwriteParamsSQLProp</Name>
-        <Value
-          type="q2:string">false</Value>
-      </Property>
-      <Property>
-        <Name>UsedTableName</Name>
-        <Value
-          type="q3:string">[dwh].[DimProduct]</Value>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q4:string">0</Value>
-      </Property>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
   <TaskHost
     design-time-name="Package\Country_fact">
     <LayoutInfo>
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="120.8,41.6"
+          Size="124,42"
           Id="Package\Country_fact\Lookup 1"
           TopLeft="460.999993130565,353.999994724989" />
         <NodeLayout
-          Size="152.8,41.6"
+          Size="153,42"
           Id="Package\Country_fact\Derived Column"
           TopLeft="453.999993234873,140.999997898936" />
         <NodeLayout
-          Size="152,41.6"
+          Size="152,42"
           Id="Package\Country_fact\OLE DB Source"
           TopLeft="494.999992623925,51.9999992251396" />
         <NodeLayout
-          Size="171.2,41.6"
+          Size="171,42"
           Id="Package\Country_fact\OLE DB Destination"
           TopLeft="433.999993532896,574.999991431832" />
         <NodeLayout
-          Size="135.2,41.6"
-          Id="Package\Country_fact\Aggregate 1"
-          TopLeft="451.999993264675,499.199993145466" />
-        <NodeLayout
-          Size="112.8,41.6"
+          Size="113,42"
           Id="Package\Country_fact\Lookup"
           TopLeft="471.999992966652,247.999996304512" />
         <NodeLayout
-          Size="97.6,41.6"
+          Size="122,42"
           Id="Package\Country_fact\Sort"
-          TopLeft="739.999988973141,537.99999281764" />
-        <NodeLayout
-          Size="126.4,41.6"
-          Id="Package\Country_fact\Aggregate"
-          TopLeft="450.999993279576,440.999993428588" />
-        <EdgeLayout
-          Id="Package\Country_fact.Paths[Aggregate Output 11]"
-          TopLeft="587.199993264675,519.999993145466">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="152.799995708466,38.7999996721744"
-              Start="0,0"
-              End="145.299995708466,38.7999996721744">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="72.3999978542328,0" />
-                  <mssgle:CubicBezierSegment
-                    Point1="72.3999978542328,0"
-                    Point2="76.3999978542328,0"
-                    Point3="76.3999978542328,4" />
-                  <mssgle:LineSegment
-                    End="76.3999978542328,34.7999996721744" />
-                  <mssgle:CubicBezierSegment
-                    Point1="76.3999978542328,34.7999996721744"
-                    Point2="76.3999978542328,38.7999996721744"
-                    Point3="80.3999978542328,38.7999996721744" />
-                  <mssgle:LineSegment
-                    End="145.299995708466,38.7999996721744" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Country_fact.Paths[Aggregate Output 1]"
-          TopLeft="450.999993279576,461.799993428588">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0.999999985098668,58.199999716878"
-              Start="0,0"
-              End="-6.50000001490133,58.199999716878">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="-18.5,0" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-18.5,0"
-                    Point2="-22.5,0"
-                    Point3="-22.5,4" />
-                  <mssgle:LineSegment
-                    End="-22.5,54.199999716878" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-22.5,54.199999716878"
-                    Point2="-22.5,58.199999716878"
-                    Point3="-18.5,58.199999716878" />
-                  <mssgle:LineSegment
-                    End="-6.50000001490133,58.199999716878" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
+          TopLeft="759.999988973141,549.99999281764" />
         <EdgeLayout
           Id="Package\Country_fact.Paths[Sort Output]"
-          TopLeft="739.999988973141,564.39999281764">
+          TopLeft="759.999988973141,576.666659484307">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-134.799995440245,31.399998614192"
+              EndConnector="-154.999995440245,19.3333319475254"
               Start="0,0"
-              End="-127.299995440245,31.399998614192">
+              End="-147.499995440245,19.3333319475254">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="-52.9155536303255,0" />
+                    End="-61.412842112397,0" />
                   <mssgle:CubicBezierSegment
-                    Point1="-52.9155536303255,0"
-                    Point2="-56.9155536303255,0"
-                    Point3="-56.9155536303255,4" />
+                    Point1="-61.412842112397,0"
+                    Point2="-65.412842112397,0"
+                    Point3="-65.412842112397,4" />
                   <mssgle:LineSegment
-                    End="-56.9155536303255,27.399998614192" />
+                    End="-65.412842112397,15.3333319475254" />
                   <mssgle:CubicBezierSegment
-                    Point1="-56.9155536303255,27.399998614192"
-                    Point2="-56.9155536303255,31.399998614192"
-                    Point3="-60.9155536303255,31.399998614192" />
+                    Point1="-65.412842112397,15.3333319475254"
+                    Point2="-65.412842112397,19.3333319475254"
+                    Point3="-69.412842112397,19.3333319475254" />
                   <mssgle:LineSegment
-                    End="-127.299995440245,31.399998614192" />
+                    End="-147.499995440245,19.3333319475254" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -9508,56 +9324,30 @@ where [refTable].[product_key] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Country_fact.Paths[Lookup Match Output1]"
-          TopLeft="517.799993205071,395.599994724989">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,45.399998703599"
-              Start="0,0"
-              End="0,37.899998703599">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,37.899998703599" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-48.19138671875,13.1453118517995,96.3827734375,11.609375"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Country_fact.Paths[Lookup Match Output]"
-          TopLeft="524.899993048608,289.599996304512">
+          TopLeft="525.749993048608,289.999996304512">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,64.3999984204768"
+              EndConnector="0,63.999998420477"
               Start="0,0"
-              End="0,56.8999984204768">
+              End="0,56.499998420477">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,56.8999984204768" />
+                    End="0,56.499998420477" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-48.19138671875,22.6453117102384,96.3827734375,11.609375"
+              BoundingBox="-48.19138671875,22.4453117102385,96.3827734375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -9580,9 +9370,119 @@ where [refTable].[product_key] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="130,42"
+          Id="Package\Country_fact\Aggregate"
+          TopLeft="467,425" />
+        <EdgeLayout
+          Id="Package\Country_fact.Paths[Lookup Match Output1]"
+          TopLeft="522.999993130565,395.999994724989">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="9.00000686943508,29.000005275011"
+              Start="0,0"
+              End="9.00000686943508,21.500005275011">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,10.5000026375055" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,10.5000026375055"
+                    Point2="0,14.5000026375055"
+                    Point3="4,14.5000026375055" />
+                  <mssgle:LineSegment
+                    End="5.00000686943508,14.5000026375055" />
+                  <mssgle:CubicBezierSegment
+                    Point1="5.00000686943508,14.5000026375055"
+                    Point2="9.00000686943508,14.5000026375055"
+                    Point3="9.00000686943508,18.5000026375055" />
+                  <mssgle:LineSegment
+                    End="9.00000686943508,21.500005275011" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
+              BoundingBox="-43.6913832840325,19.5000026375055,96.3827734375,11.609375"
               RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="139,42"
+          Id="Package\Country_fact\Aggregate 1"
+          TopLeft="473,492" />
+        <EdgeLayout
+          Id="Package\Country_fact.Paths[Aggregate Output 1]"
+          TopLeft="532,467">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="10.5,25"
+              Start="0,0"
+              End="10.5,17.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,8.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,8.5"
+                    Point2="0,12.5"
+                    Point3="4,12.5" />
+                  <mssgle:LineSegment
+                    End="6.5,12.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="6.5,12.5"
+                    Point2="10.5,12.5"
+                    Point3="10.5,16.5" />
+                  <mssgle:LineSegment
+                    End="10.5,17.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Country_fact.Paths[Aggregate Output 11]"
+          TopLeft="612,513">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="147.999988973141,52.3333261509733"
+              Start="0,0"
+              End="140.499988973141,52.3333261509733">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="81.5412780303474,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="81.5412780303474,0"
+                    Point2="85.5412780303474,0"
+                    Point3="85.5412780303474,4" />
+                  <mssgle:LineSegment
+                    End="85.5412780303474,48.3333261509733" />
+                  <mssgle:CubicBezierSegment
+                    Point1="85.5412780303474,48.3333261509733"
+                    Point2="85.5412780303474,52.3333261509733"
+                    Point3="89.5412780303474,52.3333261509733" />
+                  <mssgle:LineSegment
+                    End="140.499988973141,52.3333261509733" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -9594,7 +9494,7 @@ where [refTable].[product_key] = ?</property>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:string">false</Value>
+          type="q2:boolean">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
@@ -9604,7 +9504,7 @@ where [refTable].[product_key] = ?</property>
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q4:string">0</Value>
+          type="q4:int">0</Value>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -9643,7 +9543,7 @@ where [refTable].[product_key] = ?</property>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:string">false</Value>
+          type="q2:boolean">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
@@ -9653,10 +9553,240 @@ where [refTable].[product_key] = ?</property>
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q4:string">0</Value>
+          type="q4:int">0</Value>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <TaskHost
+    design-time-name="Package\Customer_ratings">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="98,42"
+          Id="Package\Customer_ratings\Sort"
+          TopLeft="490.99999268353,455.999993205071" />
+        <NodeLayout
+          Size="121,42"
+          Id="Package\Customer_ratings\Lookup 1"
+          TopLeft="473.99999293685,264.999996051192" />
+        <NodeLayout
+          Size="113,42"
+          Id="Package\Customer_ratings\Lookup"
+          TopLeft="473.99999293685,160.999997600913" />
+        <NodeLayout
+          Size="152,42"
+          Id="Package\Customer_ratings\OLE DB Source"
+          TopLeft="466.999993041158,46.9999992996455" />
+        <NodeLayout
+          Size="171,42"
+          Id="Package\Customer_ratings\OLE DB Destination"
+          TopLeft="450.999993279576,555.999991714954" />
+        <NodeLayout
+          Size="126,42"
+          Id="Package\Customer_ratings\Aggregate"
+          TopLeft="477.999992877245,379.999994337559" />
+        <EdgeLayout
+          Id="Package\Customer_ratings.Paths[Sort Output]"
+          TopLeft="538.199992981553,497.599993205071">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,58.3999985098839"
+              Start="0,0"
+              End="0,50.8999985098839">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,50.8999985098839" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Customer_ratings.Paths[OLE DB Source Output]"
+          TopLeft="542.999993041158,88.5999992996454">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-12.6000001043083,72.3999983012677"
+              Start="0,0"
+              End="-12.6000001043083,64.8999983012677">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,32.1999991506338" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,32.1999991506338"
+                    Point2="0,36.1999991506338"
+                    Point3="-4,36.1999991506338" />
+                  <mssgle:LineSegment
+                    End="-8.60000010430826,36.1999991506338" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-8.60000010430826,36.1999991506338"
+                    Point2="-12.6000001043083,36.1999991506338"
+                    Point3="-12.6000001043083,40.1999991506338" />
+                  <mssgle:LineSegment
+                    End="-12.6000001043083,64.8999983012677" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Customer_ratings.Paths[Lookup Match Output1]"
+          TopLeft="537.799992907047,306.599996051192">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,73.3999982863663"
+              Start="0,0"
+              End="0,65.8999982863663">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,65.8999982863663" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-48.19138671875,27.1453116431832,96.3827734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Customer_ratings.Paths[Lookup Match Output]"
+          TopLeft="532.39999293685,202.599997600913">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,62.3999984502792"
+              Start="0,0"
+              End="0,54.8999984502792">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,54.8999984502792" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-48.19138671875,21.6453117251396,96.3827734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Customer_ratings.Paths[Aggregate Output 1]"
+          TopLeft="540.499992780388,421.599994337559">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,34.3999988675119"
+              Start="0,0"
+              End="0,26.8999988675119">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,26.8999988675119" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Customer_ratings\Lookup 1">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:boolean">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dwh].[DimCategory]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:int">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Customer_ratings\Lookup">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:boolean">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dwh].[DimCustomer]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:int">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Customer_ratings\OLE DB Source">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Customer_ratings\OLE DB Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
       </Property>
     </Properties>
   </PipelineComponentMetadata>
@@ -9666,19 +9796,19 @@ where [refTable].[product_key] = ?</property>
       <GraphLayout
         Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="156.8,41.6"
+          Size="157,42"
           Id="Package\Load_Campaign_Dim\OLE DB Source"
           TopLeft="376,58" />
         <NodeLayout
-          Size="159.2,41.6"
+          Size="159,42"
           Id="Package\Load_Campaign_Dim\Conditional Split"
           TopLeft="366,269" />
         <NodeLayout
-          Size="129.6,41.6"
+          Size="130,42"
           Id="Package\Load_Campaign_Dim\Aggregate"
           TopLeft="382,171" />
         <NodeLayout
-          Size="176.8,41.6"
+          Size="177,42"
           Id="Package\Load_Campaign_Dim\OLE DB Destination"
           TopLeft="375,356" />
         <EdgeLayout
@@ -9700,9 +9830,7 @@ where [refTable].[product_key] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -9760,9 +9888,7 @@ where [refTable].[product_key] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -9798,17 +9924,17 @@ where [refTable].[product_key] = ?</property>
     design-time-name="Package\Load_Category_Dim">
     <LayoutInfo>
       <GraphLayout
-        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="176.8,41.6"
+          Size="177,42"
           Id="Package\Load_Category_Dim\OLE DB Destination"
           TopLeft="246,244" />
         <NodeLayout
-          Size="129.6,41.6"
+          Size="130,42"
           Id="Package\Load_Category_Dim\Aggregate"
           TopLeft="278,122" />
         <NodeLayout
-          Size="156.8,41.6"
+          Size="157,42"
           Id="Package\Load_Category_Dim\OLE DB Source"
           TopLeft="271,35" />
         <EdgeLayout
@@ -9830,9 +9956,7 @@ where [refTable].[product_key] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -9866,9 +9990,7 @@ where [refTable].[product_key] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -9904,17 +10026,17 @@ where [refTable].[product_key] = ?</property>
     design-time-name="Package\Load_Country_Dim">
     <LayoutInfo>
       <GraphLayout
-        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="176.8,41.6"
+          Size="177,42"
           Id="Package\Load_Country_Dim\OLE DB Destination"
           TopLeft="192,337" />
         <NodeLayout
-          Size="156.8,41.6"
+          Size="157,42"
           Id="Package\Load_Country_Dim\OLE DB Source"
           TopLeft="196,59" />
         <NodeLayout
-          Size="129.6,41.6"
+          Size="130,42"
           Id="Package\Load_Country_Dim\Aggregate"
           TopLeft="213,157" />
         <EdgeLayout
@@ -9936,9 +10058,7 @@ where [refTable].[product_key] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -9960,9 +10080,7 @@ where [refTable].[product_key] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -9998,17 +10116,17 @@ where [refTable].[product_key] = ?</property>
     design-time-name="Package\Load_Customer_Dim">
     <LayoutInfo>
       <GraphLayout
-        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="176.8,41.6"
+          Size="177,42"
           Id="Package\Load_Customer_Dim\OLE DB Destination"
           TopLeft="128,245" />
         <NodeLayout
-          Size="158.4,41.6"
+          Size="158,42"
           Id="Package\Load_Customer_Dim\Derived Column"
           TopLeft="141,128" />
         <NodeLayout
-          Size="156.8,41.6"
+          Size="157,42"
           Id="Package\Load_Customer_Dim\OLE DB Source"
           TopLeft="140,48" />
         <EdgeLayout
@@ -10030,9 +10148,7 @@ where [refTable].[product_key] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -10054,9 +10170,7 @@ where [refTable].[product_key] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -10092,17 +10206,17 @@ where [refTable].[product_key] = ?</property>
     design-time-name="Package\Load_Product-Dim">
     <LayoutInfo>
       <GraphLayout
-        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="176.8,41.6"
+          Size="177,42"
           Id="Package\Load_Product-Dim\OLE DB Destination"
           TopLeft="179.999999329448,284.999999716878" />
         <NodeLayout
-          Size="129.6,41.6"
+          Size="130,42"
           Id="Package\Load_Product-Dim\Aggregate"
           TopLeft="196.999999329448,152.999999716878" />
         <NodeLayout
-          Size="156.8,41.6"
+          Size="157,42"
           Id="Package\Load_Product-Dim\OLE DB Source"
           TopLeft="173.99999935925,61.999999716878" />
         <EdgeLayout
@@ -10136,9 +10250,7 @@ where [refTable].[product_key] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -10160,9 +10272,7 @@ where [refTable].[product_key] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -10200,35 +10310,35 @@ where [refTable].[product_key] = ?</property>
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="124,41.6"
+          Size="124,42"
           Id="Package\Load_Returns_Fact\Lookup 1"
           TopLeft="416,255" />
         <NodeLayout
-          Size="158.4,41.6"
+          Size="158,42"
           Id="Package\Load_Returns_Fact\Derived Column"
           TopLeft="408,106" />
         <NodeLayout
-          Size="176.8,41.6"
+          Size="177,42"
           Id="Package\Load_Returns_Fact\OLE DB Destination"
           TopLeft="380,608" />
         <NodeLayout
-          Size="97.6,41.6"
+          Size="98,42"
           Id="Package\Load_Returns_Fact\Sort"
           TopLeft="412.699992487332,498.133331187831" />
         <NodeLayout
-          Size="115.2,41.6"
+          Size="115,42"
           Id="Package\Load_Returns_Fact\Lookup"
           TopLeft="428.851851750671,181.074074087467" />
         <NodeLayout
-          Size="124,41.6"
+          Size="124,42"
           Id="Package\Load_Returns_Fact\Lookup 2"
           TopLeft="418,341" />
         <NodeLayout
-          Size="156.8,41.6"
+          Size="157,42"
           Id="Package\Load_Returns_Fact\OLE DB Source"
           TopLeft="419.333332604832,2.00000009040037" />
         <NodeLayout
-          Size="129.6,41.6"
+          Size="130,42"
           Id="Package\Load_Returns_Fact\Aggregate"
           TopLeft="412,425" />
         <EdgeLayout
@@ -10250,9 +10360,7 @@ where [refTable].[product_key] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -10286,9 +10394,7 @@ where [refTable].[product_key] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -10394,9 +10500,7 @@ where [refTable].[product_key] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -10430,16 +10534,14 @@ where [refTable].[product_key] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <AnnotationLayout
           Text="p[l;'./    nnb bjhnm"
           ParentId="Package\Load_Returns_Fact"
           FontInfo="{assembly:Null}"
-          Size="126.4,NaN"
+          Size="126,40"
           Id="cddaf3b7-5250-45e6-94bc-b667d7488dd9"
           TopLeft="1483,53" />
       </GraphLayout>
@@ -10451,7 +10553,7 @@ where [refTable].[product_key] = ?</property>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:string">false</Value>
+          type="q2:boolean">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
@@ -10461,7 +10563,7 @@ where [refTable].[product_key] = ?</property>
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q4:string">0</Value>
+          type="q4:int">0</Value>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -10487,7 +10589,7 @@ where [refTable].[product_key] = ?</property>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:string">false</Value>
+          type="q2:boolean">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
@@ -10497,7 +10599,7 @@ where [refTable].[product_key] = ?</property>
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q4:string">0</Value>
+          type="q4:int">0</Value>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -10510,7 +10612,7 @@ where [refTable].[product_key] = ?</property>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:string">false</Value>
+          type="q2:boolean">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
@@ -10520,7 +10622,7 @@ where [refTable].[product_key] = ?</property>
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q4:string">0</Value>
+          type="q4:int">0</Value>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -10544,17 +10646,17 @@ where [refTable].[product_key] = ?</property>
     design-time-name="Package\Load_Suppliers_Dim">
     <LayoutInfo>
       <GraphLayout
-        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="156.8,41.6"
+          Size="157,42"
           Id="Package\Load_Suppliers_Dim\OLE DB Source"
           TopLeft="139,36" />
         <NodeLayout
-          Size="176.8,41.6"
+          Size="177,42"
           Id="Package\Load_Suppliers_Dim\OLE DB Destination"
           TopLeft="129,215" />
         <NodeLayout
-          Size="126.4,41.6"
+          Size="126,42"
           Id="Package\Load_Suppliers_Dim\Aggregate"
           TopLeft="150,111" />
         <EdgeLayout
@@ -10576,9 +10678,7 @@ where [refTable].[product_key] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -10600,9 +10700,7 @@ where [refTable].[product_key] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -10623,236 +10721,6 @@ where [refTable].[product_key] = ?</property>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
     design-time-name="Package\Load_Suppliers_Dim\OLE DB Destination">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <TaskHost
-    design-time-name="Package\Customer_ratings">
-    <LayoutInfo>
-      <GraphLayout
-        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
-        <NodeLayout
-          Size="152,41.6"
-          Id="Package\Customer_ratings\OLE DB Source"
-          TopLeft="466.999993041158,46.9999992996455" />
-        <NodeLayout
-          Size="112.8,41.6"
-          Id="Package\Customer_ratings\Lookup"
-          TopLeft="473.99999293685,160.999997600913" />
-        <EdgeLayout
-          Id="Package\Customer_ratings.Paths[OLE DB Source Output]"
-          TopLeft="542.999993041158,88.5999992996454">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-12.6000001043083,72.3999983012677"
-              Start="0,0"
-              End="-12.6000001043083,64.8999983012677">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,32.1999991506338" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,32.1999991506338"
-                    Point2="0,36.1999991506338"
-                    Point3="-4,36.1999991506338" />
-                  <mssgle:LineSegment
-                    End="-8.60000010430826,36.1999991506338" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-8.60000010430826,36.1999991506338"
-                    Point2="-12.6000001043083,36.1999991506338"
-                    Point3="-12.6000001043083,40.1999991506338" />
-                  <mssgle:LineSegment
-                    End="-12.6000001043083,64.8999983012677" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="120.8,41.6"
-          Id="Package\Customer_ratings\Lookup 1"
-          TopLeft="473.99999293685,264.999996051192" />
-        <EdgeLayout
-          Id="Package\Customer_ratings.Paths[Lookup Match Output]"
-          TopLeft="532.39999293685,202.599997600913">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,62.3999984502792"
-              Start="0,0"
-              End="0,54.8999984502792">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,54.8999984502792" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-48.19138671875,21.6453117251396,96.3827734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="126.4,41.6"
-          Id="Package\Customer_ratings\Aggregate"
-          TopLeft="477.999992877245,379.999994337559" />
-        <EdgeLayout
-          Id="Package\Customer_ratings.Paths[Lookup Match Output1]"
-          TopLeft="537.799992907047,306.599996051192">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,73.3999982863663"
-              Start="0,0"
-              End="0,65.8999982863663">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,65.8999982863663" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-48.19138671875,27.1453116431832,96.3827734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="171.2,41.6"
-          Id="Package\Customer_ratings\OLE DB Destination"
-          TopLeft="450.999993279576,555.999991714954" />
-        <NodeLayout
-          Size="97.6,41.6"
-          Id="Package\Customer_ratings\Sort"
-          TopLeft="490.99999268353,455.999993205071" />
-        <EdgeLayout
-          Id="Package\Customer_ratings.Paths[Aggregate Output 1]"
-          TopLeft="540.499992780388,421.599994337559">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,34.3999988675119"
-              Start="0,0"
-              End="0,26.8999988675119">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,26.8999988675119" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Customer_ratings.Paths[Sort Output]"
-          TopLeft="538.199992981553,497.599993205071">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,58.3999985098839"
-              Start="0,0"
-              End="0,50.8999985098839">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,50.8999985098839" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-      </GraphLayout>
-    </LayoutInfo>
-  </TaskHost>
-  <PipelineComponentMetadata
-    design-time-name="Package\Customer_ratings\OLE DB Source">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Customer_ratings\Lookup">
-    <Properties>
-      <Property>
-        <Name>OverwriteParamsSQLProp</Name>
-        <Value
-          type="q2:boolean">false</Value>
-      </Property>
-      <Property>
-        <Name>UsedTableName</Name>
-        <Value
-          type="q3:string">[dwh].[DimCustomer]</Value>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q4:int">0</Value>
-      </Property>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Customer_ratings\Lookup 1">
-    <Properties>
-      <Property>
-        <Name>OverwriteParamsSQLProp</Name>
-        <Value
-          type="q2:boolean">false</Value>
-      </Property>
-      <Property>
-        <Name>UsedTableName</Name>
-        <Value
-          type="q3:string">[dwh].[DimCategory]</Value>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q4:int">0</Value>
-      </Property>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Customer_ratings\OLE DB Destination">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
