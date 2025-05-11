@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package4"
   DTS:PackageType="5"
-  DTS:VersionBuild="8"
-  DTS:VersionGUID="{B6237BA9-E245-46AD-9C2A-D9B110A2BD09}">
+  DTS:VersionBuild="10"
+  DTS:VersionGUID="{D5AE43C2-5F3C-4ED6-9DD1-FD7AF03C9DA0}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -90,11 +90,11 @@
           version="1">
           <components>
             <component
-              refId="Package\Load_Customer_Ratings_STG\Customer Ratings"
+              refId="Package\Load_Customer_Ratings_STG\Customer Ratings Src"
               componentClassID="Microsoft.OLEDBSource"
               contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
               description="OLE DB Source"
-              name="Customer Ratings"
+              name="Customer Ratings Src"
               usesDispositions="true"
               version="7">
               <properties>
@@ -140,7 +140,7 @@
               </properties>
               <connections>
                 <connection
-                  refId="Package\Load_Customer_Ratings_STG\Customer Ratings.Connections[OleDbConnection]"
+                  refId="Package\Load_Customer_Ratings_STG\Customer Ratings Src.Connections[OleDbConnection]"
                   connectionManagerID="Package.ConnectionManagers[DESKTOP-LEL90HF.DataSet]"
                   connectionManagerRefId="Package.ConnectionManagers[DESKTOP-LEL90HF.DataSet]"
                   description="The OLE DB runtime connection used to access the database."
@@ -148,161 +148,161 @@
               </connections>
               <outputs>
                 <output
-                  refId="Package\Load_Customer_Ratings_STG\Customer Ratings.Outputs[OLE DB Source Output]"
+                  refId="Package\Load_Customer_Ratings_STG\Customer Ratings Src.Outputs[OLE DB Source Output]"
                   name="OLE DB Source Output">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Load_Customer_Ratings_STG\Customer Ratings.Outputs[OLE DB Source Output].Columns[customerproductrating_id]"
+                      refId="Package\Load_Customer_Ratings_STG\Customer Ratings Src.Outputs[OLE DB Source Output].Columns[customerproductrating_id]"
                       dataType="i4"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Load_Customer_Ratings_STG\Customer Ratings.Outputs[OLE DB Source Output].ExternalColumns[customerproductrating_id]"
-                      lineageId="Package\Load_Customer_Ratings_STG\Customer Ratings.Outputs[OLE DB Source Output].Columns[customerproductrating_id]"
+                      externalMetadataColumnId="Package\Load_Customer_Ratings_STG\Customer Ratings Src.Outputs[OLE DB Source Output].ExternalColumns[customerproductrating_id]"
+                      lineageId="Package\Load_Customer_Ratings_STG\Customer Ratings Src.Outputs[OLE DB Source Output].Columns[customerproductrating_id]"
                       name="customerproductrating_id"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Load_Customer_Ratings_STG\Customer Ratings.Outputs[OLE DB Source Output].Columns[customer_id]"
+                      refId="Package\Load_Customer_Ratings_STG\Customer Ratings Src.Outputs[OLE DB Source Output].Columns[customer_id]"
                       dataType="i4"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Load_Customer_Ratings_STG\Customer Ratings.Outputs[OLE DB Source Output].ExternalColumns[customer_id]"
-                      lineageId="Package\Load_Customer_Ratings_STG\Customer Ratings.Outputs[OLE DB Source Output].Columns[customer_id]"
+                      externalMetadataColumnId="Package\Load_Customer_Ratings_STG\Customer Ratings Src.Outputs[OLE DB Source Output].ExternalColumns[customer_id]"
+                      lineageId="Package\Load_Customer_Ratings_STG\Customer Ratings Src.Outputs[OLE DB Source Output].Columns[customer_id]"
                       name="customer_id"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Load_Customer_Ratings_STG\Customer Ratings.Outputs[OLE DB Source Output].Columns[product_id]"
+                      refId="Package\Load_Customer_Ratings_STG\Customer Ratings Src.Outputs[OLE DB Source Output].Columns[product_id]"
                       dataType="i4"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Load_Customer_Ratings_STG\Customer Ratings.Outputs[OLE DB Source Output].ExternalColumns[product_id]"
-                      lineageId="Package\Load_Customer_Ratings_STG\Customer Ratings.Outputs[OLE DB Source Output].Columns[product_id]"
+                      externalMetadataColumnId="Package\Load_Customer_Ratings_STG\Customer Ratings Src.Outputs[OLE DB Source Output].ExternalColumns[product_id]"
+                      lineageId="Package\Load_Customer_Ratings_STG\Customer Ratings Src.Outputs[OLE DB Source Output].Columns[product_id]"
                       name="product_id"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Load_Customer_Ratings_STG\Customer Ratings.Outputs[OLE DB Source Output].Columns[ratings]"
+                      refId="Package\Load_Customer_Ratings_STG\Customer Ratings Src.Outputs[OLE DB Source Output].Columns[ratings]"
                       dataType="r8"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Load_Customer_Ratings_STG\Customer Ratings.Outputs[OLE DB Source Output].ExternalColumns[ratings]"
-                      lineageId="Package\Load_Customer_Ratings_STG\Customer Ratings.Outputs[OLE DB Source Output].Columns[ratings]"
+                      externalMetadataColumnId="Package\Load_Customer_Ratings_STG\Customer Ratings Src.Outputs[OLE DB Source Output].ExternalColumns[ratings]"
+                      lineageId="Package\Load_Customer_Ratings_STG\Customer Ratings Src.Outputs[OLE DB Source Output].Columns[ratings]"
                       name="ratings"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Load_Customer_Ratings_STG\Customer Ratings.Outputs[OLE DB Source Output].Columns[review]"
+                      refId="Package\Load_Customer_Ratings_STG\Customer Ratings Src.Outputs[OLE DB Source Output].Columns[review]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Load_Customer_Ratings_STG\Customer Ratings.Outputs[OLE DB Source Output].ExternalColumns[review]"
+                      externalMetadataColumnId="Package\Load_Customer_Ratings_STG\Customer Ratings Src.Outputs[OLE DB Source Output].ExternalColumns[review]"
                       length="100"
-                      lineageId="Package\Load_Customer_Ratings_STG\Customer Ratings.Outputs[OLE DB Source Output].Columns[review]"
+                      lineageId="Package\Load_Customer_Ratings_STG\Customer Ratings Src.Outputs[OLE DB Source Output].Columns[review]"
                       name="review"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Load_Customer_Ratings_STG\Customer Ratings.Outputs[OLE DB Source Output].Columns[sentiment]"
+                      refId="Package\Load_Customer_Ratings_STG\Customer Ratings Src.Outputs[OLE DB Source Output].Columns[sentiment]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Load_Customer_Ratings_STG\Customer Ratings.Outputs[OLE DB Source Output].ExternalColumns[sentiment]"
+                      externalMetadataColumnId="Package\Load_Customer_Ratings_STG\Customer Ratings Src.Outputs[OLE DB Source Output].ExternalColumns[sentiment]"
                       length="50"
-                      lineageId="Package\Load_Customer_Ratings_STG\Customer Ratings.Outputs[OLE DB Source Output].Columns[sentiment]"
+                      lineageId="Package\Load_Customer_Ratings_STG\Customer Ratings Src.Outputs[OLE DB Source Output].Columns[sentiment]"
                       name="sentiment"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Load_Customer_Ratings_STG\Customer Ratings.Outputs[OLE DB Source Output].Columns[UpdateDate]"
+                      refId="Package\Load_Customer_Ratings_STG\Customer Ratings Src.Outputs[OLE DB Source Output].Columns[UpdateDate]"
                       dataType="dbTimeStamp"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Load_Customer_Ratings_STG\Customer Ratings.Outputs[OLE DB Source Output].ExternalColumns[UpdateDate]"
-                      lineageId="Package\Load_Customer_Ratings_STG\Customer Ratings.Outputs[OLE DB Source Output].Columns[UpdateDate]"
+                      externalMetadataColumnId="Package\Load_Customer_Ratings_STG\Customer Ratings Src.Outputs[OLE DB Source Output].ExternalColumns[UpdateDate]"
+                      lineageId="Package\Load_Customer_Ratings_STG\Customer Ratings Src.Outputs[OLE DB Source Output].Columns[UpdateDate]"
                       name="UpdateDate"
                       truncationRowDisposition="FailComponent" />
                   </outputColumns>
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
-                      refId="Package\Load_Customer_Ratings_STG\Customer Ratings.Outputs[OLE DB Source Output].ExternalColumns[customerproductrating_id]"
+                      refId="Package\Load_Customer_Ratings_STG\Customer Ratings Src.Outputs[OLE DB Source Output].ExternalColumns[customerproductrating_id]"
                       dataType="i4"
                       name="customerproductrating_id" />
                     <externalMetadataColumn
-                      refId="Package\Load_Customer_Ratings_STG\Customer Ratings.Outputs[OLE DB Source Output].ExternalColumns[customer_id]"
+                      refId="Package\Load_Customer_Ratings_STG\Customer Ratings Src.Outputs[OLE DB Source Output].ExternalColumns[customer_id]"
                       dataType="i4"
                       name="customer_id" />
                     <externalMetadataColumn
-                      refId="Package\Load_Customer_Ratings_STG\Customer Ratings.Outputs[OLE DB Source Output].ExternalColumns[product_id]"
+                      refId="Package\Load_Customer_Ratings_STG\Customer Ratings Src.Outputs[OLE DB Source Output].ExternalColumns[product_id]"
                       dataType="i4"
                       name="product_id" />
                     <externalMetadataColumn
-                      refId="Package\Load_Customer_Ratings_STG\Customer Ratings.Outputs[OLE DB Source Output].ExternalColumns[ratings]"
+                      refId="Package\Load_Customer_Ratings_STG\Customer Ratings Src.Outputs[OLE DB Source Output].ExternalColumns[ratings]"
                       dataType="r8"
                       name="ratings" />
                     <externalMetadataColumn
-                      refId="Package\Load_Customer_Ratings_STG\Customer Ratings.Outputs[OLE DB Source Output].ExternalColumns[review]"
+                      refId="Package\Load_Customer_Ratings_STG\Customer Ratings Src.Outputs[OLE DB Source Output].ExternalColumns[review]"
                       dataType="wstr"
                       length="100"
                       name="review" />
                     <externalMetadataColumn
-                      refId="Package\Load_Customer_Ratings_STG\Customer Ratings.Outputs[OLE DB Source Output].ExternalColumns[sentiment]"
+                      refId="Package\Load_Customer_Ratings_STG\Customer Ratings Src.Outputs[OLE DB Source Output].ExternalColumns[sentiment]"
                       dataType="wstr"
                       length="50"
                       name="sentiment" />
                     <externalMetadataColumn
-                      refId="Package\Load_Customer_Ratings_STG\Customer Ratings.Outputs[OLE DB Source Output].ExternalColumns[UpdateDate]"
+                      refId="Package\Load_Customer_Ratings_STG\Customer Ratings Src.Outputs[OLE DB Source Output].ExternalColumns[UpdateDate]"
                       dataType="dbTimeStamp"
                       name="UpdateDate" />
                   </externalMetadataColumns>
                 </output>
                 <output
-                  refId="Package\Load_Customer_Ratings_STG\Customer Ratings.Outputs[OLE DB Source Error Output]"
+                  refId="Package\Load_Customer_Ratings_STG\Customer Ratings Src.Outputs[OLE DB Source Error Output]"
                   isErrorOut="true"
                   name="OLE DB Source Error Output">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Load_Customer_Ratings_STG\Customer Ratings.Outputs[OLE DB Source Error Output].Columns[customerproductrating_id]"
+                      refId="Package\Load_Customer_Ratings_STG\Customer Ratings Src.Outputs[OLE DB Source Error Output].Columns[customerproductrating_id]"
                       dataType="i4"
-                      lineageId="Package\Load_Customer_Ratings_STG\Customer Ratings.Outputs[OLE DB Source Error Output].Columns[customerproductrating_id]"
+                      lineageId="Package\Load_Customer_Ratings_STG\Customer Ratings Src.Outputs[OLE DB Source Error Output].Columns[customerproductrating_id]"
                       name="customerproductrating_id" />
                     <outputColumn
-                      refId="Package\Load_Customer_Ratings_STG\Customer Ratings.Outputs[OLE DB Source Error Output].Columns[customer_id]"
+                      refId="Package\Load_Customer_Ratings_STG\Customer Ratings Src.Outputs[OLE DB Source Error Output].Columns[customer_id]"
                       dataType="i4"
-                      lineageId="Package\Load_Customer_Ratings_STG\Customer Ratings.Outputs[OLE DB Source Error Output].Columns[customer_id]"
+                      lineageId="Package\Load_Customer_Ratings_STG\Customer Ratings Src.Outputs[OLE DB Source Error Output].Columns[customer_id]"
                       name="customer_id" />
                     <outputColumn
-                      refId="Package\Load_Customer_Ratings_STG\Customer Ratings.Outputs[OLE DB Source Error Output].Columns[product_id]"
+                      refId="Package\Load_Customer_Ratings_STG\Customer Ratings Src.Outputs[OLE DB Source Error Output].Columns[product_id]"
                       dataType="i4"
-                      lineageId="Package\Load_Customer_Ratings_STG\Customer Ratings.Outputs[OLE DB Source Error Output].Columns[product_id]"
+                      lineageId="Package\Load_Customer_Ratings_STG\Customer Ratings Src.Outputs[OLE DB Source Error Output].Columns[product_id]"
                       name="product_id" />
                     <outputColumn
-                      refId="Package\Load_Customer_Ratings_STG\Customer Ratings.Outputs[OLE DB Source Error Output].Columns[ratings]"
+                      refId="Package\Load_Customer_Ratings_STG\Customer Ratings Src.Outputs[OLE DB Source Error Output].Columns[ratings]"
                       dataType="r8"
-                      lineageId="Package\Load_Customer_Ratings_STG\Customer Ratings.Outputs[OLE DB Source Error Output].Columns[ratings]"
+                      lineageId="Package\Load_Customer_Ratings_STG\Customer Ratings Src.Outputs[OLE DB Source Error Output].Columns[ratings]"
                       name="ratings" />
                     <outputColumn
-                      refId="Package\Load_Customer_Ratings_STG\Customer Ratings.Outputs[OLE DB Source Error Output].Columns[review]"
+                      refId="Package\Load_Customer_Ratings_STG\Customer Ratings Src.Outputs[OLE DB Source Error Output].Columns[review]"
                       dataType="wstr"
                       length="100"
-                      lineageId="Package\Load_Customer_Ratings_STG\Customer Ratings.Outputs[OLE DB Source Error Output].Columns[review]"
+                      lineageId="Package\Load_Customer_Ratings_STG\Customer Ratings Src.Outputs[OLE DB Source Error Output].Columns[review]"
                       name="review" />
                     <outputColumn
-                      refId="Package\Load_Customer_Ratings_STG\Customer Ratings.Outputs[OLE DB Source Error Output].Columns[sentiment]"
+                      refId="Package\Load_Customer_Ratings_STG\Customer Ratings Src.Outputs[OLE DB Source Error Output].Columns[sentiment]"
                       dataType="wstr"
                       length="50"
-                      lineageId="Package\Load_Customer_Ratings_STG\Customer Ratings.Outputs[OLE DB Source Error Output].Columns[sentiment]"
+                      lineageId="Package\Load_Customer_Ratings_STG\Customer Ratings Src.Outputs[OLE DB Source Error Output].Columns[sentiment]"
                       name="sentiment" />
                     <outputColumn
-                      refId="Package\Load_Customer_Ratings_STG\Customer Ratings.Outputs[OLE DB Source Error Output].Columns[UpdateDate]"
+                      refId="Package\Load_Customer_Ratings_STG\Customer Ratings Src.Outputs[OLE DB Source Error Output].Columns[UpdateDate]"
                       dataType="dbTimeStamp"
-                      lineageId="Package\Load_Customer_Ratings_STG\Customer Ratings.Outputs[OLE DB Source Error Output].Columns[UpdateDate]"
+                      lineageId="Package\Load_Customer_Ratings_STG\Customer Ratings Src.Outputs[OLE DB Source Error Output].Columns[UpdateDate]"
                       name="UpdateDate" />
                     <outputColumn
-                      refId="Package\Load_Customer_Ratings_STG\Customer Ratings.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      refId="Package\Load_Customer_Ratings_STG\Customer Ratings Src.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\Load_Customer_Ratings_STG\Customer Ratings.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      lineageId="Package\Load_Customer_Ratings_STG\Customer Ratings Src.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\Load_Customer_Ratings_STG\Customer Ratings.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      refId="Package\Load_Customer_Ratings_STG\Customer Ratings Src.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\Load_Customer_Ratings_STG\Customer Ratings.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      lineageId="Package\Load_Customer_Ratings_STG\Customer Ratings Src.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -981,18 +981,6 @@
                   name="OLE DB Destination Input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Load_Customer_Ratings_STG\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[customer_id]"
-                      cachedDataType="i4"
-                      cachedName="customer_id"
-                      externalMetadataColumnId="Package\Load_Customer_Ratings_STG\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[customer_id]"
-                      lineageId="Package\Load_Customer_Ratings_STG\Merge Join 1.Outputs[Merge Join Output].Columns[customer_id]" />
-                    <inputColumn
-                      refId="Package\Load_Customer_Ratings_STG\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[product_id]"
-                      cachedDataType="i4"
-                      cachedName="product_id"
-                      externalMetadataColumnId="Package\Load_Customer_Ratings_STG\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[product_id]"
-                      lineageId="Package\Load_Customer_Ratings_STG\Merge Join 1.Outputs[Merge Join Output].Columns[product_id]" />
-                    <inputColumn
                       refId="Package\Load_Customer_Ratings_STG\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Copy of review]"
                       cachedDataType="wstr"
                       cachedLength="255"
@@ -1024,6 +1012,18 @@
                       cachedName="Copy of ratings"
                       externalMetadataColumnId="Package\Load_Customer_Ratings_STG\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[rating]"
                       lineageId="Package\Load_Customer_Ratings_STG\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of ratings]" />
+                    <inputColumn
+                      refId="Package\Load_Customer_Ratings_STG\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Copy of customer_id]"
+                      cachedDataType="i4"
+                      cachedName="Copy of customer_id"
+                      externalMetadataColumnId="Package\Load_Customer_Ratings_STG\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[customer_id]"
+                      lineageId="Package\Load_Customer_Ratings_STG\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of customer_id]" />
+                    <inputColumn
+                      refId="Package\Load_Customer_Ratings_STG\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Copy of product_id]"
+                      cachedDataType="i4"
+                      cachedName="Copy of product_id"
+                      externalMetadataColumnId="Package\Load_Customer_Ratings_STG\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[product_id]"
+                      lineageId="Package\Load_Customer_Ratings_STG\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of product_id]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -1056,6 +1056,10 @@
                       refId="Package\Load_Customer_Ratings_STG\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[rating]"
                       dataType="r8"
                       name="rating" />
+                    <externalMetadataColumn
+                      refId="Package\Load_Customer_Ratings_STG\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[last_update]"
+                      dataType="dbTimeStamp"
+                      name="last_update" />
                   </externalMetadataColumns>
                 </input>
               </inputs>
@@ -1085,11 +1089,11 @@
               </outputs>
             </component>
             <component
-              refId="Package\Load_Customer_Ratings_STG\Product"
+              refId="Package\Load_Customer_Ratings_STG\Product Src"
               componentClassID="Microsoft.OLEDBSource"
               contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
               description="OLE DB Source"
-              name="Product"
+              name="Product Src"
               usesDispositions="true"
               version="7">
               <properties>
@@ -1135,7 +1139,7 @@
               </properties>
               <connections>
                 <connection
-                  refId="Package\Load_Customer_Ratings_STG\Product.Connections[OleDbConnection]"
+                  refId="Package\Load_Customer_Ratings_STG\Product Src.Connections[OleDbConnection]"
                   connectionManagerID="Package.ConnectionManagers[DESKTOP-LEL90HF.DataSet]"
                   connectionManagerRefId="Package.ConnectionManagers[DESKTOP-LEL90HF.DataSet]"
                   description="The OLE DB runtime connection used to access the database."
@@ -1143,143 +1147,143 @@
               </connections>
               <outputs>
                 <output
-                  refId="Package\Load_Customer_Ratings_STG\Product.Outputs[OLE DB Source Output]"
+                  refId="Package\Load_Customer_Ratings_STG\Product Src.Outputs[OLE DB Source Output]"
                   name="OLE DB Source Output">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Load_Customer_Ratings_STG\Product.Outputs[OLE DB Source Output].Columns[product_id]"
+                      refId="Package\Load_Customer_Ratings_STG\Product Src.Outputs[OLE DB Source Output].Columns[product_id]"
                       dataType="i4"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Load_Customer_Ratings_STG\Product.Outputs[OLE DB Source Output].ExternalColumns[product_id]"
-                      lineageId="Package\Load_Customer_Ratings_STG\Product.Outputs[OLE DB Source Output].Columns[product_id]"
+                      externalMetadataColumnId="Package\Load_Customer_Ratings_STG\Product Src.Outputs[OLE DB Source Output].ExternalColumns[product_id]"
+                      lineageId="Package\Load_Customer_Ratings_STG\Product Src.Outputs[OLE DB Source Output].Columns[product_id]"
                       name="product_id"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Load_Customer_Ratings_STG\Product.Outputs[OLE DB Source Output].Columns[name]"
+                      refId="Package\Load_Customer_Ratings_STG\Product Src.Outputs[OLE DB Source Output].Columns[name]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Load_Customer_Ratings_STG\Product.Outputs[OLE DB Source Output].ExternalColumns[name]"
+                      externalMetadataColumnId="Package\Load_Customer_Ratings_STG\Product Src.Outputs[OLE DB Source Output].ExternalColumns[name]"
                       length="50"
-                      lineageId="Package\Load_Customer_Ratings_STG\Product.Outputs[OLE DB Source Output].Columns[name]"
+                      lineageId="Package\Load_Customer_Ratings_STG\Product Src.Outputs[OLE DB Source Output].Columns[name]"
                       name="name"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Load_Customer_Ratings_STG\Product.Outputs[OLE DB Source Output].Columns[price]"
+                      refId="Package\Load_Customer_Ratings_STG\Product Src.Outputs[OLE DB Source Output].Columns[price]"
                       dataType="r8"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Load_Customer_Ratings_STG\Product.Outputs[OLE DB Source Output].ExternalColumns[price]"
-                      lineageId="Package\Load_Customer_Ratings_STG\Product.Outputs[OLE DB Source Output].Columns[price]"
+                      externalMetadataColumnId="Package\Load_Customer_Ratings_STG\Product Src.Outputs[OLE DB Source Output].ExternalColumns[price]"
+                      lineageId="Package\Load_Customer_Ratings_STG\Product Src.Outputs[OLE DB Source Output].Columns[price]"
                       name="price"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Load_Customer_Ratings_STG\Product.Outputs[OLE DB Source Output].Columns[description]"
+                      refId="Package\Load_Customer_Ratings_STG\Product Src.Outputs[OLE DB Source Output].Columns[description]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Load_Customer_Ratings_STG\Product.Outputs[OLE DB Source Output].ExternalColumns[description]"
+                      externalMetadataColumnId="Package\Load_Customer_Ratings_STG\Product Src.Outputs[OLE DB Source Output].ExternalColumns[description]"
                       length="100"
-                      lineageId="Package\Load_Customer_Ratings_STG\Product.Outputs[OLE DB Source Output].Columns[description]"
+                      lineageId="Package\Load_Customer_Ratings_STG\Product Src.Outputs[OLE DB Source Output].Columns[description]"
                       name="description"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Load_Customer_Ratings_STG\Product.Outputs[OLE DB Source Output].Columns[subcategory_id]"
+                      refId="Package\Load_Customer_Ratings_STG\Product Src.Outputs[OLE DB Source Output].Columns[subcategory_id]"
                       dataType="i4"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Load_Customer_Ratings_STG\Product.Outputs[OLE DB Source Output].ExternalColumns[subcategory_id]"
-                      lineageId="Package\Load_Customer_Ratings_STG\Product.Outputs[OLE DB Source Output].Columns[subcategory_id]"
+                      externalMetadataColumnId="Package\Load_Customer_Ratings_STG\Product Src.Outputs[OLE DB Source Output].ExternalColumns[subcategory_id]"
+                      lineageId="Package\Load_Customer_Ratings_STG\Product Src.Outputs[OLE DB Source Output].Columns[subcategory_id]"
                       name="subcategory_id"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Load_Customer_Ratings_STG\Product.Outputs[OLE DB Source Output].Columns[UpdateDate]"
+                      refId="Package\Load_Customer_Ratings_STG\Product Src.Outputs[OLE DB Source Output].Columns[UpdateDate]"
                       dataType="dbTimeStamp"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Load_Customer_Ratings_STG\Product.Outputs[OLE DB Source Output].ExternalColumns[UpdateDate]"
-                      lineageId="Package\Load_Customer_Ratings_STG\Product.Outputs[OLE DB Source Output].Columns[UpdateDate]"
+                      externalMetadataColumnId="Package\Load_Customer_Ratings_STG\Product Src.Outputs[OLE DB Source Output].ExternalColumns[UpdateDate]"
+                      lineageId="Package\Load_Customer_Ratings_STG\Product Src.Outputs[OLE DB Source Output].Columns[UpdateDate]"
                       name="UpdateDate"
                       truncationRowDisposition="FailComponent" />
                   </outputColumns>
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
-                      refId="Package\Load_Customer_Ratings_STG\Product.Outputs[OLE DB Source Output].ExternalColumns[product_id]"
+                      refId="Package\Load_Customer_Ratings_STG\Product Src.Outputs[OLE DB Source Output].ExternalColumns[product_id]"
                       dataType="i4"
                       name="product_id" />
                     <externalMetadataColumn
-                      refId="Package\Load_Customer_Ratings_STG\Product.Outputs[OLE DB Source Output].ExternalColumns[name]"
+                      refId="Package\Load_Customer_Ratings_STG\Product Src.Outputs[OLE DB Source Output].ExternalColumns[name]"
                       dataType="wstr"
                       length="50"
                       name="name" />
                     <externalMetadataColumn
-                      refId="Package\Load_Customer_Ratings_STG\Product.Outputs[OLE DB Source Output].ExternalColumns[price]"
+                      refId="Package\Load_Customer_Ratings_STG\Product Src.Outputs[OLE DB Source Output].ExternalColumns[price]"
                       dataType="r8"
                       name="price" />
                     <externalMetadataColumn
-                      refId="Package\Load_Customer_Ratings_STG\Product.Outputs[OLE DB Source Output].ExternalColumns[description]"
+                      refId="Package\Load_Customer_Ratings_STG\Product Src.Outputs[OLE DB Source Output].ExternalColumns[description]"
                       dataType="wstr"
                       length="100"
                       name="description" />
                     <externalMetadataColumn
-                      refId="Package\Load_Customer_Ratings_STG\Product.Outputs[OLE DB Source Output].ExternalColumns[subcategory_id]"
+                      refId="Package\Load_Customer_Ratings_STG\Product Src.Outputs[OLE DB Source Output].ExternalColumns[subcategory_id]"
                       dataType="i4"
                       name="subcategory_id" />
                     <externalMetadataColumn
-                      refId="Package\Load_Customer_Ratings_STG\Product.Outputs[OLE DB Source Output].ExternalColumns[UpdateDate]"
+                      refId="Package\Load_Customer_Ratings_STG\Product Src.Outputs[OLE DB Source Output].ExternalColumns[UpdateDate]"
                       dataType="dbTimeStamp"
                       name="UpdateDate" />
                   </externalMetadataColumns>
                 </output>
                 <output
-                  refId="Package\Load_Customer_Ratings_STG\Product.Outputs[OLE DB Source Error Output]"
+                  refId="Package\Load_Customer_Ratings_STG\Product Src.Outputs[OLE DB Source Error Output]"
                   isErrorOut="true"
                   name="OLE DB Source Error Output">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Load_Customer_Ratings_STG\Product.Outputs[OLE DB Source Error Output].Columns[product_id]"
+                      refId="Package\Load_Customer_Ratings_STG\Product Src.Outputs[OLE DB Source Error Output].Columns[product_id]"
                       dataType="i4"
-                      lineageId="Package\Load_Customer_Ratings_STG\Product.Outputs[OLE DB Source Error Output].Columns[product_id]"
+                      lineageId="Package\Load_Customer_Ratings_STG\Product Src.Outputs[OLE DB Source Error Output].Columns[product_id]"
                       name="product_id" />
                     <outputColumn
-                      refId="Package\Load_Customer_Ratings_STG\Product.Outputs[OLE DB Source Error Output].Columns[name]"
+                      refId="Package\Load_Customer_Ratings_STG\Product Src.Outputs[OLE DB Source Error Output].Columns[name]"
                       dataType="wstr"
                       length="50"
-                      lineageId="Package\Load_Customer_Ratings_STG\Product.Outputs[OLE DB Source Error Output].Columns[name]"
+                      lineageId="Package\Load_Customer_Ratings_STG\Product Src.Outputs[OLE DB Source Error Output].Columns[name]"
                       name="name" />
                     <outputColumn
-                      refId="Package\Load_Customer_Ratings_STG\Product.Outputs[OLE DB Source Error Output].Columns[price]"
+                      refId="Package\Load_Customer_Ratings_STG\Product Src.Outputs[OLE DB Source Error Output].Columns[price]"
                       dataType="r8"
-                      lineageId="Package\Load_Customer_Ratings_STG\Product.Outputs[OLE DB Source Error Output].Columns[price]"
+                      lineageId="Package\Load_Customer_Ratings_STG\Product Src.Outputs[OLE DB Source Error Output].Columns[price]"
                       name="price" />
                     <outputColumn
-                      refId="Package\Load_Customer_Ratings_STG\Product.Outputs[OLE DB Source Error Output].Columns[description]"
+                      refId="Package\Load_Customer_Ratings_STG\Product Src.Outputs[OLE DB Source Error Output].Columns[description]"
                       dataType="wstr"
                       length="100"
-                      lineageId="Package\Load_Customer_Ratings_STG\Product.Outputs[OLE DB Source Error Output].Columns[description]"
+                      lineageId="Package\Load_Customer_Ratings_STG\Product Src.Outputs[OLE DB Source Error Output].Columns[description]"
                       name="description" />
                     <outputColumn
-                      refId="Package\Load_Customer_Ratings_STG\Product.Outputs[OLE DB Source Error Output].Columns[subcategory_id]"
+                      refId="Package\Load_Customer_Ratings_STG\Product Src.Outputs[OLE DB Source Error Output].Columns[subcategory_id]"
                       dataType="i4"
-                      lineageId="Package\Load_Customer_Ratings_STG\Product.Outputs[OLE DB Source Error Output].Columns[subcategory_id]"
+                      lineageId="Package\Load_Customer_Ratings_STG\Product Src.Outputs[OLE DB Source Error Output].Columns[subcategory_id]"
                       name="subcategory_id" />
                     <outputColumn
-                      refId="Package\Load_Customer_Ratings_STG\Product.Outputs[OLE DB Source Error Output].Columns[UpdateDate]"
+                      refId="Package\Load_Customer_Ratings_STG\Product Src.Outputs[OLE DB Source Error Output].Columns[UpdateDate]"
                       dataType="dbTimeStamp"
-                      lineageId="Package\Load_Customer_Ratings_STG\Product.Outputs[OLE DB Source Error Output].Columns[UpdateDate]"
+                      lineageId="Package\Load_Customer_Ratings_STG\Product Src.Outputs[OLE DB Source Error Output].Columns[UpdateDate]"
                       name="UpdateDate" />
                     <outputColumn
-                      refId="Package\Load_Customer_Ratings_STG\Product.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      refId="Package\Load_Customer_Ratings_STG\Product Src.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\Load_Customer_Ratings_STG\Product.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      lineageId="Package\Load_Customer_Ratings_STG\Product Src.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\Load_Customer_Ratings_STG\Product.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      refId="Package\Load_Customer_Ratings_STG\Product Src.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\Load_Customer_Ratings_STG\Product.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      lineageId="Package\Load_Customer_Ratings_STG\Product Src.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -1314,7 +1318,7 @@
                       refId="Package\Load_Customer_Ratings_STG\Sort.Inputs[Sort Input].Columns[customerproductrating_id]"
                       cachedDataType="i4"
                       cachedName="customerproductrating_id"
-                      lineageId="Package\Load_Customer_Ratings_STG\Customer Ratings.Outputs[OLE DB Source Output].Columns[customerproductrating_id]">
+                      lineageId="Package\Load_Customer_Ratings_STG\Customer Ratings Src.Outputs[OLE DB Source Output].Columns[customerproductrating_id]">
                       <properties>
                         <property
                           dataType="System.Int32"
@@ -1330,7 +1334,7 @@
                       refId="Package\Load_Customer_Ratings_STG\Sort.Inputs[Sort Input].Columns[customer_id]"
                       cachedDataType="i4"
                       cachedName="customer_id"
-                      lineageId="Package\Load_Customer_Ratings_STG\Customer Ratings.Outputs[OLE DB Source Output].Columns[customer_id]">
+                      lineageId="Package\Load_Customer_Ratings_STG\Customer Ratings Src.Outputs[OLE DB Source Output].Columns[customer_id]">
                       <properties>
                         <property
                           dataType="System.Int32"
@@ -1346,7 +1350,7 @@
                       refId="Package\Load_Customer_Ratings_STG\Sort.Inputs[Sort Input].Columns[product_id]"
                       cachedDataType="i4"
                       cachedName="product_id"
-                      lineageId="Package\Load_Customer_Ratings_STG\Customer Ratings.Outputs[OLE DB Source Output].Columns[product_id]">
+                      lineageId="Package\Load_Customer_Ratings_STG\Customer Ratings Src.Outputs[OLE DB Source Output].Columns[product_id]">
                       <properties>
                         <property
                           dataType="System.Int32"
@@ -1362,7 +1366,7 @@
                       refId="Package\Load_Customer_Ratings_STG\Sort.Inputs[Sort Input].Columns[ratings]"
                       cachedDataType="r8"
                       cachedName="ratings"
-                      lineageId="Package\Load_Customer_Ratings_STG\Customer Ratings.Outputs[OLE DB Source Output].Columns[ratings]">
+                      lineageId="Package\Load_Customer_Ratings_STG\Customer Ratings Src.Outputs[OLE DB Source Output].Columns[ratings]">
                       <properties>
                         <property
                           dataType="System.Int32"
@@ -1379,7 +1383,7 @@
                       cachedDataType="wstr"
                       cachedLength="100"
                       cachedName="review"
-                      lineageId="Package\Load_Customer_Ratings_STG\Customer Ratings.Outputs[OLE DB Source Output].Columns[review]">
+                      lineageId="Package\Load_Customer_Ratings_STG\Customer Ratings Src.Outputs[OLE DB Source Output].Columns[review]">
                       <properties>
                         <property
                           dataType="System.Int32"
@@ -1396,7 +1400,7 @@
                       cachedDataType="wstr"
                       cachedLength="50"
                       cachedName="sentiment"
-                      lineageId="Package\Load_Customer_Ratings_STG\Customer Ratings.Outputs[OLE DB Source Output].Columns[sentiment]">
+                      lineageId="Package\Load_Customer_Ratings_STG\Customer Ratings Src.Outputs[OLE DB Source Output].Columns[sentiment]">
                       <properties>
                         <property
                           dataType="System.Int32"
@@ -1428,7 +1432,7 @@
                           containsID="true"
                           dataType="System.Int32"
                           description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\Load_Customer_Ratings_STG\Customer Ratings.Outputs[OLE DB Source Output].Columns[customerproductrating_id]}</property>
+                          name="SortColumnId">#{Package\Load_Customer_Ratings_STG\Customer Ratings Src.Outputs[OLE DB Source Output].Columns[customerproductrating_id]}</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
@@ -1441,7 +1445,7 @@
                           containsID="true"
                           dataType="System.Int32"
                           description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\Load_Customer_Ratings_STG\Customer Ratings.Outputs[OLE DB Source Output].Columns[customer_id]}</property>
+                          name="SortColumnId">#{Package\Load_Customer_Ratings_STG\Customer Ratings Src.Outputs[OLE DB Source Output].Columns[customer_id]}</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
@@ -1455,7 +1459,7 @@
                           containsID="true"
                           dataType="System.Int32"
                           description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\Load_Customer_Ratings_STG\Customer Ratings.Outputs[OLE DB Source Output].Columns[product_id]}</property>
+                          name="SortColumnId">#{Package\Load_Customer_Ratings_STG\Customer Ratings Src.Outputs[OLE DB Source Output].Columns[product_id]}</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
@@ -1468,7 +1472,7 @@
                           containsID="true"
                           dataType="System.Int32"
                           description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\Load_Customer_Ratings_STG\Customer Ratings.Outputs[OLE DB Source Output].Columns[ratings]}</property>
+                          name="SortColumnId">#{Package\Load_Customer_Ratings_STG\Customer Ratings Src.Outputs[OLE DB Source Output].Columns[ratings]}</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
@@ -1482,7 +1486,7 @@
                           containsID="true"
                           dataType="System.Int32"
                           description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\Load_Customer_Ratings_STG\Customer Ratings.Outputs[OLE DB Source Output].Columns[review]}</property>
+                          name="SortColumnId">#{Package\Load_Customer_Ratings_STG\Customer Ratings Src.Outputs[OLE DB Source Output].Columns[review]}</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
@@ -1496,7 +1500,7 @@
                           containsID="true"
                           dataType="System.Int32"
                           description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\Load_Customer_Ratings_STG\Customer Ratings.Outputs[OLE DB Source Output].Columns[sentiment]}</property>
+                          name="SortColumnId">#{Package\Load_Customer_Ratings_STG\Customer Ratings Src.Outputs[OLE DB Source Output].Columns[sentiment]}</property>
                       </properties>
                     </outputColumn>
                   </outputColumns>
@@ -1531,7 +1535,7 @@
                       refId="Package\Load_Customer_Ratings_STG\Sort 1.Inputs[Sort Input].Columns[product_id]"
                       cachedDataType="i4"
                       cachedName="product_id"
-                      lineageId="Package\Load_Customer_Ratings_STG\Product.Outputs[OLE DB Source Output].Columns[product_id]">
+                      lineageId="Package\Load_Customer_Ratings_STG\Product Src.Outputs[OLE DB Source Output].Columns[product_id]">
                       <properties>
                         <property
                           dataType="System.Int32"
@@ -1548,7 +1552,7 @@
                       cachedDataType="wstr"
                       cachedLength="50"
                       cachedName="name"
-                      lineageId="Package\Load_Customer_Ratings_STG\Product.Outputs[OLE DB Source Output].Columns[name]">
+                      lineageId="Package\Load_Customer_Ratings_STG\Product Src.Outputs[OLE DB Source Output].Columns[name]">
                       <properties>
                         <property
                           dataType="System.Int32"
@@ -1564,7 +1568,7 @@
                       refId="Package\Load_Customer_Ratings_STG\Sort 1.Inputs[Sort Input].Columns[price]"
                       cachedDataType="r8"
                       cachedName="price"
-                      lineageId="Package\Load_Customer_Ratings_STG\Product.Outputs[OLE DB Source Output].Columns[price]">
+                      lineageId="Package\Load_Customer_Ratings_STG\Product Src.Outputs[OLE DB Source Output].Columns[price]">
                       <properties>
                         <property
                           dataType="System.Int32"
@@ -1581,7 +1585,7 @@
                       cachedDataType="wstr"
                       cachedLength="100"
                       cachedName="description"
-                      lineageId="Package\Load_Customer_Ratings_STG\Product.Outputs[OLE DB Source Output].Columns[description]">
+                      lineageId="Package\Load_Customer_Ratings_STG\Product Src.Outputs[OLE DB Source Output].Columns[description]">
                       <properties>
                         <property
                           dataType="System.Int32"
@@ -1597,7 +1601,7 @@
                       refId="Package\Load_Customer_Ratings_STG\Sort 1.Inputs[Sort Input].Columns[subcategory_id]"
                       cachedDataType="i4"
                       cachedName="subcategory_id"
-                      lineageId="Package\Load_Customer_Ratings_STG\Product.Outputs[OLE DB Source Output].Columns[subcategory_id]">
+                      lineageId="Package\Load_Customer_Ratings_STG\Product Src.Outputs[OLE DB Source Output].Columns[subcategory_id]">
                       <properties>
                         <property
                           dataType="System.Int32"
@@ -1630,7 +1634,7 @@
                           containsID="true"
                           dataType="System.Int32"
                           description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\Load_Customer_Ratings_STG\Product.Outputs[OLE DB Source Output].Columns[product_id]}</property>
+                          name="SortColumnId">#{Package\Load_Customer_Ratings_STG\Product Src.Outputs[OLE DB Source Output].Columns[product_id]}</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
@@ -1644,7 +1648,7 @@
                           containsID="true"
                           dataType="System.Int32"
                           description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\Load_Customer_Ratings_STG\Product.Outputs[OLE DB Source Output].Columns[name]}</property>
+                          name="SortColumnId">#{Package\Load_Customer_Ratings_STG\Product Src.Outputs[OLE DB Source Output].Columns[name]}</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
@@ -1657,7 +1661,7 @@
                           containsID="true"
                           dataType="System.Int32"
                           description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\Load_Customer_Ratings_STG\Product.Outputs[OLE DB Source Output].Columns[price]}</property>
+                          name="SortColumnId">#{Package\Load_Customer_Ratings_STG\Product Src.Outputs[OLE DB Source Output].Columns[price]}</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
@@ -1671,7 +1675,7 @@
                           containsID="true"
                           dataType="System.Int32"
                           description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\Load_Customer_Ratings_STG\Product.Outputs[OLE DB Source Output].Columns[description]}</property>
+                          name="SortColumnId">#{Package\Load_Customer_Ratings_STG\Product Src.Outputs[OLE DB Source Output].Columns[description]}</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
@@ -1684,7 +1688,7 @@
                           containsID="true"
                           dataType="System.Int32"
                           description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\Load_Customer_Ratings_STG\Product.Outputs[OLE DB Source Output].Columns[subcategory_id]}</property>
+                          name="SortColumnId">#{Package\Load_Customer_Ratings_STG\Product Src.Outputs[OLE DB Source Output].Columns[subcategory_id]}</property>
                       </properties>
                     </outputColumn>
                   </outputColumns>
@@ -1937,7 +1941,7 @@
                       refId="Package\Load_Customer_Ratings_STG\Sort 3.Inputs[Sort Input].Columns[subcategory_id]"
                       cachedDataType="i4"
                       cachedName="subcategory_id"
-                      lineageId="Package\Load_Customer_Ratings_STG\Subcategory.Outputs[OLE DB Source Output].Columns[subcategory_id]">
+                      lineageId="Package\Load_Customer_Ratings_STG\Subcategory Src.Outputs[OLE DB Source Output].Columns[subcategory_id]">
                       <properties>
                         <property
                           dataType="System.Int32"
@@ -1954,7 +1958,7 @@
                       cachedDataType="wstr"
                       cachedLength="50"
                       cachedName="subcategory_name"
-                      lineageId="Package\Load_Customer_Ratings_STG\Subcategory.Outputs[OLE DB Source Output].Columns[subcategory_name]">
+                      lineageId="Package\Load_Customer_Ratings_STG\Subcategory Src.Outputs[OLE DB Source Output].Columns[subcategory_name]">
                       <properties>
                         <property
                           dataType="System.Int32"
@@ -1970,7 +1974,7 @@
                       refId="Package\Load_Customer_Ratings_STG\Sort 3.Inputs[Sort Input].Columns[category_id]"
                       cachedDataType="i4"
                       cachedName="category_id"
-                      lineageId="Package\Load_Customer_Ratings_STG\Subcategory.Outputs[OLE DB Source Output].Columns[category_id]">
+                      lineageId="Package\Load_Customer_Ratings_STG\Subcategory Src.Outputs[OLE DB Source Output].Columns[category_id]">
                       <properties>
                         <property
                           dataType="System.Int32"
@@ -2003,7 +2007,7 @@
                           containsID="true"
                           dataType="System.Int32"
                           description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\Load_Customer_Ratings_STG\Subcategory.Outputs[OLE DB Source Output].Columns[subcategory_id]}</property>
+                          name="SortColumnId">#{Package\Load_Customer_Ratings_STG\Subcategory Src.Outputs[OLE DB Source Output].Columns[subcategory_id]}</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
@@ -2017,7 +2021,7 @@
                           containsID="true"
                           dataType="System.Int32"
                           description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\Load_Customer_Ratings_STG\Subcategory.Outputs[OLE DB Source Output].Columns[subcategory_name]}</property>
+                          name="SortColumnId">#{Package\Load_Customer_Ratings_STG\Subcategory Src.Outputs[OLE DB Source Output].Columns[subcategory_name]}</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
@@ -2030,7 +2034,7 @@
                           containsID="true"
                           dataType="System.Int32"
                           description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\Load_Customer_Ratings_STG\Subcategory.Outputs[OLE DB Source Output].Columns[category_id]}</property>
+                          name="SortColumnId">#{Package\Load_Customer_Ratings_STG\Subcategory Src.Outputs[OLE DB Source Output].Columns[category_id]}</property>
                       </properties>
                     </outputColumn>
                   </outputColumns>
@@ -2039,11 +2043,11 @@
               </outputs>
             </component>
             <component
-              refId="Package\Load_Customer_Ratings_STG\Subcategory"
+              refId="Package\Load_Customer_Ratings_STG\Subcategory Src"
               componentClassID="Microsoft.OLEDBSource"
               contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
               description="OLE DB Source"
-              name="Subcategory"
+              name="Subcategory Src"
               usesDispositions="true"
               version="7">
               <properties>
@@ -2089,7 +2093,7 @@
               </properties>
               <connections>
                 <connection
-                  refId="Package\Load_Customer_Ratings_STG\Subcategory.Connections[OleDbConnection]"
+                  refId="Package\Load_Customer_Ratings_STG\Subcategory Src.Connections[OleDbConnection]"
                   connectionManagerID="Package.ConnectionManagers[DESKTOP-LEL90HF.DataSet]"
                   connectionManagerRefId="Package.ConnectionManagers[DESKTOP-LEL90HF.DataSet]"
                   description="The OLE DB runtime connection used to access the database."
@@ -2097,104 +2101,104 @@
               </connections>
               <outputs>
                 <output
-                  refId="Package\Load_Customer_Ratings_STG\Subcategory.Outputs[OLE DB Source Output]"
+                  refId="Package\Load_Customer_Ratings_STG\Subcategory Src.Outputs[OLE DB Source Output]"
                   name="OLE DB Source Output">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Load_Customer_Ratings_STG\Subcategory.Outputs[OLE DB Source Output].Columns[subcategory_id]"
+                      refId="Package\Load_Customer_Ratings_STG\Subcategory Src.Outputs[OLE DB Source Output].Columns[subcategory_id]"
                       dataType="i4"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Load_Customer_Ratings_STG\Subcategory.Outputs[OLE DB Source Output].ExternalColumns[subcategory_id]"
-                      lineageId="Package\Load_Customer_Ratings_STG\Subcategory.Outputs[OLE DB Source Output].Columns[subcategory_id]"
+                      externalMetadataColumnId="Package\Load_Customer_Ratings_STG\Subcategory Src.Outputs[OLE DB Source Output].ExternalColumns[subcategory_id]"
+                      lineageId="Package\Load_Customer_Ratings_STG\Subcategory Src.Outputs[OLE DB Source Output].Columns[subcategory_id]"
                       name="subcategory_id"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Load_Customer_Ratings_STG\Subcategory.Outputs[OLE DB Source Output].Columns[subcategory_name]"
+                      refId="Package\Load_Customer_Ratings_STG\Subcategory Src.Outputs[OLE DB Source Output].Columns[subcategory_name]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Load_Customer_Ratings_STG\Subcategory.Outputs[OLE DB Source Output].ExternalColumns[subcategory_name]"
+                      externalMetadataColumnId="Package\Load_Customer_Ratings_STG\Subcategory Src.Outputs[OLE DB Source Output].ExternalColumns[subcategory_name]"
                       length="50"
-                      lineageId="Package\Load_Customer_Ratings_STG\Subcategory.Outputs[OLE DB Source Output].Columns[subcategory_name]"
+                      lineageId="Package\Load_Customer_Ratings_STG\Subcategory Src.Outputs[OLE DB Source Output].Columns[subcategory_name]"
                       name="subcategory_name"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Load_Customer_Ratings_STG\Subcategory.Outputs[OLE DB Source Output].Columns[category_id]"
+                      refId="Package\Load_Customer_Ratings_STG\Subcategory Src.Outputs[OLE DB Source Output].Columns[category_id]"
                       dataType="i4"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Load_Customer_Ratings_STG\Subcategory.Outputs[OLE DB Source Output].ExternalColumns[category_id]"
-                      lineageId="Package\Load_Customer_Ratings_STG\Subcategory.Outputs[OLE DB Source Output].Columns[category_id]"
+                      externalMetadataColumnId="Package\Load_Customer_Ratings_STG\Subcategory Src.Outputs[OLE DB Source Output].ExternalColumns[category_id]"
+                      lineageId="Package\Load_Customer_Ratings_STG\Subcategory Src.Outputs[OLE DB Source Output].Columns[category_id]"
                       name="category_id"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Load_Customer_Ratings_STG\Subcategory.Outputs[OLE DB Source Output].Columns[UpdateDate]"
+                      refId="Package\Load_Customer_Ratings_STG\Subcategory Src.Outputs[OLE DB Source Output].Columns[UpdateDate]"
                       dataType="dbTimeStamp"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Load_Customer_Ratings_STG\Subcategory.Outputs[OLE DB Source Output].ExternalColumns[UpdateDate]"
-                      lineageId="Package\Load_Customer_Ratings_STG\Subcategory.Outputs[OLE DB Source Output].Columns[UpdateDate]"
+                      externalMetadataColumnId="Package\Load_Customer_Ratings_STG\Subcategory Src.Outputs[OLE DB Source Output].ExternalColumns[UpdateDate]"
+                      lineageId="Package\Load_Customer_Ratings_STG\Subcategory Src.Outputs[OLE DB Source Output].Columns[UpdateDate]"
                       name="UpdateDate"
                       truncationRowDisposition="FailComponent" />
                   </outputColumns>
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
-                      refId="Package\Load_Customer_Ratings_STG\Subcategory.Outputs[OLE DB Source Output].ExternalColumns[subcategory_id]"
+                      refId="Package\Load_Customer_Ratings_STG\Subcategory Src.Outputs[OLE DB Source Output].ExternalColumns[subcategory_id]"
                       dataType="i4"
                       name="subcategory_id" />
                     <externalMetadataColumn
-                      refId="Package\Load_Customer_Ratings_STG\Subcategory.Outputs[OLE DB Source Output].ExternalColumns[subcategory_name]"
+                      refId="Package\Load_Customer_Ratings_STG\Subcategory Src.Outputs[OLE DB Source Output].ExternalColumns[subcategory_name]"
                       dataType="wstr"
                       length="50"
                       name="subcategory_name" />
                     <externalMetadataColumn
-                      refId="Package\Load_Customer_Ratings_STG\Subcategory.Outputs[OLE DB Source Output].ExternalColumns[category_id]"
+                      refId="Package\Load_Customer_Ratings_STG\Subcategory Src.Outputs[OLE DB Source Output].ExternalColumns[category_id]"
                       dataType="i4"
                       name="category_id" />
                     <externalMetadataColumn
-                      refId="Package\Load_Customer_Ratings_STG\Subcategory.Outputs[OLE DB Source Output].ExternalColumns[UpdateDate]"
+                      refId="Package\Load_Customer_Ratings_STG\Subcategory Src.Outputs[OLE DB Source Output].ExternalColumns[UpdateDate]"
                       dataType="dbTimeStamp"
                       name="UpdateDate" />
                   </externalMetadataColumns>
                 </output>
                 <output
-                  refId="Package\Load_Customer_Ratings_STG\Subcategory.Outputs[OLE DB Source Error Output]"
+                  refId="Package\Load_Customer_Ratings_STG\Subcategory Src.Outputs[OLE DB Source Error Output]"
                   isErrorOut="true"
                   name="OLE DB Source Error Output">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Load_Customer_Ratings_STG\Subcategory.Outputs[OLE DB Source Error Output].Columns[subcategory_id]"
+                      refId="Package\Load_Customer_Ratings_STG\Subcategory Src.Outputs[OLE DB Source Error Output].Columns[subcategory_id]"
                       dataType="i4"
-                      lineageId="Package\Load_Customer_Ratings_STG\Subcategory.Outputs[OLE DB Source Error Output].Columns[subcategory_id]"
+                      lineageId="Package\Load_Customer_Ratings_STG\Subcategory Src.Outputs[OLE DB Source Error Output].Columns[subcategory_id]"
                       name="subcategory_id" />
                     <outputColumn
-                      refId="Package\Load_Customer_Ratings_STG\Subcategory.Outputs[OLE DB Source Error Output].Columns[subcategory_name]"
+                      refId="Package\Load_Customer_Ratings_STG\Subcategory Src.Outputs[OLE DB Source Error Output].Columns[subcategory_name]"
                       dataType="wstr"
                       length="50"
-                      lineageId="Package\Load_Customer_Ratings_STG\Subcategory.Outputs[OLE DB Source Error Output].Columns[subcategory_name]"
+                      lineageId="Package\Load_Customer_Ratings_STG\Subcategory Src.Outputs[OLE DB Source Error Output].Columns[subcategory_name]"
                       name="subcategory_name" />
                     <outputColumn
-                      refId="Package\Load_Customer_Ratings_STG\Subcategory.Outputs[OLE DB Source Error Output].Columns[category_id]"
+                      refId="Package\Load_Customer_Ratings_STG\Subcategory Src.Outputs[OLE DB Source Error Output].Columns[category_id]"
                       dataType="i4"
-                      lineageId="Package\Load_Customer_Ratings_STG\Subcategory.Outputs[OLE DB Source Error Output].Columns[category_id]"
+                      lineageId="Package\Load_Customer_Ratings_STG\Subcategory Src.Outputs[OLE DB Source Error Output].Columns[category_id]"
                       name="category_id" />
                     <outputColumn
-                      refId="Package\Load_Customer_Ratings_STG\Subcategory.Outputs[OLE DB Source Error Output].Columns[UpdateDate]"
+                      refId="Package\Load_Customer_Ratings_STG\Subcategory Src.Outputs[OLE DB Source Error Output].Columns[UpdateDate]"
                       dataType="dbTimeStamp"
-                      lineageId="Package\Load_Customer_Ratings_STG\Subcategory.Outputs[OLE DB Source Error Output].Columns[UpdateDate]"
+                      lineageId="Package\Load_Customer_Ratings_STG\Subcategory Src.Outputs[OLE DB Source Error Output].Columns[UpdateDate]"
                       name="UpdateDate" />
                     <outputColumn
-                      refId="Package\Load_Customer_Ratings_STG\Subcategory.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      refId="Package\Load_Customer_Ratings_STG\Subcategory Src.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\Load_Customer_Ratings_STG\Subcategory.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      lineageId="Package\Load_Customer_Ratings_STG\Subcategory Src.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\Load_Customer_Ratings_STG\Subcategory.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      refId="Package\Load_Customer_Ratings_STG\Subcategory Src.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\Load_Customer_Ratings_STG\Subcategory.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      lineageId="Package\Load_Customer_Ratings_STG\Subcategory Src.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -2223,17 +2227,17 @@
               refId="Package\Load_Customer_Ratings_STG.Paths[OLE DB Source Output]"
               endId="Package\Load_Customer_Ratings_STG\Sort.Inputs[Sort Input]"
               name="OLE DB Source Output"
-              startId="Package\Load_Customer_Ratings_STG\Customer Ratings.Outputs[OLE DB Source Output]" />
+              startId="Package\Load_Customer_Ratings_STG\Customer Ratings Src.Outputs[OLE DB Source Output]" />
             <path
               refId="Package\Load_Customer_Ratings_STG.Paths[OLE DB Source Output1]"
               endId="Package\Load_Customer_Ratings_STG\Sort 1.Inputs[Sort Input]"
               name="OLE DB Source Output"
-              startId="Package\Load_Customer_Ratings_STG\Product.Outputs[OLE DB Source Output]" />
+              startId="Package\Load_Customer_Ratings_STG\Product Src.Outputs[OLE DB Source Output]" />
             <path
               refId="Package\Load_Customer_Ratings_STG.Paths[OLE DB Source Output2]"
               endId="Package\Load_Customer_Ratings_STG\Sort 3.Inputs[Sort Input]"
               name="OLE DB Source Output"
-              startId="Package\Load_Customer_Ratings_STG\Subcategory.Outputs[OLE DB Source Output]" />
+              startId="Package\Load_Customer_Ratings_STG\Subcategory Src.Outputs[OLE DB Source Output]" />
             <path
               refId="Package\Load_Customer_Ratings_STG.Paths[Sort Output]"
               endId="Package\Load_Customer_Ratings_STG\Merge Join.Inputs[Merge Join Left Input]"
@@ -2381,7 +2385,7 @@
     design-time-name="Package\Load_Customer_Ratings_STG">
     <LayoutInfo>
       <GraphLayout
-        Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="142,42"
           Id="Package\Load_Customer_Ratings_STG\Merge Join 1"
@@ -2399,8 +2403,8 @@
           Id="Package\Load_Customer_Ratings_STG\OLE DB Destination"
           TopLeft="468,650.000000014901" />
         <NodeLayout
-          Size="117,42"
-          Id="Package\Load_Customer_Ratings_STG\Product"
+          Size="136,42"
+          Id="Package\Load_Customer_Ratings_STG\Product Src"
           TopLeft="388,24.000000014901" />
         <NodeLayout
           Size="99,42"
@@ -2415,12 +2419,12 @@
           Id="Package\Load_Customer_Ratings_STG\Sort 2"
           TopLeft="344,349" />
         <NodeLayout
-          Size="167,42"
-          Id="Package\Load_Customer_Ratings_STG\Customer Ratings"
+          Size="186,42"
+          Id="Package\Load_Customer_Ratings_STG\Customer Ratings Src"
           TopLeft="121,28" />
         <NodeLayout
-          Size="141,42"
-          Id="Package\Load_Customer_Ratings_STG\Subcategory"
+          Size="160,42"
+          Id="Package\Load_Customer_Ratings_STG\Subcategory Src"
           TopLeft="606,165.000000014901" />
         <NodeLayout
           Size="108,42"
@@ -2457,9 +2461,7 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -2493,9 +2495,7 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -2529,9 +2529,7 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -2565,20 +2563,18 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Load_Customer_Ratings_STG.Paths[OLE DB Source Output2]"
-          TopLeft="676.5,207.000000014901">
+          TopLeft="686,207.000000014901">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-9.5,139.999999985099"
+              EndConnector="-19,139.999999985099"
               Start="0,0"
-              End="-9.5,132.499999985099">
+              End="-19,132.499999985099">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
@@ -2589,32 +2585,30 @@
                     Point2="0,69.9999999925495"
                     Point3="-4,69.9999999925495" />
                   <mssgle:LineSegment
-                    End="-5.5,69.9999999925495" />
+                    End="-15,69.9999999925495" />
                   <mssgle:CubicBezierSegment
-                    Point1="-5.5,69.9999999925495"
-                    Point2="-9.5,69.9999999925495"
-                    Point3="-9.5,73.9999999925495" />
+                    Point1="-15,69.9999999925495"
+                    Point2="-19,69.9999999925495"
+                    Point3="-19,73.9999999925495" />
                   <mssgle:LineSegment
-                    End="-9.5,132.499999985099" />
+                    End="-19,132.499999985099" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Load_Customer_Ratings_STG.Paths[OLE DB Source Output1]"
-          TopLeft="446.5,66.000000014901">
+          TopLeft="456,66.000000014901">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="22.5,39.999999985099"
+              EndConnector="13,39.999999985099"
               Start="0,0"
-              End="22.5,32.499999985099">
+              End="13,32.499999985099">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
@@ -2625,26 +2619,24 @@
                     Point2="0,19.9999999925495"
                     Point3="4,19.9999999925495" />
                   <mssgle:LineSegment
-                    End="18.5,19.9999999925495" />
+                    End="9,19.9999999925495" />
                   <mssgle:CubicBezierSegment
-                    Point1="18.5,19.9999999925495"
-                    Point2="22.5,19.9999999925495"
-                    Point3="22.5,23.9999999925495" />
+                    Point1="9,19.9999999925495"
+                    Point2="13,19.9999999925495"
+                    Point3="13,23.9999999925495" />
                   <mssgle:LineSegment
-                    End="22.5,32.499999985099" />
+                    End="13,32.499999985099" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Load_Customer_Ratings_STG.Paths[OLE DB Source Output]"
-          TopLeft="205.5,70">
+          TopLeft="210.25,70">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -2661,9 +2653,7 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -2685,9 +2675,7 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -2709,9 +2697,7 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -2733,16 +2719,27 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\Load_Customer_Ratings_STG\Product">
+    design-time-name="Package\Load_Customer_Ratings_STG\OLE DB Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Load_Customer_Ratings_STG\Product Src">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -2750,7 +2747,7 @@
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Load_Customer_Ratings_STG\Customer Ratings">
+    design-time-name="Package\Load_Customer_Ratings_STG\Customer Ratings Src">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -2758,7 +2755,7 @@
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Load_Customer_Ratings_STG\Subcategory">
+    design-time-name="Package\Load_Customer_Ratings_STG\Subcategory Src">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>

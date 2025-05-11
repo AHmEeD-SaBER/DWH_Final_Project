@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Load_ReturnsSTG"
   DTS:PackageType="5"
-  DTS:VersionBuild="7"
-  DTS:VersionGUID="{116DEE9C-225B-4D0C-8397-4DA8752E26FE}">
+  DTS:VersionBuild="8"
+  DTS:VersionGUID="{E235B7BD-D613-41F8-A9BE-C87BCF7B33E5}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -969,11 +969,11 @@
               </outputs>
             </component>
             <component
-              refId="Package\Load_ReturnsSTG\OrderItem"
+              refId="Package\Load_ReturnsSTG\OrderItem Src"
               componentClassID="Microsoft.OLEDBSource"
               contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
               description="OLE DB Source"
-              name="OrderItem"
+              name="OrderItem Src"
               usesDispositions="true"
               version="7">
               <properties>
@@ -1019,7 +1019,7 @@
               </properties>
               <connections>
                 <connection
-                  refId="Package\Load_ReturnsSTG\OrderItem.Connections[OleDbConnection]"
+                  refId="Package\Load_ReturnsSTG\OrderItem Src.Connections[OleDbConnection]"
                   connectionManagerID="Package.ConnectionManagers[DESKTOP-LEL90HF.DataSet]"
                   connectionManagerRefId="Package.ConnectionManagers[DESKTOP-LEL90HF.DataSet]"
                   description="The OLE DB runtime connection used to access the database."
@@ -1027,173 +1027,173 @@
               </connections>
               <outputs>
                 <output
-                  refId="Package\Load_ReturnsSTG\OrderItem.Outputs[OLE DB Source Output]"
+                  refId="Package\Load_ReturnsSTG\OrderItem Src.Outputs[OLE DB Source Output]"
                   name="OLE DB Source Output">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Load_ReturnsSTG\OrderItem.Outputs[OLE DB Source Output].Columns[order_id]"
+                      refId="Package\Load_ReturnsSTG\OrderItem Src.Outputs[OLE DB Source Output].Columns[order_id]"
                       dataType="i4"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Load_ReturnsSTG\OrderItem.Outputs[OLE DB Source Output].ExternalColumns[order_id]"
-                      lineageId="Package\Load_ReturnsSTG\OrderItem.Outputs[OLE DB Source Output].Columns[order_id]"
+                      externalMetadataColumnId="Package\Load_ReturnsSTG\OrderItem Src.Outputs[OLE DB Source Output].ExternalColumns[order_id]"
+                      lineageId="Package\Load_ReturnsSTG\OrderItem Src.Outputs[OLE DB Source Output].Columns[order_id]"
                       name="order_id"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Load_ReturnsSTG\OrderItem.Outputs[OLE DB Source Output].Columns[orderitem_id]"
+                      refId="Package\Load_ReturnsSTG\OrderItem Src.Outputs[OLE DB Source Output].Columns[orderitem_id]"
                       dataType="i4"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Load_ReturnsSTG\OrderItem.Outputs[OLE DB Source Output].ExternalColumns[orderitem_id]"
-                      lineageId="Package\Load_ReturnsSTG\OrderItem.Outputs[OLE DB Source Output].Columns[orderitem_id]"
+                      externalMetadataColumnId="Package\Load_ReturnsSTG\OrderItem Src.Outputs[OLE DB Source Output].ExternalColumns[orderitem_id]"
+                      lineageId="Package\Load_ReturnsSTG\OrderItem Src.Outputs[OLE DB Source Output].Columns[orderitem_id]"
                       name="orderitem_id"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Load_ReturnsSTG\OrderItem.Outputs[OLE DB Source Output].Columns[product_id]"
+                      refId="Package\Load_ReturnsSTG\OrderItem Src.Outputs[OLE DB Source Output].Columns[product_id]"
                       dataType="i4"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Load_ReturnsSTG\OrderItem.Outputs[OLE DB Source Output].ExternalColumns[product_id]"
-                      lineageId="Package\Load_ReturnsSTG\OrderItem.Outputs[OLE DB Source Output].Columns[product_id]"
+                      externalMetadataColumnId="Package\Load_ReturnsSTG\OrderItem Src.Outputs[OLE DB Source Output].ExternalColumns[product_id]"
+                      lineageId="Package\Load_ReturnsSTG\OrderItem Src.Outputs[OLE DB Source Output].Columns[product_id]"
                       name="product_id"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Load_ReturnsSTG\OrderItem.Outputs[OLE DB Source Output].Columns[quantity]"
+                      refId="Package\Load_ReturnsSTG\OrderItem Src.Outputs[OLE DB Source Output].Columns[quantity]"
                       dataType="i4"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Load_ReturnsSTG\OrderItem.Outputs[OLE DB Source Output].ExternalColumns[quantity]"
-                      lineageId="Package\Load_ReturnsSTG\OrderItem.Outputs[OLE DB Source Output].Columns[quantity]"
+                      externalMetadataColumnId="Package\Load_ReturnsSTG\OrderItem Src.Outputs[OLE DB Source Output].ExternalColumns[quantity]"
+                      lineageId="Package\Load_ReturnsSTG\OrderItem Src.Outputs[OLE DB Source Output].Columns[quantity]"
                       name="quantity"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Load_ReturnsSTG\OrderItem.Outputs[OLE DB Source Output].Columns[supplier_id]"
+                      refId="Package\Load_ReturnsSTG\OrderItem Src.Outputs[OLE DB Source Output].Columns[supplier_id]"
                       dataType="i4"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Load_ReturnsSTG\OrderItem.Outputs[OLE DB Source Output].ExternalColumns[supplier_id]"
-                      lineageId="Package\Load_ReturnsSTG\OrderItem.Outputs[OLE DB Source Output].Columns[supplier_id]"
+                      externalMetadataColumnId="Package\Load_ReturnsSTG\OrderItem Src.Outputs[OLE DB Source Output].ExternalColumns[supplier_id]"
+                      lineageId="Package\Load_ReturnsSTG\OrderItem Src.Outputs[OLE DB Source Output].Columns[supplier_id]"
                       name="supplier_id"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Load_ReturnsSTG\OrderItem.Outputs[OLE DB Source Output].Columns[subtotal]"
+                      refId="Package\Load_ReturnsSTG\OrderItem Src.Outputs[OLE DB Source Output].Columns[subtotal]"
                       dataType="r8"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Load_ReturnsSTG\OrderItem.Outputs[OLE DB Source Output].ExternalColumns[subtotal]"
-                      lineageId="Package\Load_ReturnsSTG\OrderItem.Outputs[OLE DB Source Output].Columns[subtotal]"
+                      externalMetadataColumnId="Package\Load_ReturnsSTG\OrderItem Src.Outputs[OLE DB Source Output].ExternalColumns[subtotal]"
+                      lineageId="Package\Load_ReturnsSTG\OrderItem Src.Outputs[OLE DB Source Output].Columns[subtotal]"
                       name="subtotal"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Load_ReturnsSTG\OrderItem.Outputs[OLE DB Source Output].Columns[discount]"
+                      refId="Package\Load_ReturnsSTG\OrderItem Src.Outputs[OLE DB Source Output].Columns[discount]"
                       dataType="r8"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Load_ReturnsSTG\OrderItem.Outputs[OLE DB Source Output].ExternalColumns[discount]"
-                      lineageId="Package\Load_ReturnsSTG\OrderItem.Outputs[OLE DB Source Output].Columns[discount]"
+                      externalMetadataColumnId="Package\Load_ReturnsSTG\OrderItem Src.Outputs[OLE DB Source Output].ExternalColumns[discount]"
+                      lineageId="Package\Load_ReturnsSTG\OrderItem Src.Outputs[OLE DB Source Output].Columns[discount]"
                       name="discount"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Load_ReturnsSTG\OrderItem.Outputs[OLE DB Source Output].Columns[UpdateDate]"
+                      refId="Package\Load_ReturnsSTG\OrderItem Src.Outputs[OLE DB Source Output].Columns[UpdateDate]"
                       dataType="dbTimeStamp"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Load_ReturnsSTG\OrderItem.Outputs[OLE DB Source Output].ExternalColumns[UpdateDate]"
-                      lineageId="Package\Load_ReturnsSTG\OrderItem.Outputs[OLE DB Source Output].Columns[UpdateDate]"
+                      externalMetadataColumnId="Package\Load_ReturnsSTG\OrderItem Src.Outputs[OLE DB Source Output].ExternalColumns[UpdateDate]"
+                      lineageId="Package\Load_ReturnsSTG\OrderItem Src.Outputs[OLE DB Source Output].Columns[UpdateDate]"
                       name="UpdateDate"
                       truncationRowDisposition="FailComponent" />
                   </outputColumns>
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
-                      refId="Package\Load_ReturnsSTG\OrderItem.Outputs[OLE DB Source Output].ExternalColumns[order_id]"
+                      refId="Package\Load_ReturnsSTG\OrderItem Src.Outputs[OLE DB Source Output].ExternalColumns[order_id]"
                       dataType="i4"
                       name="order_id" />
                     <externalMetadataColumn
-                      refId="Package\Load_ReturnsSTG\OrderItem.Outputs[OLE DB Source Output].ExternalColumns[orderitem_id]"
+                      refId="Package\Load_ReturnsSTG\OrderItem Src.Outputs[OLE DB Source Output].ExternalColumns[orderitem_id]"
                       dataType="i4"
                       name="orderitem_id" />
                     <externalMetadataColumn
-                      refId="Package\Load_ReturnsSTG\OrderItem.Outputs[OLE DB Source Output].ExternalColumns[product_id]"
+                      refId="Package\Load_ReturnsSTG\OrderItem Src.Outputs[OLE DB Source Output].ExternalColumns[product_id]"
                       dataType="i4"
                       name="product_id" />
                     <externalMetadataColumn
-                      refId="Package\Load_ReturnsSTG\OrderItem.Outputs[OLE DB Source Output].ExternalColumns[quantity]"
+                      refId="Package\Load_ReturnsSTG\OrderItem Src.Outputs[OLE DB Source Output].ExternalColumns[quantity]"
                       dataType="i4"
                       name="quantity" />
                     <externalMetadataColumn
-                      refId="Package\Load_ReturnsSTG\OrderItem.Outputs[OLE DB Source Output].ExternalColumns[supplier_id]"
+                      refId="Package\Load_ReturnsSTG\OrderItem Src.Outputs[OLE DB Source Output].ExternalColumns[supplier_id]"
                       dataType="i4"
                       name="supplier_id" />
                     <externalMetadataColumn
-                      refId="Package\Load_ReturnsSTG\OrderItem.Outputs[OLE DB Source Output].ExternalColumns[subtotal]"
+                      refId="Package\Load_ReturnsSTG\OrderItem Src.Outputs[OLE DB Source Output].ExternalColumns[subtotal]"
                       dataType="r8"
                       name="subtotal" />
                     <externalMetadataColumn
-                      refId="Package\Load_ReturnsSTG\OrderItem.Outputs[OLE DB Source Output].ExternalColumns[discount]"
+                      refId="Package\Load_ReturnsSTG\OrderItem Src.Outputs[OLE DB Source Output].ExternalColumns[discount]"
                       dataType="r8"
                       name="discount" />
                     <externalMetadataColumn
-                      refId="Package\Load_ReturnsSTG\OrderItem.Outputs[OLE DB Source Output].ExternalColumns[UpdateDate]"
+                      refId="Package\Load_ReturnsSTG\OrderItem Src.Outputs[OLE DB Source Output].ExternalColumns[UpdateDate]"
                       dataType="dbTimeStamp"
                       name="UpdateDate" />
                   </externalMetadataColumns>
                 </output>
                 <output
-                  refId="Package\Load_ReturnsSTG\OrderItem.Outputs[OLE DB Source Error Output]"
+                  refId="Package\Load_ReturnsSTG\OrderItem Src.Outputs[OLE DB Source Error Output]"
                   isErrorOut="true"
                   name="OLE DB Source Error Output">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Load_ReturnsSTG\OrderItem.Outputs[OLE DB Source Error Output].Columns[orderitem_id]"
+                      refId="Package\Load_ReturnsSTG\OrderItem Src.Outputs[OLE DB Source Error Output].Columns[orderitem_id]"
                       dataType="i4"
-                      lineageId="Package\Load_ReturnsSTG\OrderItem.Outputs[OLE DB Source Error Output].Columns[orderitem_id]"
+                      lineageId="Package\Load_ReturnsSTG\OrderItem Src.Outputs[OLE DB Source Error Output].Columns[orderitem_id]"
                       name="orderitem_id" />
                     <outputColumn
-                      refId="Package\Load_ReturnsSTG\OrderItem.Outputs[OLE DB Source Error Output].Columns[order_id]"
+                      refId="Package\Load_ReturnsSTG\OrderItem Src.Outputs[OLE DB Source Error Output].Columns[order_id]"
                       dataType="i4"
-                      lineageId="Package\Load_ReturnsSTG\OrderItem.Outputs[OLE DB Source Error Output].Columns[order_id]"
+                      lineageId="Package\Load_ReturnsSTG\OrderItem Src.Outputs[OLE DB Source Error Output].Columns[order_id]"
                       name="order_id" />
                     <outputColumn
-                      refId="Package\Load_ReturnsSTG\OrderItem.Outputs[OLE DB Source Error Output].Columns[product_id]"
+                      refId="Package\Load_ReturnsSTG\OrderItem Src.Outputs[OLE DB Source Error Output].Columns[product_id]"
                       dataType="i4"
-                      lineageId="Package\Load_ReturnsSTG\OrderItem.Outputs[OLE DB Source Error Output].Columns[product_id]"
+                      lineageId="Package\Load_ReturnsSTG\OrderItem Src.Outputs[OLE DB Source Error Output].Columns[product_id]"
                       name="product_id" />
                     <outputColumn
-                      refId="Package\Load_ReturnsSTG\OrderItem.Outputs[OLE DB Source Error Output].Columns[quantity]"
+                      refId="Package\Load_ReturnsSTG\OrderItem Src.Outputs[OLE DB Source Error Output].Columns[quantity]"
                       dataType="i4"
-                      lineageId="Package\Load_ReturnsSTG\OrderItem.Outputs[OLE DB Source Error Output].Columns[quantity]"
+                      lineageId="Package\Load_ReturnsSTG\OrderItem Src.Outputs[OLE DB Source Error Output].Columns[quantity]"
                       name="quantity" />
                     <outputColumn
-                      refId="Package\Load_ReturnsSTG\OrderItem.Outputs[OLE DB Source Error Output].Columns[supplier_id]"
+                      refId="Package\Load_ReturnsSTG\OrderItem Src.Outputs[OLE DB Source Error Output].Columns[supplier_id]"
                       dataType="i4"
-                      lineageId="Package\Load_ReturnsSTG\OrderItem.Outputs[OLE DB Source Error Output].Columns[supplier_id]"
+                      lineageId="Package\Load_ReturnsSTG\OrderItem Src.Outputs[OLE DB Source Error Output].Columns[supplier_id]"
                       name="supplier_id" />
                     <outputColumn
-                      refId="Package\Load_ReturnsSTG\OrderItem.Outputs[OLE DB Source Error Output].Columns[subtotal]"
+                      refId="Package\Load_ReturnsSTG\OrderItem Src.Outputs[OLE DB Source Error Output].Columns[subtotal]"
                       dataType="r8"
-                      lineageId="Package\Load_ReturnsSTG\OrderItem.Outputs[OLE DB Source Error Output].Columns[subtotal]"
+                      lineageId="Package\Load_ReturnsSTG\OrderItem Src.Outputs[OLE DB Source Error Output].Columns[subtotal]"
                       name="subtotal" />
                     <outputColumn
-                      refId="Package\Load_ReturnsSTG\OrderItem.Outputs[OLE DB Source Error Output].Columns[discount]"
+                      refId="Package\Load_ReturnsSTG\OrderItem Src.Outputs[OLE DB Source Error Output].Columns[discount]"
                       dataType="r8"
-                      lineageId="Package\Load_ReturnsSTG\OrderItem.Outputs[OLE DB Source Error Output].Columns[discount]"
+                      lineageId="Package\Load_ReturnsSTG\OrderItem Src.Outputs[OLE DB Source Error Output].Columns[discount]"
                       name="discount" />
                     <outputColumn
-                      refId="Package\Load_ReturnsSTG\OrderItem.Outputs[OLE DB Source Error Output].Columns[UpdateDate]"
+                      refId="Package\Load_ReturnsSTG\OrderItem Src.Outputs[OLE DB Source Error Output].Columns[UpdateDate]"
                       dataType="dbTimeStamp"
-                      lineageId="Package\Load_ReturnsSTG\OrderItem.Outputs[OLE DB Source Error Output].Columns[UpdateDate]"
+                      lineageId="Package\Load_ReturnsSTG\OrderItem Src.Outputs[OLE DB Source Error Output].Columns[UpdateDate]"
                       name="UpdateDate" />
                     <outputColumn
-                      refId="Package\Load_ReturnsSTG\OrderItem.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      refId="Package\Load_ReturnsSTG\OrderItem Src.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\Load_ReturnsSTG\OrderItem.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      lineageId="Package\Load_ReturnsSTG\OrderItem Src.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\Load_ReturnsSTG\OrderItem.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      refId="Package\Load_ReturnsSTG\OrderItem Src.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\Load_ReturnsSTG\OrderItem.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      lineageId="Package\Load_ReturnsSTG\OrderItem Src.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -1202,11 +1202,11 @@
               </outputs>
             </component>
             <component
-              refId="Package\Load_ReturnsSTG\Returns"
+              refId="Package\Load_ReturnsSTG\Returns Src"
               componentClassID="Microsoft.OLEDBSource"
               contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
               description="OLE DB Source"
-              name="Returns"
+              name="Returns Src"
               usesDispositions="true"
               version="7">
               <properties>
@@ -1252,7 +1252,7 @@
               </properties>
               <connections>
                 <connection
-                  refId="Package\Load_ReturnsSTG\Returns.Connections[OleDbConnection]"
+                  refId="Package\Load_ReturnsSTG\Returns Src.Connections[OleDbConnection]"
                   connectionManagerID="Package.ConnectionManagers[DESKTOP-LEL90HF.DataSet]"
                   connectionManagerRefId="Package.ConnectionManagers[DESKTOP-LEL90HF.DataSet]"
                   description="The OLE DB runtime connection used to access the database."
@@ -1260,161 +1260,161 @@
               </connections>
               <outputs>
                 <output
-                  refId="Package\Load_ReturnsSTG\Returns.Outputs[OLE DB Source Output]"
+                  refId="Package\Load_ReturnsSTG\Returns Src.Outputs[OLE DB Source Output]"
                   name="OLE DB Source Output">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Load_ReturnsSTG\Returns.Outputs[OLE DB Source Output].Columns[return_id]"
+                      refId="Package\Load_ReturnsSTG\Returns Src.Outputs[OLE DB Source Output].Columns[return_id]"
                       dataType="i4"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Load_ReturnsSTG\Returns.Outputs[OLE DB Source Output].ExternalColumns[return_id]"
-                      lineageId="Package\Load_ReturnsSTG\Returns.Outputs[OLE DB Source Output].Columns[return_id]"
+                      externalMetadataColumnId="Package\Load_ReturnsSTG\Returns Src.Outputs[OLE DB Source Output].ExternalColumns[return_id]"
+                      lineageId="Package\Load_ReturnsSTG\Returns Src.Outputs[OLE DB Source Output].Columns[return_id]"
                       name="return_id"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Load_ReturnsSTG\Returns.Outputs[OLE DB Source Output].Columns[order_id]"
+                      refId="Package\Load_ReturnsSTG\Returns Src.Outputs[OLE DB Source Output].Columns[order_id]"
                       dataType="i4"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Load_ReturnsSTG\Returns.Outputs[OLE DB Source Output].ExternalColumns[order_id]"
-                      lineageId="Package\Load_ReturnsSTG\Returns.Outputs[OLE DB Source Output].Columns[order_id]"
+                      externalMetadataColumnId="Package\Load_ReturnsSTG\Returns Src.Outputs[OLE DB Source Output].ExternalColumns[order_id]"
+                      lineageId="Package\Load_ReturnsSTG\Returns Src.Outputs[OLE DB Source Output].Columns[order_id]"
                       name="order_id"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Load_ReturnsSTG\Returns.Outputs[OLE DB Source Output].Columns[product_id]"
+                      refId="Package\Load_ReturnsSTG\Returns Src.Outputs[OLE DB Source Output].Columns[product_id]"
                       dataType="i4"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Load_ReturnsSTG\Returns.Outputs[OLE DB Source Output].ExternalColumns[product_id]"
-                      lineageId="Package\Load_ReturnsSTG\Returns.Outputs[OLE DB Source Output].Columns[product_id]"
+                      externalMetadataColumnId="Package\Load_ReturnsSTG\Returns Src.Outputs[OLE DB Source Output].ExternalColumns[product_id]"
+                      lineageId="Package\Load_ReturnsSTG\Returns Src.Outputs[OLE DB Source Output].Columns[product_id]"
                       name="product_id"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Load_ReturnsSTG\Returns.Outputs[OLE DB Source Output].Columns[return_date]"
+                      refId="Package\Load_ReturnsSTG\Returns Src.Outputs[OLE DB Source Output].Columns[return_date]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Load_ReturnsSTG\Returns.Outputs[OLE DB Source Output].ExternalColumns[return_date]"
+                      externalMetadataColumnId="Package\Load_ReturnsSTG\Returns Src.Outputs[OLE DB Source Output].ExternalColumns[return_date]"
                       length="10"
-                      lineageId="Package\Load_ReturnsSTG\Returns.Outputs[OLE DB Source Output].Columns[return_date]"
+                      lineageId="Package\Load_ReturnsSTG\Returns Src.Outputs[OLE DB Source Output].Columns[return_date]"
                       name="return_date"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Load_ReturnsSTG\Returns.Outputs[OLE DB Source Output].Columns[reason]"
+                      refId="Package\Load_ReturnsSTG\Returns Src.Outputs[OLE DB Source Output].Columns[reason]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Load_ReturnsSTG\Returns.Outputs[OLE DB Source Output].ExternalColumns[reason]"
+                      externalMetadataColumnId="Package\Load_ReturnsSTG\Returns Src.Outputs[OLE DB Source Output].ExternalColumns[reason]"
                       length="50"
-                      lineageId="Package\Load_ReturnsSTG\Returns.Outputs[OLE DB Source Output].Columns[reason]"
+                      lineageId="Package\Load_ReturnsSTG\Returns Src.Outputs[OLE DB Source Output].Columns[reason]"
                       name="reason"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Load_ReturnsSTG\Returns.Outputs[OLE DB Source Output].Columns[amount_refunded]"
+                      refId="Package\Load_ReturnsSTG\Returns Src.Outputs[OLE DB Source Output].Columns[amount_refunded]"
                       dataType="r8"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Load_ReturnsSTG\Returns.Outputs[OLE DB Source Output].ExternalColumns[amount_refunded]"
-                      lineageId="Package\Load_ReturnsSTG\Returns.Outputs[OLE DB Source Output].Columns[amount_refunded]"
+                      externalMetadataColumnId="Package\Load_ReturnsSTG\Returns Src.Outputs[OLE DB Source Output].ExternalColumns[amount_refunded]"
+                      lineageId="Package\Load_ReturnsSTG\Returns Src.Outputs[OLE DB Source Output].Columns[amount_refunded]"
                       name="amount_refunded"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Load_ReturnsSTG\Returns.Outputs[OLE DB Source Output].Columns[UpdateDate]"
+                      refId="Package\Load_ReturnsSTG\Returns Src.Outputs[OLE DB Source Output].Columns[UpdateDate]"
                       dataType="dbTimeStamp"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Load_ReturnsSTG\Returns.Outputs[OLE DB Source Output].ExternalColumns[UpdateDate]"
-                      lineageId="Package\Load_ReturnsSTG\Returns.Outputs[OLE DB Source Output].Columns[UpdateDate]"
+                      externalMetadataColumnId="Package\Load_ReturnsSTG\Returns Src.Outputs[OLE DB Source Output].ExternalColumns[UpdateDate]"
+                      lineageId="Package\Load_ReturnsSTG\Returns Src.Outputs[OLE DB Source Output].Columns[UpdateDate]"
                       name="UpdateDate"
                       truncationRowDisposition="FailComponent" />
                   </outputColumns>
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
-                      refId="Package\Load_ReturnsSTG\Returns.Outputs[OLE DB Source Output].ExternalColumns[return_id]"
+                      refId="Package\Load_ReturnsSTG\Returns Src.Outputs[OLE DB Source Output].ExternalColumns[return_id]"
                       dataType="i4"
                       name="return_id" />
                     <externalMetadataColumn
-                      refId="Package\Load_ReturnsSTG\Returns.Outputs[OLE DB Source Output].ExternalColumns[order_id]"
+                      refId="Package\Load_ReturnsSTG\Returns Src.Outputs[OLE DB Source Output].ExternalColumns[order_id]"
                       dataType="i4"
                       name="order_id" />
                     <externalMetadataColumn
-                      refId="Package\Load_ReturnsSTG\Returns.Outputs[OLE DB Source Output].ExternalColumns[product_id]"
+                      refId="Package\Load_ReturnsSTG\Returns Src.Outputs[OLE DB Source Output].ExternalColumns[product_id]"
                       dataType="i4"
                       name="product_id" />
                     <externalMetadataColumn
-                      refId="Package\Load_ReturnsSTG\Returns.Outputs[OLE DB Source Output].ExternalColumns[return_date]"
+                      refId="Package\Load_ReturnsSTG\Returns Src.Outputs[OLE DB Source Output].ExternalColumns[return_date]"
                       dataType="wstr"
                       length="10"
                       name="return_date" />
                     <externalMetadataColumn
-                      refId="Package\Load_ReturnsSTG\Returns.Outputs[OLE DB Source Output].ExternalColumns[reason]"
+                      refId="Package\Load_ReturnsSTG\Returns Src.Outputs[OLE DB Source Output].ExternalColumns[reason]"
                       dataType="wstr"
                       length="50"
                       name="reason" />
                     <externalMetadataColumn
-                      refId="Package\Load_ReturnsSTG\Returns.Outputs[OLE DB Source Output].ExternalColumns[amount_refunded]"
+                      refId="Package\Load_ReturnsSTG\Returns Src.Outputs[OLE DB Source Output].ExternalColumns[amount_refunded]"
                       dataType="r8"
                       name="amount_refunded" />
                     <externalMetadataColumn
-                      refId="Package\Load_ReturnsSTG\Returns.Outputs[OLE DB Source Output].ExternalColumns[UpdateDate]"
+                      refId="Package\Load_ReturnsSTG\Returns Src.Outputs[OLE DB Source Output].ExternalColumns[UpdateDate]"
                       dataType="dbTimeStamp"
                       name="UpdateDate" />
                   </externalMetadataColumns>
                 </output>
                 <output
-                  refId="Package\Load_ReturnsSTG\Returns.Outputs[OLE DB Source Error Output]"
+                  refId="Package\Load_ReturnsSTG\Returns Src.Outputs[OLE DB Source Error Output]"
                   isErrorOut="true"
                   name="OLE DB Source Error Output">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Load_ReturnsSTG\Returns.Outputs[OLE DB Source Error Output].Columns[return_id]"
+                      refId="Package\Load_ReturnsSTG\Returns Src.Outputs[OLE DB Source Error Output].Columns[return_id]"
                       dataType="i4"
-                      lineageId="Package\Load_ReturnsSTG\Returns.Outputs[OLE DB Source Error Output].Columns[return_id]"
+                      lineageId="Package\Load_ReturnsSTG\Returns Src.Outputs[OLE DB Source Error Output].Columns[return_id]"
                       name="return_id" />
                     <outputColumn
-                      refId="Package\Load_ReturnsSTG\Returns.Outputs[OLE DB Source Error Output].Columns[order_id]"
+                      refId="Package\Load_ReturnsSTG\Returns Src.Outputs[OLE DB Source Error Output].Columns[order_id]"
                       dataType="i4"
-                      lineageId="Package\Load_ReturnsSTG\Returns.Outputs[OLE DB Source Error Output].Columns[order_id]"
+                      lineageId="Package\Load_ReturnsSTG\Returns Src.Outputs[OLE DB Source Error Output].Columns[order_id]"
                       name="order_id" />
                     <outputColumn
-                      refId="Package\Load_ReturnsSTG\Returns.Outputs[OLE DB Source Error Output].Columns[product_id]"
+                      refId="Package\Load_ReturnsSTG\Returns Src.Outputs[OLE DB Source Error Output].Columns[product_id]"
                       dataType="i4"
-                      lineageId="Package\Load_ReturnsSTG\Returns.Outputs[OLE DB Source Error Output].Columns[product_id]"
+                      lineageId="Package\Load_ReturnsSTG\Returns Src.Outputs[OLE DB Source Error Output].Columns[product_id]"
                       name="product_id" />
                     <outputColumn
-                      refId="Package\Load_ReturnsSTG\Returns.Outputs[OLE DB Source Error Output].Columns[return_date]"
+                      refId="Package\Load_ReturnsSTG\Returns Src.Outputs[OLE DB Source Error Output].Columns[return_date]"
                       dataType="wstr"
                       length="10"
-                      lineageId="Package\Load_ReturnsSTG\Returns.Outputs[OLE DB Source Error Output].Columns[return_date]"
+                      lineageId="Package\Load_ReturnsSTG\Returns Src.Outputs[OLE DB Source Error Output].Columns[return_date]"
                       name="return_date" />
                     <outputColumn
-                      refId="Package\Load_ReturnsSTG\Returns.Outputs[OLE DB Source Error Output].Columns[reason]"
+                      refId="Package\Load_ReturnsSTG\Returns Src.Outputs[OLE DB Source Error Output].Columns[reason]"
                       dataType="wstr"
                       length="50"
-                      lineageId="Package\Load_ReturnsSTG\Returns.Outputs[OLE DB Source Error Output].Columns[reason]"
+                      lineageId="Package\Load_ReturnsSTG\Returns Src.Outputs[OLE DB Source Error Output].Columns[reason]"
                       name="reason" />
                     <outputColumn
-                      refId="Package\Load_ReturnsSTG\Returns.Outputs[OLE DB Source Error Output].Columns[amount_refunded]"
+                      refId="Package\Load_ReturnsSTG\Returns Src.Outputs[OLE DB Source Error Output].Columns[amount_refunded]"
                       dataType="r8"
-                      lineageId="Package\Load_ReturnsSTG\Returns.Outputs[OLE DB Source Error Output].Columns[amount_refunded]"
+                      lineageId="Package\Load_ReturnsSTG\Returns Src.Outputs[OLE DB Source Error Output].Columns[amount_refunded]"
                       name="amount_refunded" />
                     <outputColumn
-                      refId="Package\Load_ReturnsSTG\Returns.Outputs[OLE DB Source Error Output].Columns[UpdateDate]"
+                      refId="Package\Load_ReturnsSTG\Returns Src.Outputs[OLE DB Source Error Output].Columns[UpdateDate]"
                       dataType="dbTimeStamp"
-                      lineageId="Package\Load_ReturnsSTG\Returns.Outputs[OLE DB Source Error Output].Columns[UpdateDate]"
+                      lineageId="Package\Load_ReturnsSTG\Returns Src.Outputs[OLE DB Source Error Output].Columns[UpdateDate]"
                       name="UpdateDate" />
                     <outputColumn
-                      refId="Package\Load_ReturnsSTG\Returns.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      refId="Package\Load_ReturnsSTG\Returns Src.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\Load_ReturnsSTG\Returns.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      lineageId="Package\Load_ReturnsSTG\Returns Src.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\Load_ReturnsSTG\Returns.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      refId="Package\Load_ReturnsSTG\Returns Src.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\Load_ReturnsSTG\Returns.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      lineageId="Package\Load_ReturnsSTG\Returns Src.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -1449,7 +1449,7 @@
                       refId="Package\Load_ReturnsSTG\Sort.Inputs[Sort Input].Columns[supplier_id]"
                       cachedDataType="i4"
                       cachedName="supplier_id"
-                      lineageId="Package\Load_ReturnsSTG\Supplier.Outputs[OLE DB Source Output].Columns[supplier_id]">
+                      lineageId="Package\Load_ReturnsSTG\Supplier Src.Outputs[OLE DB Source Output].Columns[supplier_id]">
                       <properties>
                         <property
                           dataType="System.Int32"
@@ -1466,7 +1466,7 @@
                       cachedDataType="wstr"
                       cachedLength="50"
                       cachedName="supplier_name"
-                      lineageId="Package\Load_ReturnsSTG\Supplier.Outputs[OLE DB Source Output].Columns[supplier_name]">
+                      lineageId="Package\Load_ReturnsSTG\Supplier Src.Outputs[OLE DB Source Output].Columns[supplier_name]">
                       <properties>
                         <property
                           dataType="System.Int32"
@@ -1483,7 +1483,7 @@
                       cachedDataType="wstr"
                       cachedLength="50"
                       cachedName="email"
-                      lineageId="Package\Load_ReturnsSTG\Supplier.Outputs[OLE DB Source Output].Columns[email]">
+                      lineageId="Package\Load_ReturnsSTG\Supplier Src.Outputs[OLE DB Source Output].Columns[email]">
                       <properties>
                         <property
                           dataType="System.Int32"
@@ -1516,7 +1516,7 @@
                           containsID="true"
                           dataType="System.Int32"
                           description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\Load_ReturnsSTG\Supplier.Outputs[OLE DB Source Output].Columns[supplier_id]}</property>
+                          name="SortColumnId">#{Package\Load_ReturnsSTG\Supplier Src.Outputs[OLE DB Source Output].Columns[supplier_id]}</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
@@ -1530,7 +1530,7 @@
                           containsID="true"
                           dataType="System.Int32"
                           description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\Load_ReturnsSTG\Supplier.Outputs[OLE DB Source Output].Columns[supplier_name]}</property>
+                          name="SortColumnId">#{Package\Load_ReturnsSTG\Supplier Src.Outputs[OLE DB Source Output].Columns[supplier_name]}</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
@@ -1544,7 +1544,7 @@
                           containsID="true"
                           dataType="System.Int32"
                           description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\Load_ReturnsSTG\Supplier.Outputs[OLE DB Source Output].Columns[email]}</property>
+                          name="SortColumnId">#{Package\Load_ReturnsSTG\Supplier Src.Outputs[OLE DB Source Output].Columns[email]}</property>
                       </properties>
                     </outputColumn>
                   </outputColumns>
@@ -1579,7 +1579,7 @@
                       refId="Package\Load_ReturnsSTG\Sort 1.Inputs[Sort Input].Columns[return_id]"
                       cachedDataType="i4"
                       cachedName="return_id"
-                      lineageId="Package\Load_ReturnsSTG\Returns.Outputs[OLE DB Source Output].Columns[return_id]">
+                      lineageId="Package\Load_ReturnsSTG\Returns Src.Outputs[OLE DB Source Output].Columns[return_id]">
                       <properties>
                         <property
                           dataType="System.Int32"
@@ -1595,7 +1595,7 @@
                       refId="Package\Load_ReturnsSTG\Sort 1.Inputs[Sort Input].Columns[order_id]"
                       cachedDataType="i4"
                       cachedName="order_id"
-                      lineageId="Package\Load_ReturnsSTG\Returns.Outputs[OLE DB Source Output].Columns[order_id]">
+                      lineageId="Package\Load_ReturnsSTG\Returns Src.Outputs[OLE DB Source Output].Columns[order_id]">
                       <properties>
                         <property
                           dataType="System.Int32"
@@ -1611,7 +1611,7 @@
                       refId="Package\Load_ReturnsSTG\Sort 1.Inputs[Sort Input].Columns[product_id]"
                       cachedDataType="i4"
                       cachedName="product_id"
-                      lineageId="Package\Load_ReturnsSTG\Returns.Outputs[OLE DB Source Output].Columns[product_id]">
+                      lineageId="Package\Load_ReturnsSTG\Returns Src.Outputs[OLE DB Source Output].Columns[product_id]">
                       <properties>
                         <property
                           dataType="System.Int32"
@@ -1628,7 +1628,7 @@
                       cachedDataType="wstr"
                       cachedLength="10"
                       cachedName="return_date"
-                      lineageId="Package\Load_ReturnsSTG\Returns.Outputs[OLE DB Source Output].Columns[return_date]">
+                      lineageId="Package\Load_ReturnsSTG\Returns Src.Outputs[OLE DB Source Output].Columns[return_date]">
                       <properties>
                         <property
                           dataType="System.Int32"
@@ -1645,7 +1645,7 @@
                       cachedDataType="wstr"
                       cachedLength="50"
                       cachedName="reason"
-                      lineageId="Package\Load_ReturnsSTG\Returns.Outputs[OLE DB Source Output].Columns[reason]">
+                      lineageId="Package\Load_ReturnsSTG\Returns Src.Outputs[OLE DB Source Output].Columns[reason]">
                       <properties>
                         <property
                           dataType="System.Int32"
@@ -1661,7 +1661,7 @@
                       refId="Package\Load_ReturnsSTG\Sort 1.Inputs[Sort Input].Columns[amount_refunded]"
                       cachedDataType="r8"
                       cachedName="amount_refunded"
-                      lineageId="Package\Load_ReturnsSTG\Returns.Outputs[OLE DB Source Output].Columns[amount_refunded]">
+                      lineageId="Package\Load_ReturnsSTG\Returns Src.Outputs[OLE DB Source Output].Columns[amount_refunded]">
                       <properties>
                         <property
                           dataType="System.Int32"
@@ -1693,7 +1693,7 @@
                           containsID="true"
                           dataType="System.Int32"
                           description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\Load_ReturnsSTG\Returns.Outputs[OLE DB Source Output].Columns[return_id]}</property>
+                          name="SortColumnId">#{Package\Load_ReturnsSTG\Returns Src.Outputs[OLE DB Source Output].Columns[return_id]}</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
@@ -1707,7 +1707,7 @@
                           containsID="true"
                           dataType="System.Int32"
                           description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\Load_ReturnsSTG\Returns.Outputs[OLE DB Source Output].Columns[order_id]}</property>
+                          name="SortColumnId">#{Package\Load_ReturnsSTG\Returns Src.Outputs[OLE DB Source Output].Columns[order_id]}</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
@@ -1721,7 +1721,7 @@
                           containsID="true"
                           dataType="System.Int32"
                           description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\Load_ReturnsSTG\Returns.Outputs[OLE DB Source Output].Columns[product_id]}</property>
+                          name="SortColumnId">#{Package\Load_ReturnsSTG\Returns Src.Outputs[OLE DB Source Output].Columns[product_id]}</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
@@ -1735,7 +1735,7 @@
                           containsID="true"
                           dataType="System.Int32"
                           description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\Load_ReturnsSTG\Returns.Outputs[OLE DB Source Output].Columns[return_date]}</property>
+                          name="SortColumnId">#{Package\Load_ReturnsSTG\Returns Src.Outputs[OLE DB Source Output].Columns[return_date]}</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
@@ -1749,7 +1749,7 @@
                           containsID="true"
                           dataType="System.Int32"
                           description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\Load_ReturnsSTG\Returns.Outputs[OLE DB Source Output].Columns[reason]}</property>
+                          name="SortColumnId">#{Package\Load_ReturnsSTG\Returns Src.Outputs[OLE DB Source Output].Columns[reason]}</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
@@ -1762,7 +1762,7 @@
                           containsID="true"
                           dataType="System.Int32"
                           description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\Load_ReturnsSTG\Returns.Outputs[OLE DB Source Output].Columns[amount_refunded]}</property>
+                          name="SortColumnId">#{Package\Load_ReturnsSTG\Returns Src.Outputs[OLE DB Source Output].Columns[amount_refunded]}</property>
                       </properties>
                     </outputColumn>
                   </outputColumns>
@@ -1797,7 +1797,7 @@
                       refId="Package\Load_ReturnsSTG\Sort 2.Inputs[Sort Input].Columns[orderitem_id]"
                       cachedDataType="i4"
                       cachedName="orderitem_id"
-                      lineageId="Package\Load_ReturnsSTG\OrderItem.Outputs[OLE DB Source Output].Columns[orderitem_id]">
+                      lineageId="Package\Load_ReturnsSTG\OrderItem Src.Outputs[OLE DB Source Output].Columns[orderitem_id]">
                       <properties>
                         <property
                           dataType="System.Int32"
@@ -1813,7 +1813,7 @@
                       refId="Package\Load_ReturnsSTG\Sort 2.Inputs[Sort Input].Columns[order_id]"
                       cachedDataType="i4"
                       cachedName="order_id"
-                      lineageId="Package\Load_ReturnsSTG\OrderItem.Outputs[OLE DB Source Output].Columns[order_id]">
+                      lineageId="Package\Load_ReturnsSTG\OrderItem Src.Outputs[OLE DB Source Output].Columns[order_id]">
                       <properties>
                         <property
                           dataType="System.Int32"
@@ -1829,7 +1829,7 @@
                       refId="Package\Load_ReturnsSTG\Sort 2.Inputs[Sort Input].Columns[product_id]"
                       cachedDataType="i4"
                       cachedName="product_id"
-                      lineageId="Package\Load_ReturnsSTG\OrderItem.Outputs[OLE DB Source Output].Columns[product_id]">
+                      lineageId="Package\Load_ReturnsSTG\OrderItem Src.Outputs[OLE DB Source Output].Columns[product_id]">
                       <properties>
                         <property
                           dataType="System.Int32"
@@ -1845,7 +1845,7 @@
                       refId="Package\Load_ReturnsSTG\Sort 2.Inputs[Sort Input].Columns[quantity]"
                       cachedDataType="i4"
                       cachedName="quantity"
-                      lineageId="Package\Load_ReturnsSTG\OrderItem.Outputs[OLE DB Source Output].Columns[quantity]">
+                      lineageId="Package\Load_ReturnsSTG\OrderItem Src.Outputs[OLE DB Source Output].Columns[quantity]">
                       <properties>
                         <property
                           dataType="System.Int32"
@@ -1861,7 +1861,7 @@
                       refId="Package\Load_ReturnsSTG\Sort 2.Inputs[Sort Input].Columns[supplier_id]"
                       cachedDataType="i4"
                       cachedName="supplier_id"
-                      lineageId="Package\Load_ReturnsSTG\OrderItem.Outputs[OLE DB Source Output].Columns[supplier_id]">
+                      lineageId="Package\Load_ReturnsSTG\OrderItem Src.Outputs[OLE DB Source Output].Columns[supplier_id]">
                       <properties>
                         <property
                           dataType="System.Int32"
@@ -1877,7 +1877,7 @@
                       refId="Package\Load_ReturnsSTG\Sort 2.Inputs[Sort Input].Columns[subtotal]"
                       cachedDataType="r8"
                       cachedName="subtotal"
-                      lineageId="Package\Load_ReturnsSTG\OrderItem.Outputs[OLE DB Source Output].Columns[subtotal]">
+                      lineageId="Package\Load_ReturnsSTG\OrderItem Src.Outputs[OLE DB Source Output].Columns[subtotal]">
                       <properties>
                         <property
                           dataType="System.Int32"
@@ -1893,7 +1893,7 @@
                       refId="Package\Load_ReturnsSTG\Sort 2.Inputs[Sort Input].Columns[discount]"
                       cachedDataType="r8"
                       cachedName="discount"
-                      lineageId="Package\Load_ReturnsSTG\OrderItem.Outputs[OLE DB Source Output].Columns[discount]">
+                      lineageId="Package\Load_ReturnsSTG\OrderItem Src.Outputs[OLE DB Source Output].Columns[discount]">
                       <properties>
                         <property
                           dataType="System.Int32"
@@ -1925,7 +1925,7 @@
                           containsID="true"
                           dataType="System.Int32"
                           description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\Load_ReturnsSTG\OrderItem.Outputs[OLE DB Source Output].Columns[orderitem_id]}</property>
+                          name="SortColumnId">#{Package\Load_ReturnsSTG\OrderItem Src.Outputs[OLE DB Source Output].Columns[orderitem_id]}</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
@@ -1939,7 +1939,7 @@
                           containsID="true"
                           dataType="System.Int32"
                           description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\Load_ReturnsSTG\OrderItem.Outputs[OLE DB Source Output].Columns[order_id]}</property>
+                          name="SortColumnId">#{Package\Load_ReturnsSTG\OrderItem Src.Outputs[OLE DB Source Output].Columns[order_id]}</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
@@ -1953,7 +1953,7 @@
                           containsID="true"
                           dataType="System.Int32"
                           description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\Load_ReturnsSTG\OrderItem.Outputs[OLE DB Source Output].Columns[product_id]}</property>
+                          name="SortColumnId">#{Package\Load_ReturnsSTG\OrderItem Src.Outputs[OLE DB Source Output].Columns[product_id]}</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
@@ -1966,7 +1966,7 @@
                           containsID="true"
                           dataType="System.Int32"
                           description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\Load_ReturnsSTG\OrderItem.Outputs[OLE DB Source Output].Columns[quantity]}</property>
+                          name="SortColumnId">#{Package\Load_ReturnsSTG\OrderItem Src.Outputs[OLE DB Source Output].Columns[quantity]}</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
@@ -1979,7 +1979,7 @@
                           containsID="true"
                           dataType="System.Int32"
                           description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\Load_ReturnsSTG\OrderItem.Outputs[OLE DB Source Output].Columns[supplier_id]}</property>
+                          name="SortColumnId">#{Package\Load_ReturnsSTG\OrderItem Src.Outputs[OLE DB Source Output].Columns[supplier_id]}</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
@@ -1992,7 +1992,7 @@
                           containsID="true"
                           dataType="System.Int32"
                           description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\Load_ReturnsSTG\OrderItem.Outputs[OLE DB Source Output].Columns[subtotal]}</property>
+                          name="SortColumnId">#{Package\Load_ReturnsSTG\OrderItem Src.Outputs[OLE DB Source Output].Columns[subtotal]}</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
@@ -2005,7 +2005,7 @@
                           containsID="true"
                           dataType="System.Int32"
                           description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\Load_ReturnsSTG\OrderItem.Outputs[OLE DB Source Output].Columns[discount]}</property>
+                          name="SortColumnId">#{Package\Load_ReturnsSTG\OrderItem Src.Outputs[OLE DB Source Output].Columns[discount]}</property>
                       </properties>
                     </outputColumn>
                   </outputColumns>
@@ -2262,11 +2262,11 @@
               </outputs>
             </component>
             <component
-              refId="Package\Load_ReturnsSTG\Supplier"
+              refId="Package\Load_ReturnsSTG\Supplier Src"
               componentClassID="Microsoft.OLEDBSource"
               contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
               description="OLE DB Source"
-              name="Supplier"
+              name="Supplier Src"
               usesDispositions="true"
               version="7">
               <properties>
@@ -2312,7 +2312,7 @@
               </properties>
               <connections>
                 <connection
-                  refId="Package\Load_ReturnsSTG\Supplier.Connections[OleDbConnection]"
+                  refId="Package\Load_ReturnsSTG\Supplier Src.Connections[OleDbConnection]"
                   connectionManagerID="Package.ConnectionManagers[DESKTOP-LEL90HF.DataSet]"
                   connectionManagerRefId="Package.ConnectionManagers[DESKTOP-LEL90HF.DataSet]"
                   description="The OLE DB runtime connection used to access the database."
@@ -2320,107 +2320,107 @@
               </connections>
               <outputs>
                 <output
-                  refId="Package\Load_ReturnsSTG\Supplier.Outputs[OLE DB Source Output]"
+                  refId="Package\Load_ReturnsSTG\Supplier Src.Outputs[OLE DB Source Output]"
                   name="OLE DB Source Output">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Load_ReturnsSTG\Supplier.Outputs[OLE DB Source Output].Columns[supplier_id]"
+                      refId="Package\Load_ReturnsSTG\Supplier Src.Outputs[OLE DB Source Output].Columns[supplier_id]"
                       dataType="i4"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Load_ReturnsSTG\Supplier.Outputs[OLE DB Source Output].ExternalColumns[supplier_id]"
-                      lineageId="Package\Load_ReturnsSTG\Supplier.Outputs[OLE DB Source Output].Columns[supplier_id]"
+                      externalMetadataColumnId="Package\Load_ReturnsSTG\Supplier Src.Outputs[OLE DB Source Output].ExternalColumns[supplier_id]"
+                      lineageId="Package\Load_ReturnsSTG\Supplier Src.Outputs[OLE DB Source Output].Columns[supplier_id]"
                       name="supplier_id"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Load_ReturnsSTG\Supplier.Outputs[OLE DB Source Output].Columns[supplier_name]"
+                      refId="Package\Load_ReturnsSTG\Supplier Src.Outputs[OLE DB Source Output].Columns[supplier_name]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Load_ReturnsSTG\Supplier.Outputs[OLE DB Source Output].ExternalColumns[supplier_name]"
+                      externalMetadataColumnId="Package\Load_ReturnsSTG\Supplier Src.Outputs[OLE DB Source Output].ExternalColumns[supplier_name]"
                       length="50"
-                      lineageId="Package\Load_ReturnsSTG\Supplier.Outputs[OLE DB Source Output].Columns[supplier_name]"
+                      lineageId="Package\Load_ReturnsSTG\Supplier Src.Outputs[OLE DB Source Output].Columns[supplier_name]"
                       name="supplier_name"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Load_ReturnsSTG\Supplier.Outputs[OLE DB Source Output].Columns[email]"
+                      refId="Package\Load_ReturnsSTG\Supplier Src.Outputs[OLE DB Source Output].Columns[email]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Load_ReturnsSTG\Supplier.Outputs[OLE DB Source Output].ExternalColumns[email]"
+                      externalMetadataColumnId="Package\Load_ReturnsSTG\Supplier Src.Outputs[OLE DB Source Output].ExternalColumns[email]"
                       length="50"
-                      lineageId="Package\Load_ReturnsSTG\Supplier.Outputs[OLE DB Source Output].Columns[email]"
+                      lineageId="Package\Load_ReturnsSTG\Supplier Src.Outputs[OLE DB Source Output].Columns[email]"
                       name="email"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Load_ReturnsSTG\Supplier.Outputs[OLE DB Source Output].Columns[UpdateDate]"
+                      refId="Package\Load_ReturnsSTG\Supplier Src.Outputs[OLE DB Source Output].Columns[UpdateDate]"
                       dataType="dbTimeStamp"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Load_ReturnsSTG\Supplier.Outputs[OLE DB Source Output].ExternalColumns[UpdateDate]"
-                      lineageId="Package\Load_ReturnsSTG\Supplier.Outputs[OLE DB Source Output].Columns[UpdateDate]"
+                      externalMetadataColumnId="Package\Load_ReturnsSTG\Supplier Src.Outputs[OLE DB Source Output].ExternalColumns[UpdateDate]"
+                      lineageId="Package\Load_ReturnsSTG\Supplier Src.Outputs[OLE DB Source Output].Columns[UpdateDate]"
                       name="UpdateDate"
                       truncationRowDisposition="FailComponent" />
                   </outputColumns>
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
-                      refId="Package\Load_ReturnsSTG\Supplier.Outputs[OLE DB Source Output].ExternalColumns[supplier_id]"
+                      refId="Package\Load_ReturnsSTG\Supplier Src.Outputs[OLE DB Source Output].ExternalColumns[supplier_id]"
                       dataType="i4"
                       name="supplier_id" />
                     <externalMetadataColumn
-                      refId="Package\Load_ReturnsSTG\Supplier.Outputs[OLE DB Source Output].ExternalColumns[supplier_name]"
+                      refId="Package\Load_ReturnsSTG\Supplier Src.Outputs[OLE DB Source Output].ExternalColumns[supplier_name]"
                       dataType="wstr"
                       length="50"
                       name="supplier_name" />
                     <externalMetadataColumn
-                      refId="Package\Load_ReturnsSTG\Supplier.Outputs[OLE DB Source Output].ExternalColumns[email]"
+                      refId="Package\Load_ReturnsSTG\Supplier Src.Outputs[OLE DB Source Output].ExternalColumns[email]"
                       dataType="wstr"
                       length="50"
                       name="email" />
                     <externalMetadataColumn
-                      refId="Package\Load_ReturnsSTG\Supplier.Outputs[OLE DB Source Output].ExternalColumns[UpdateDate]"
+                      refId="Package\Load_ReturnsSTG\Supplier Src.Outputs[OLE DB Source Output].ExternalColumns[UpdateDate]"
                       dataType="dbTimeStamp"
                       name="UpdateDate" />
                   </externalMetadataColumns>
                 </output>
                 <output
-                  refId="Package\Load_ReturnsSTG\Supplier.Outputs[OLE DB Source Error Output]"
+                  refId="Package\Load_ReturnsSTG\Supplier Src.Outputs[OLE DB Source Error Output]"
                   isErrorOut="true"
                   name="OLE DB Source Error Output">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Load_ReturnsSTG\Supplier.Outputs[OLE DB Source Error Output].Columns[supplier_id]"
+                      refId="Package\Load_ReturnsSTG\Supplier Src.Outputs[OLE DB Source Error Output].Columns[supplier_id]"
                       dataType="i4"
-                      lineageId="Package\Load_ReturnsSTG\Supplier.Outputs[OLE DB Source Error Output].Columns[supplier_id]"
+                      lineageId="Package\Load_ReturnsSTG\Supplier Src.Outputs[OLE DB Source Error Output].Columns[supplier_id]"
                       name="supplier_id" />
                     <outputColumn
-                      refId="Package\Load_ReturnsSTG\Supplier.Outputs[OLE DB Source Error Output].Columns[supplier_name]"
+                      refId="Package\Load_ReturnsSTG\Supplier Src.Outputs[OLE DB Source Error Output].Columns[supplier_name]"
                       dataType="wstr"
                       length="50"
-                      lineageId="Package\Load_ReturnsSTG\Supplier.Outputs[OLE DB Source Error Output].Columns[supplier_name]"
+                      lineageId="Package\Load_ReturnsSTG\Supplier Src.Outputs[OLE DB Source Error Output].Columns[supplier_name]"
                       name="supplier_name" />
                     <outputColumn
-                      refId="Package\Load_ReturnsSTG\Supplier.Outputs[OLE DB Source Error Output].Columns[email]"
+                      refId="Package\Load_ReturnsSTG\Supplier Src.Outputs[OLE DB Source Error Output].Columns[email]"
                       dataType="wstr"
                       length="50"
-                      lineageId="Package\Load_ReturnsSTG\Supplier.Outputs[OLE DB Source Error Output].Columns[email]"
+                      lineageId="Package\Load_ReturnsSTG\Supplier Src.Outputs[OLE DB Source Error Output].Columns[email]"
                       name="email" />
                     <outputColumn
-                      refId="Package\Load_ReturnsSTG\Supplier.Outputs[OLE DB Source Error Output].Columns[UpdateDate]"
+                      refId="Package\Load_ReturnsSTG\Supplier Src.Outputs[OLE DB Source Error Output].Columns[UpdateDate]"
                       dataType="dbTimeStamp"
-                      lineageId="Package\Load_ReturnsSTG\Supplier.Outputs[OLE DB Source Error Output].Columns[UpdateDate]"
+                      lineageId="Package\Load_ReturnsSTG\Supplier Src.Outputs[OLE DB Source Error Output].Columns[UpdateDate]"
                       name="UpdateDate" />
                     <outputColumn
-                      refId="Package\Load_ReturnsSTG\Supplier.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      refId="Package\Load_ReturnsSTG\Supplier Src.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\Load_ReturnsSTG\Supplier.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      lineageId="Package\Load_ReturnsSTG\Supplier Src.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\Load_ReturnsSTG\Supplier.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      refId="Package\Load_ReturnsSTG\Supplier Src.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\Load_ReturnsSTG\Supplier.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      lineageId="Package\Load_ReturnsSTG\Supplier Src.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -2449,17 +2449,17 @@
               refId="Package\Load_ReturnsSTG.Paths[OLE DB Source Output]"
               endId="Package\Load_ReturnsSTG\Sort.Inputs[Sort Input]"
               name="OLE DB Source Output"
-              startId="Package\Load_ReturnsSTG\Supplier.Outputs[OLE DB Source Output]" />
+              startId="Package\Load_ReturnsSTG\Supplier Src.Outputs[OLE DB Source Output]" />
             <path
               refId="Package\Load_ReturnsSTG.Paths[OLE DB Source Output1]"
               endId="Package\Load_ReturnsSTG\Sort 2.Inputs[Sort Input]"
               name="OLE DB Source Output"
-              startId="Package\Load_ReturnsSTG\OrderItem.Outputs[OLE DB Source Output]" />
+              startId="Package\Load_ReturnsSTG\OrderItem Src.Outputs[OLE DB Source Output]" />
             <path
               refId="Package\Load_ReturnsSTG.Paths[OLE DB Source Output2]"
               endId="Package\Load_ReturnsSTG\Sort 1.Inputs[Sort Input]"
               name="OLE DB Source Output"
-              startId="Package\Load_ReturnsSTG\Returns.Outputs[OLE DB Source Output]" />
+              startId="Package\Load_ReturnsSTG\Returns Src.Outputs[OLE DB Source Output]" />
             <path
               refId="Package\Load_ReturnsSTG.Paths[Sort Output]"
               endId="Package\Load_ReturnsSTG\Merge Join.Inputs[Merge Join Right Input]"
@@ -2533,13 +2533,17 @@
       <GraphLayout
         Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
+          Size="174,42"
+          Id="Package\Get Last Load Date"
+          TopLeft="128,78" />
+        <NodeLayout
           Size="171,42"
           Id="Package\Load_ReturnsSTG"
           TopLeft="126,210" />
         <NodeLayout
-          Size="174,42"
-          Id="Package\Get Last Load Date"
-          TopLeft="128,78" />
+          Size="168,42"
+          Id="Package\Update Load Date"
+          TopLeft="133,343" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint]"
           TopLeft="213.25,120">
@@ -2562,10 +2566,6 @@
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="168,42"
-          Id="Package\Update Load Date"
-          TopLeft="133,343" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 1]"
           TopLeft="214.25,252">
@@ -2597,32 +2597,28 @@
       <GraphLayout
         Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="108,42"
-          Id="Package\Load_ReturnsSTG\Sort 3"
-          TopLeft="605,343" />
-        <NodeLayout
           Size="133,42"
           Id="Package\Load_ReturnsSTG\Merge Join"
           TopLeft="556,232" />
-        <NodeLayout
-          Size="119,42"
-          Id="Package\Load_ReturnsSTG\Supplier"
-          TopLeft="134,125" />
-        <NodeLayout
-          Size="99,42"
-          Id="Package\Load_ReturnsSTG\Sort"
-          TopLeft="147,284" />
-        <NodeLayout
-          Size="108,42"
-          Id="Package\Load_ReturnsSTG\Sort 2"
-          TopLeft="672,131" />
         <NodeLayout
           Size="108,42"
           Id="Package\Load_ReturnsSTG\Sort 1"
           TopLeft="456,118" />
         <NodeLayout
-          Size="118,42"
-          Id="Package\Load_ReturnsSTG\Returns"
+          Size="108,42"
+          Id="Package\Load_ReturnsSTG\Sort 2"
+          TopLeft="672,131" />
+        <NodeLayout
+          Size="99,42"
+          Id="Package\Load_ReturnsSTG\Sort"
+          TopLeft="147,284" />
+        <NodeLayout
+          Size="139,42"
+          Id="Package\Load_ReturnsSTG\Supplier Src"
+          TopLeft="134,125" />
+        <NodeLayout
+          Size="137,42"
+          Id="Package\Load_ReturnsSTG\Returns Src"
           TopLeft="430,35" />
         <NodeLayout
           Size="177,42"
@@ -2633,193 +2629,17 @@
           Id="Package\Load_ReturnsSTG\Merge Join 1"
           TopLeft="427,490" />
         <NodeLayout
-          Size="129,42"
-          Id="Package\Load_ReturnsSTG\OrderItem"
+          Size="148,42"
+          Id="Package\Load_ReturnsSTG\OrderItem Src"
           TopLeft="683,27" />
         <NodeLayout
           Size="161,42"
           Id="Package\Load_ReturnsSTG\Data Conversion"
           TopLeft="421,584" />
-        <EdgeLayout
-          Id="Package\Load_ReturnsSTG.Paths[OLE DB Source Output2]"
-          TopLeft="489,77">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="21,41"
-              Start="0,0"
-              End="21,33.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,16.5" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,16.5"
-                    Point2="0,20.5"
-                    Point3="4,20.5" />
-                  <mssgle:LineSegment
-                    End="17,20.5" />
-                  <mssgle:CubicBezierSegment
-                    Point1="17,20.5"
-                    Point2="21,20.5"
-                    Point3="21,24.5" />
-                  <mssgle:LineSegment
-                    End="21,33.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Load_ReturnsSTG.Paths[OLE DB Source Output1]"
-          TopLeft="747.5,69">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-21.5,62"
-              Start="0,0"
-              End="-21.5,54.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,27" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,27"
-                    Point2="0,31"
-                    Point3="-4,31" />
-                  <mssgle:LineSegment
-                    End="-17.5,31" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-17.5,31"
-                    Point2="-21.5,31"
-                    Point3="-21.5,35" />
-                  <mssgle:LineSegment
-                    End="-21.5,54.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Load_ReturnsSTG.Paths[OLE DB Source Output]"
-          TopLeft="195,167">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,117"
-              Start="0,0"
-              End="0,109.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,109.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Load_ReturnsSTG.Paths[Merge Join Output1]"
-          TopLeft="499.75,532">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,52"
-              Start="0,0"
-              End="0,44.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,44.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Load_ReturnsSTG.Paths[Merge Join Output]"
-          TopLeft="622.5,274">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="36.5,69"
-              Start="0,0"
-              End="36.5,61.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,30.5" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,30.5"
-                    Point2="0,34.5"
-                    Point3="4,34.5" />
-                  <mssgle:LineSegment
-                    End="32.5,34.5" />
-                  <mssgle:CubicBezierSegment
-                    Point1="32.5,34.5"
-                    Point2="36.5,34.5"
-                    Point3="36.5,38.5" />
-                  <mssgle:LineSegment
-                    End="36.5,61.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Load_ReturnsSTG.Paths[Data Conversion Output]"
-          TopLeft="501.5,626">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="90,42"
-              Start="0,0"
-              End="90,34.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,17" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,17"
-                    Point2="0,21"
-                    Point3="4,21" />
-                  <mssgle:LineSegment
-                    End="86,21" />
-                  <mssgle:CubicBezierSegment
-                    Point1="86,21"
-                    Point2="90,21"
-                    Point3="90,25" />
-                  <mssgle:LineSegment
-                    End="90,34.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
+        <NodeLayout
+          Size="108,42"
+          Id="Package\Load_ReturnsSTG\Sort 3"
+          TopLeft="605,343" />
         <EdgeLayout
           Id="Package\Load_ReturnsSTG.Paths[Sort Output3]"
           TopLeft="510,160">
@@ -2956,11 +2776,191 @@
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Load_ReturnsSTG.Paths[OLE DB Source Output2]"
+          TopLeft="498.5,77">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="11.5,41"
+              Start="0,0"
+              End="11.5,33.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,16.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,16.5"
+                    Point2="0,20.5"
+                    Point3="4,20.5" />
+                  <mssgle:LineSegment
+                    End="7.5,20.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="7.5,20.5"
+                    Point2="11.5,20.5"
+                    Point3="11.5,24.5" />
+                  <mssgle:LineSegment
+                    End="11.5,33.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Load_ReturnsSTG.Paths[OLE DB Source Output1]"
+          TopLeft="757,69">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-31,62"
+              Start="0,0"
+              End="-31,54.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,27" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,27"
+                    Point2="0,31"
+                    Point3="-4,31" />
+                  <mssgle:LineSegment
+                    End="-27,31" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-27,31"
+                    Point2="-31,31"
+                    Point3="-31,35" />
+                  <mssgle:LineSegment
+                    End="-31,54.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Load_ReturnsSTG.Paths[OLE DB Source Output]"
+          TopLeft="200,167">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,117"
+              Start="0,0"
+              End="0,109.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,109.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Load_ReturnsSTG.Paths[Merge Join Output1]"
+          TopLeft="499.75,532">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,52"
+              Start="0,0"
+              End="0,44.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,44.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Load_ReturnsSTG.Paths[Merge Join Output]"
+          TopLeft="622.5,274">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="36.5,69"
+              Start="0,0"
+              End="36.5,61.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,30.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,30.5"
+                    Point2="0,34.5"
+                    Point3="4,34.5" />
+                  <mssgle:LineSegment
+                    End="32.5,34.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="32.5,34.5"
+                    Point2="36.5,34.5"
+                    Point3="36.5,38.5" />
+                  <mssgle:LineSegment
+                    End="36.5,61.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Load_ReturnsSTG.Paths[Data Conversion Output]"
+          TopLeft="501.5,626">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="90,42"
+              Start="0,0"
+              End="90,34.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,17" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,17"
+                    Point2="0,21"
+                    Point3="4,21" />
+                  <mssgle:LineSegment
+                    End="86,21" />
+                  <mssgle:CubicBezierSegment
+                    Point1="86,21"
+                    Point2="90,21"
+                    Point3="90,25" />
+                  <mssgle:LineSegment
+                    End="90,34.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\Load_ReturnsSTG\Supplier">
+    design-time-name="Package\Load_ReturnsSTG\Supplier Src">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -2968,7 +2968,7 @@
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Load_ReturnsSTG\Returns">
+    design-time-name="Package\Load_ReturnsSTG\Returns Src">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -2976,7 +2976,7 @@
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Load_ReturnsSTG\OrderItem">
+    design-time-name="Package\Load_ReturnsSTG\OrderItem Src">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
